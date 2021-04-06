@@ -1,6 +1,18 @@
 body {
     background-color: lightseagreen;
 }
+.extended {
+  background-color: #3c7c32;
+}
+
+.brand-logo {
+  margin-left: 1rem;
+}
+
+.brand-logo > span {
+  color: #9aaa4a;
+}
+
 .flashes h4 {
     line-height: 2;
 }
