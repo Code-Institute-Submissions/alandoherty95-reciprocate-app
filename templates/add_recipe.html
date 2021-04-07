@@ -1,20 +1,52 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Add New Recipe</h3>
+    <h2 class="center-align">Add New Recipe</h2>
 
     <div class="row">
         <form class="col s12" method="POST" action="">
+            <!-- recipe type selector -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
+                    <i class="fas fa-pencil-alt prefix"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose recipe type</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="category_name">Type of Recipe</label>
                 </div>
+            </div>
+            <!-- recipe name input -->
+            <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-phone prefix">phone</i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telephone</label>
+                    <i class="fas fa-pencil-alt prefix"></i>
+                    <input id="recipe_name" name="recipe_name" minlenght="4" maxlenght="28" type="text" class="validate" required>
+                    <label for="recipe_name">Name of Recipe</label>
+                </div>
+            </div>
+            <!-- recipe description input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix"></i>
+                    <textarea id="recipe_ingredients" name="recipe_ingredients" minlenght="4" maxlenght="200" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_ingredients">Ingredients</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix"></i>
+                    <textarea id="recipe_instructions" name="recipe_instructions" minlenght="4" maxlenght="200" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_instructions">Instructions</label>
+                </div>
+            </div>            
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large">
+                        Add New Recipe <i class="fas fa-plus-square right"></i>
+                    </button>
                 </div>
             </div>
         </form>
