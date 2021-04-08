@@ -5,6 +5,7 @@ body {
 h2 {
   color: #9aaa4a;
   font-weight: bold;
+  margin: 0;
 }
 .extended {
   background-color: #3c7c32;
