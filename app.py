@@ -5,7 +5,6 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-
 if os.path.exists("env.py"):
     import env
 
@@ -31,8 +30,7 @@ def register():
     if request.method == "POST":
         # check if username exists in mongo db already
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()}
-        )
+            {"username": request.form.get("username").lower()})
 
         if existing_user:
             flash("Username already exists!")
@@ -40,7 +38,7 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password")),
+            "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
 
@@ -57,14 +55,13 @@ def login():
     if request.method == "POST":
         # checks if username already exists in mongo db
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()}
-        )
+            {"username": request.form.get("username").lower()})
 
         if existing_user:
             # ensures hashed password is a match
             if check_password_hash(
-                existing_user["password"], request.form.get("password")
-            ):
+                existing_user["password"], request.form.get(
+                    "password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for("profile", username=session["user"]))
@@ -76,6 +73,7 @@ def login():
             # username does not exist in mongo db
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
+
     return render_template("login.html")
 
 
@@ -107,7 +105,7 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_instructions": request.form.get("recipe_instructions"),
-            "created_by": session["user"],
+            "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
@@ -125,7 +123,7 @@ def edit_recipe(recipe_id):
             "recipe_name": request.form.get("recipe_name"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_instructions": request.form.get("recipe_instructions"),
-            "created_by": session["user"],
+            "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
