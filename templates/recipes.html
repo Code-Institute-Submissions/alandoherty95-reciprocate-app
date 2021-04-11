@@ -21,9 +21,9 @@
             </div>
             <div class="collapsible-body">
                 <h5><i class="fas fa-blender"></i> {{ recipe.category_name }}</h5>
-                <p><strong>What do I need?</strong><br>{{ recipe.recipe_ingredients }}</p>
-                <p><strong>What do I do?</strong><br>{{ recipe.recipe_instructions }}</p>
-                <p>Created by: {{ recipe.created_by }}</p>
+                <h6>What do I need?</h6><br><p>{{ recipe.recipe_ingredients }}</p>
+                <h6>What do I do?</h6><br><p>{{ recipe.recipe_instructions }}</p>
+                <h6>Created by:</h6><p>{{ recipe.created_by }}</p>
             </div>
         </li>
         {% endfor %}

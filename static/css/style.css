@@ -1,14 +1,40 @@
+/*
+#87643e
+#ff6e4e
+#fea201
+#ffe02a
+#2d5500
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
 body {
-    background-color: #ffffff;
+  background-color: #dbe1d2;
+  font-family: 'Merienda';
+}
+
+nav ul {
+  color: #ff6e4e;
 }
 
 h2 {
-  color: #9aaa4a;
-  font-weight: bold;
-  margin: 0;
+  color: #ff6e4e;
 }
+
+h5 {
+  color: #fea201;
+}
+
+h6 {
+  color: #fea201;
+}
+
 .extended {
-  background-color: #3c7c32;
+  background-color: #ffe02a;
+}
+
+.extended .recip {
+  color: #ff6e4e;
 }
 
 .brand-logo {
@@ -16,7 +42,11 @@ h2 {
 }
 
 .brand-logo > span {
-  color: #9aaa4a;
+  color: #fea201;
+}
+
+.recip {
+  color: #ff6e4e;
 }
 
 .flashes h4 {
