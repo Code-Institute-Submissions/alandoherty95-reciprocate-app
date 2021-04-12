@@ -1,12 +1,20 @@
 # Reciprocate
 
-Welcome to **Reciprocate**! 
+Welcome to **Reciprocate** - share your favourite recipes!
 
 **Reciprocate** is a community-based website designed to allow users to share and contribute recipes ideas with each other. Users utilise the website to share their own data with the community, and benefit from having convenient access to the data provided by all other members. 
 
 In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand. The three main recipes types we are focusing on are smoothies, cocktails and snacks. The most popular recipes will be compiled in a cookbook which can be published.
 
+The website was designed using CRUD functionality. Create, Read, Update, and Delete (CRUD) are the four basic functions available to users of the website. 
 
+Create — A function we can call when a new recipe is being added to the database. The user can supply the values for  `“category_name”`,  `“recipe_name”`,  `“recipe_ingredients”` and `"recipe_instructions"`. Additionally, a similar process can be followed if a user wishes to add a new recipe type to the database. The new entry is assigned a unique  `id`, which can be used to access the resource later.
+
+Read — A function we can call to see all of the recipes currently in the database. This function does not alter the recipes in the catalog - it would simply retrieve the resource and display the results. Again, a similar process can be followed if a user wishes to display the types of recipes contained in the database. 
+
+Update — A function we can call when information about a particular recipe must be changed. The user can supply the values for  `“category_name”`,  `“recipe_name”`,  `“recipe_ingredients”` and `"recipe_instructions"`.  After the function call, the corresponding entry in the  `recipes`  database would contain the new fields supplied. These steps can be followed if a user wishes to edit an existing category in the database. 
+
+Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the  `recipe`  resource should contain all of the books it had before, except for the one recipe we just deleted. A similar process can be followed if a user wishes to remove a category from the database. 
 
 ## Table of Contents
 
@@ -107,7 +115,15 @@ As mentioned,
 
 ## Technologies
 
+-   [MongoDB](https://www.mongodb.com//)  MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.
+
+-  [Heroku](https://dashboard.heroku.com/apps) Heroku is a cloud platform as a service supporting several programming languages.
+
 -   [jQuery](https://code.jquery.com/)  JQuery is a JavaScript library which I found to be a good resource.
+
+-   [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))  is a web framework written in Python.
+
+-  [Materialize](https://materializecss.com/getting-started.html) is a modern responsive front-end framework based on Material Design.
     
 -   [GitHub](https://github.com/)  GitHub was used for hosting for software development and version control using Git.
     
@@ -157,8 +173,18 @@ As mentioned,
 
 ### Known Bugs
 
+- Input fields are not populating on the edit_recipe page.
+
 
 ## Credits
+
+- [MongoDB](https://www.mongodb.com//)  for providing a scalable and flexible database system.
+
+-  [Heroku](https://dashboard.heroku.com/apps) for supplying a platform for deploying my website.
+
+-  [Materialize](https://materializecss.com/getting-started.html) for offering a modern responsive front-end framework.
+
+- [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) for providing a framework including components like Jinja and Werkzeug. 
     
 -   [W3Schools](https://www.w3schools.com/)  for providing a wealth of information about HTML, CSS and JavaScript. It was a very informative and beneficial resource.
     
@@ -176,3 +202,7 @@ As mentioned,
     
 
 ### Acknowledgements
+
+
+Input Fields: https://materializecss.com/text-inputs.html
+Buttons: https://materializecss.com/buttons.html

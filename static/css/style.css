@@ -9,16 +9,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
 body {
-  background-color: #dbe1d2;
+  background-color: #ffffff;
   font-family: 'Merienda';
 }
 
-nav ul {
+nav ul a {
   color: #ff6e4e;
 }
 
 h2 {
   color: #ff6e4e;
+  font-size: 3rem;
 }
 
 h5 {
@@ -49,15 +50,27 @@ h6 {
   color: #ff6e4e;
 }
 
+.flashes {
+  background-color: rgb(255,224,42, 0.75);
+}
+
 .flashes h4 {
-    line-height: 2;
+  line-height: 2;
+  color: #ff6e4e;
 }
 
 .btn-small {
-    margin: 4px;
+  margin: 4px;
 }
 
-.collapsible-body strong {
-    margin: 5px;
-    line-height: 36px;
+.collapsible-header {
+  margin: 6px;
+  line-height: 1;
+  color: #ff6e4e;
+  background-color: #dbe1d2;
+}
+
+.collapsible-header h4 {
+  font-size: 2rem;
+  margin: 1rem;
 }

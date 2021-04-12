@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix"></i>
-                    <select id="category_name" name="category_name" class="validate" required>
+                                        <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled>Choose recipe type</option>
                         {% for category in categories %}
                             {% if category.category_name == recipe.category_name %}
