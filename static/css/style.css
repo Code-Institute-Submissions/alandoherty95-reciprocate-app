@@ -17,6 +17,11 @@ nav ul a {
   color: #ff6e4e;
 }
 
+h1 {
+  color: #ff6e4e;
+  font-size: 3rem;
+}
+
 h2 {
   color: #ff6e4e;
   font-size: 3rem;
@@ -73,4 +78,17 @@ h6 {
 .collapsible-header h4 {
   font-size: 2rem;
   margin: 1rem;
+}
+
+h1 > span {
+  color: #fea201;
+}
+
+.greeting-card {
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.card .card-action {
+  font-size: large;
 }
