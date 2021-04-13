@@ -84,9 +84,16 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
-
-    return redirect(url_for("login"))
+        # displays all recipes shared by session user
+        user = mongo.db.users.find_one({"username": session["user"]})
+        recipes = mongo.db.recipes.find({"created_by": session["user"]})
+        recipes = list(recipes)
+        return render_template(
+            "profile.html",
+            username=username,
+            recipes=recipes)
+    else:
+        return redirect(url_for("login"))
 
 
 @app.route("/logout")
@@ -128,10 +135,10 @@ def edit_recipe(recipe_id):
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
 
-    recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
+    recipes = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "edit_recipe.html", recipe=recipe, categories=categories)
+        "edit_recipe.html", recipes=recipes, categories=categories)
 
 
 @app.route("/delete_recipe/<recipe_id>")

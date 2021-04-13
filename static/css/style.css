@@ -87,6 +87,7 @@ h1 > span {
 .greeting-card {
   margin: 2rem;
   padding: 2rem;
+  background-color: #dbe1d2;
 }
 
 .card .card-action {
