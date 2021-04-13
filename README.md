@@ -91,7 +91,20 @@ As mentioned,
 
 -   #### Imagery
     
-## Scope
+## Scope 
+
+The minimum features to be included in this project are as follows:
+
+-   **Home page** attracts first-time visitors and presents the purpose of the website. The two call-to-action buttons invite users to either log in or register. All recipes are displayed below.
+-   **Recipe Types** allows users to manage the categories of recipes. Users can add or delete categories.
+-   **Register** invites visitors to create an account in order to create new recipes as well as edit or delete recipes they have shared.
+-   **Login** invites users to log in to their account. This allows users to edit or delete recipes they have shared.
+-   **Logout** allows users to log out of their account.
+-   **Profile** can be accessed by users when they have successfully logged in. Users can view all recipes they have shared. users can also edit or delete their recipes.
+-   **Create Recipe** encourages users to share their new recipes with the community.
+-   **Edit Recipe** allows users to edit their own recipes.
+-   **Delete Recipe** function that users can delete their recipes.
+-   **Search function** allows users to search for specific recipes using keywords.
 
 
 
@@ -184,9 +197,14 @@ As mentioned,
 
 -  [Materialize](https://materializecss.com/getting-started.html) for offering a modern responsive front-end framework.
 
-- [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) for providing a framework including components like Jinja and Werkzeug. 
+- [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) for providing a framework including components like Jinja and Werkzeug. It was used for rendering templates, URI's, redirects, requests and flash messages.
     
--   [W3Schools](https://www.w3schools.com/)  for providing a wealth of information about HTML, CSS and JavaScript. It was a very informative and beneficial resource.
+- [BSON](https://en.wikipedia.org/wiki/BSON) was used to access the data in MongoDB and to access ID's
+Werkzeug
+
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) was user to hash password entry when registering to the site and encrypting on MongoDB.
+
+-   [W3Schools](https://www.w3schools.com/) for providing a wealth of information about HTML, CSS and JavaScript. It was a very informative and beneficial resource.
     
 -   [GitHub](https://github.com/)  for hosting for software development and version control.
     
