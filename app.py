@@ -33,7 +33,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists!")
+            flash("Unfortunately, this username already exists!")
             return redirect(url_for("register"))
 
         register = {
@@ -44,7 +44,7 @@ def register():
 
         # put new user into a session
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("You have successfully registered!")
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
@@ -63,15 +63,16 @@ def login():
                 existing_user["password"], request.form.get(
                     "password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
+                flash("Welcome to your profile, {}!".format(
+                    request.form.get("username")))
                 return redirect(url_for("profile", username=session["user"]))
             else:
                 # hashed password does not match
-                flash("Incorrect Username and/or Password")
+                flash("Incorrect Username and/or Password Entered")
                 return redirect(url_for("login"))
         else:
             # username does not exist in mongo db
-            flash("Incorrect Username and/or Password")
+            flash("Incorrect Username and/or Password Entered")
             return redirect(url_for("login"))
 
     return render_template("login.html")
@@ -99,7 +100,7 @@ def profile(username):
 @app.route("/logout")
 def logout():
     # removes user from current session
-    flash("Log Out Successful!")
+    flash("You have successfully logged out!")
     session.pop("user")
     return redirect(url_for("login"))
 
@@ -115,7 +116,7 @@ def add_recipe():
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("Recipe Successfully Added")
+        flash("New recipe was successfully added!")
         return redirect(url_for("add_recipe"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -133,7 +134,7 @@ def edit_recipe(recipe_id):
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        flash("Recipe Successfully Updated")
+        flash("Recipe was successfully updated")
 
     recipes = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -144,7 +145,7 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Recipe Successfully Deleted")
+    flash("Recipe was successfully deleted")
     return redirect(url_for("get_recipes"))
 
 
@@ -161,7 +162,7 @@ def add_category():
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.insert_one(category)
-        flash("New Category Added")
+        flash("New category was successfully added")
         return redirect(url_for("get_categories"))
 
     return render_template("add_category.html")
@@ -174,7 +175,7 @@ def edit_category(category_id):
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
-        flash('Category Updated Successfully!')
+        flash('Category was successfully updated!')
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
@@ -184,7 +185,7 @@ def edit_category(category_id):
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash('Category Deleted Successfully!')
+    flash('Category was successfully deleted!')
     return redirect(url_for("get_categories"))
 
 

@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
 body {
-  background-color: #ffffff;
+  background-color: #D3D3D3;
   font-family: 'Merienda';
 }
 
@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-  color: #ff6e4e;
+  color: #fea201;
   font-size: 3rem;
 }
 
@@ -32,19 +32,19 @@ h5 {
 }
 
 h6 {
-  color: #fea201;
+  color: #ff6e4e;
+}
+
+.btn-small, .btn-large {
+  background-color: #ff6e4e;
 }
 
 .extended {
-  background-color: #ffe02a;
+  background-color: #ffffff;
 }
 
 .extended .recip {
   color: #ff6e4e;
-}
-
-.brand-logo {
-  margin-left: 1rem;
 }
 
 .brand-logo > span {
@@ -56,12 +56,12 @@ h6 {
 }
 
 .flashes {
-  background-color: rgb(255,224,42, 0.75);
+  background-color: rgb(169,169,169, 0.75);
+  color: #ffffff;
 }
 
 .flashes h4 {
   line-height: 2;
-  color: #ff6e4e;
 }
 
 .btn-small {
@@ -72,12 +72,16 @@ h6 {
   margin: 6px;
   line-height: 1;
   color: #ff6e4e;
-  background-color: #dbe1d2;
+  border: 2px #A9A9A9 solid;
 }
 
 .collapsible-header h4 {
   font-size: 2rem;
-  margin: 1rem;
+}
+
+.collapsible-body {
+  background-color: #ffffff;
+  border: 2px #A9A9A9 solid;
 }
 
 h1 > span {
@@ -87,9 +91,43 @@ h1 > span {
 .greeting-card {
   margin: 2rem;
   padding: 2rem;
-  background-color: #dbe1d2;
+  background-color: #C0C0C0;
+}
+
+.card {
+  padding: 3rem;
 }
 
 .card .card-action {
   font-size: large;
+}
+
+.page-footer {
+  background-color: #ffffff;
+  color: #fea201;
+}
+
+.footer-tagline {
+  font-size: large;
+}
+
+.footer-logo {
+  font-size: larger;
+}
+
+.footer-links a {
+  color: #ff6e4e;
+}
+
+.footer-copyright .container {
+  color: #ff6e4e;
+}
+
+.footer-copyright .container a {
+  color: #ff6e4e;
+}
+
+.forms {
+  background-color: #ffffff;
+  padding: 1rem;
 }
