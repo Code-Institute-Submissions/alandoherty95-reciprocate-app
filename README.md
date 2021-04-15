@@ -67,17 +67,68 @@ As mentioned,
 
 ### Users:
 
--   As a proponent of health-living, I would like to share recipes for others to enjoy. 
+-   As an individual who likes to keep a healthy lifestyle, I want to find tasty food and drink recipes to try at home.
     
--   As a health-conscious individual, I would like easy access to recipes provided by other members.
+-   As a food lover, I would like to share recipe ideas for light snacks and smoothies with other people with similar interests.
     
+-   As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones. 
     
 
 ### Owner:
 
--   As the owner of this website, I would like to foster a community-based environment allowing users to share and contribute recipe ideas.
+-   As the owner of this website I would like to provide a platform to encourage users to share their favourite recipes with other members of the community.
     
--  As the owner of this website, I would like to compile the most popular recipes in order to publish a cookbook.
+-   As the owner, I want to users to browse and find recipes that suit their tastes.
+
+-   As the owner, I want to allow users to create additional recipe types if they would like.
+
+-   As the owner, I want to compile the most popular recipes shared by users to create a cookbook.
+
+
+### Testing - User Stories
+
+**User Story 1:**  As an individual who likes to keep a healthy lifestyle, I want to find tasty food and drink recipes to try at home.
+
+I can open the main homepage and scroll down to quickly view all recipes that have been shared by other members of the community.
+
+In order for this user to browse all recipes:
+
+-   Open homepage of website.
+    
+-   Scroll down slightly to view ‘Our Favourite Recipes'.
+    
+-   Click on any selection to view additional information about the recipe.
+    
+**User Story 2:**  As a food lover, I would like to share recipe ideas for light snacks and smoothies with other people with similar interests.
+
+When I am logged into my profile, I can add a new recipe in just a few steps.
+
+In order for this user to share recipe ideas:
+
+-   Open homepage of website.
+    
+-   Click on the 'Log In' button.
+    
+-   Enter 'Username' and 'Password' and click the 'Log In' button.
+    
+-   Navigate to the 'Add New Recipe' tab in the Navigation Bar.
+
+- Input details such as 'Recipe Type', 'Name of Recipe', 'Ingredients' and 'Instructions'.
+
+- Click 'Add New Recipe' button.
+    
+**User Story 3:**  As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones.
+
+I can open the main homepage and scroll down to quickly view all recipes that have been shared by other members of the community.
+
+In order for this user to browse all recipes:
+
+-   Open homepage of website.
+    
+-   Scroll down slightly to view ‘Our Favourite Recipes'.
+    
+-   Click on any selection to view additional information about the recipe.
+
     
 
 ### Design

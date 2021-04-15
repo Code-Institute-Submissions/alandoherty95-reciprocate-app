@@ -9,7 +9,7 @@
                     <div class="card-content">
                         <div class="card-title center">
                             <h1>Recip<span>rocate</span></h1>
-                            <p class="white-text">Discover delicious recipes & share your favourites with our community!</p>
+                            <p>Browse, discover and share your favourite recipes with our community!</p>
                         </div>
                     </div>
         
@@ -29,12 +29,13 @@
         {% for recipe in recipes %}
         <li>
             <div class="collapsible-header">
-                <div class="col s12 m4">
-                    <i class="fas fa-plus"></i>
+                <div class="col">
+                    <img class="activator" src="{{ recipe.image_url }}" alt="recipe">
                 </div>
-                <div class="col s9">
+                <div class="col">
                     <h4>{{ recipe.recipe_name }}</h4>
                     <h5>{{ recipe.category_name }}</h5>
+                    <p>Click to reveal more details!</p>
                     {% if session.user|lower == recipe.created_by|lower %}
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>

@@ -72,7 +72,6 @@ h6 {
   margin: 6px;
   line-height: 1;
   color: #ff6e4e;
-  border: 2px #A9A9A9 solid;
 }
 
 .collapsible-header h4 {
@@ -81,7 +80,6 @@ h6 {
 
 .collapsible-body {
   background-color: #ffffff;
-  border: 2px #A9A9A9 solid;
 }
 
 h1 > span {
@@ -91,7 +89,7 @@ h1 > span {
 .greeting-card {
   margin: 2rem;
   padding: 2rem;
-  background-color: #C0C0C0;
+  background-color: #ffffff;
 }
 
 .card {
@@ -130,4 +128,8 @@ h1 > span {
 .forms {
   background-color: #ffffff;
   padding: 1rem;
+}
+
+img.activator {
+  max-width: 50%;
 }

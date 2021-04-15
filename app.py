@@ -87,6 +87,7 @@ def profile(username):
     if session["user"]:
         # displays all recipes shared by session user
         user = mongo.db.users.find_one({"username": session["user"]})
+        user = list(user)
         recipes = mongo.db.recipes.find({"created_by": session["user"]})
         recipes = list(recipes)
         return render_template(
@@ -113,8 +114,9 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_instructions": request.form.get("recipe_instructions"),
-            "created_by": session["user"]
-        }
+            "created_by": session["user"],
+            "image_url": request.form.get("image_url")
+            }
         mongo.db.recipes.insert_one(recipe)
         flash("New recipe was successfully added!")
         return redirect(url_for("add_recipe"))
@@ -131,7 +133,8 @@ def edit_recipe(recipe_id):
             "recipe_name": request.form.get("recipe_name"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_instructions": request.form.get("recipe_instructions"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "image_url": request.form.get("image_url")
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe was successfully updated")
