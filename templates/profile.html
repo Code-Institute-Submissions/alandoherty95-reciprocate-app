@@ -9,6 +9,10 @@
         </div>
     </div>
 
+    <div class="card-action center">
+        <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+    </div>
+
     <h2 class="center-align">Our Favourite Recipes</h2>
 
     <ul class="collapsible">
@@ -30,8 +34,8 @@
                 </div>
             </div>
             <div class="collapsible-body">
-                <h6>What do I need?</h6><br><p>{{ recipe.recipe_ingredients }}</p>
-                <h6>What do I do?</h6><br><p>{{ recipe.recipe_instructions }}</p>
+                <h6>What do I need?</h6><p>{{ recipe.recipe_ingredients }}</p>
+                <h6>What do I do?</h6><p>{{ recipe.recipe_instructions }}</p>
                 <h6>Created by:</h6><p>{{ recipe.created_by }}</p>
             </div>
         </li>

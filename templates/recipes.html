@@ -11,18 +11,26 @@
                             <h1>Recip<span>rocate</span></h1>
                             <p>Discover & share your favourite food & drink recipes with our community!</p>
                             <hr>
-                            <p>Log in or register now</p>
+                            <p>Get involved today!</p>
                         </div>
                     </div>
-        
-                    <div class="card-action center">
-                        <a class="btn-large" href="{{ url_for('login') }}">Log In</a>
-                        <a class="btn-large" href="{{ url_for('register') }}">Register</a>
-                    </div>
-        
+                    {% if session.user %}
+                        <div class="card-action center">
+                            <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+                        </div>
+                    {% else %}
+                        <div class="card-action center">
+                            <a class="btn-large" href="{{ url_for('login') }}">Log In</a>
+                            <a class="btn-large" href="{{ url_for('register') }}">Register</a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="card">
+        <h6>About Reciprocate</h6><p>We are an online community of food & drink lovers sharing & discovering new tasty recipes. Create your own profile now to enjoy the full experience. Scroll down to view our favourite recipes.</p>
     </div>
 
     <h2 class="center-align">Our Favourite Recipes</h2>
@@ -45,11 +53,21 @@
                 </div>
             </div>
             <div class="collapsible-body">
-                <h6>What do I need?</h6><br><p>{{ recipe.recipe_ingredients }}</p>
-                <h6>What do I do?</h6><br><p>{{ recipe.recipe_instructions }}</p>
+                <h6>What do I need?</h6><p>{{ recipe.recipe_ingredients }}</p>
+                <h6>What do I do?</h6><p>{{ recipe.recipe_instructions }}</p>
                 <h6>Created by:</h6><p>{{ recipe.created_by }}</p>
             </div>
         </li>
+            <!-- modal to confrim action before deleting a recipe-->
+            <div id="modal-{{recipe._id}}" class="modal">
+                <div class="modal-content">
+                    <h5 class="text center-align">Are you sure you want to delete this tasty recipe?</h5>
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small">Cancel</a>
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>                    
+                </div>
+            </div>
         {% endfor %}
     </ul>
 
