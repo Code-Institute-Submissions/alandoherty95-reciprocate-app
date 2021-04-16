@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-  color: #fea201;
+  color: #ff6e4e;
   font-size: 3rem;
 }
 
@@ -107,6 +107,10 @@ h1 > span {
 
 .footer-tagline {
   font-size: large;
+}
+
+.footer-tagline > span {
+  color: #ff6e4e;
 }
 
 .footer-logo {

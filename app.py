@@ -139,10 +139,10 @@ def edit_recipe(recipe_id):
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe was successfully updated")
 
-    recipes = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
+    recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "edit_recipe.html", recipes=recipes, categories=categories)
+        "edit_recipe.html", recipe=recipe, categories=categories)
 
 
 @app.route("/delete_recipe/<recipe_id>")

@@ -213,11 +213,32 @@ The minimum features to be included in this project are as follows:
     
 -   [QuickTime Player](https://support.apple.com/downloads/quicktime)  QuickTime Player is an extensible multimedia framework developed by Apple Inc., capable of handling various formats of digital video, picture, sound, panoramic images, and interactivity.
     
-
 ## Features
 
+-   **Discover new recipes**  
+    The homepage displays all recipes that have been shared on the application. Each selection shows the recipe type, the recipe name and an image. Users can reveal more information about the recipe by clicking on each selection. Users can view the suggested ingredients, instructions and the username of the person who shared the idea.
+
+-   **Share your favourite recipes**  
+    The application encourages all users to share their own favourite recipes with the rest of the community. The user can input the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Additionally, a similar process can be followed if a user wishes to add a new recipe type to the database. 
+
+
+-   **Edit your recipes**  
+	In addition to adding new recipes, users can also edit recipes they have already submitted. The user can update the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Similar steps can be followed if a user wishes to add a new recipe type to the database. 
+
+-   **Delete your recipes**  
+    Users have the option to delete recipes they have submitted. Users must confirm they would like to delete a selection before it is removed from the database.
+
+-   **Register an account**  
+	The application encourages users to register an account for a better experience. Users are required to enter a unique `"username"` and `"password"` when registering. There is a large call-to-action button on the homepage attracting users to either log in or register. Users can view all recipes without logging in. However, users are required to log in in order to share a new recipe and edit or delete an existing recipe.
 
 ### Features to Implement in the Future
+
+-   **Like your favourite recipes**  
+    Users will be able to like or vote for their favourite recipe ideas. Recipes with the most votes or likes will be promoted more favourably than the rest. These recipes will be compiled and published in a recipe book.
+    
+-   **Compiled a recipe book**
+	The most popular recipes shared on the application will be compiled and published in a recipe book. The recipe book will contain details and images of the recipe. It will also give recognition to the users who originally shared the recipe. 
+
 
 
 ## Testing
