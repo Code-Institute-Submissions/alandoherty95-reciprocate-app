@@ -33,10 +33,24 @@ h5 {
 
 h6 {
   color: #ff6e4e;
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.info {
+  text-align: center;
+  color: #ff6e4e;
 }
 
 .btn-small, .btn-large {
   background-color: #ff6e4e;
+}
+
+.btn-small:hover, .btn-large:hover {
+  background-color: #fea201;
 }
 
 .extended {
@@ -135,5 +149,7 @@ h1 > span {
 }
 
 img.activator {
-  max-width: 50%;
+  height: auto;
+  width: 20rem;
+  margin-right: 2rem;
 }

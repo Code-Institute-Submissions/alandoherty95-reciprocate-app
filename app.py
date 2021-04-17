@@ -25,6 +25,13 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("recipes.html", recipes=recipes)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -127,19 +134,7 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    if request.method == "POST":
-        submit = {
-            "category_name": request.form.get("category_name"),
-            "recipe_name": request.form.get("recipe_name"),
-            "recipe_ingredients": request.form.get("recipe_ingredients"),
-            "recipe_instructions": request.form.get("recipe_instructions"),
-            "created_by": session["user"],
-            "image_url": request.form.get("image_url")
-        }
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        flash("Recipe was successfully updated")
-
-    recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_recipe.html", recipe=recipe, categories=categories)

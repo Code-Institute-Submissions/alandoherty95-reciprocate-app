@@ -2,18 +2,19 @@
 {% block content %}
 
     <h2 class="center-align">Edit Recipe</h2>
+    <p class="info">Edit your recipe by updating the fields below.</p>
 
-    <div class="row">
+    <div class="row card-panel">
         <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
             <!-- recipe type selector -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix"></i>
-                                        <select id="category_name" name="category_name" class="validate" required>
+                    <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled>Choose recipe type</option>
                         {% for category in categories %}
                             {% if category.category_name == recipe.category_name %}
-                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                                <option value="{{ category.category_name }}" disabled>{{ category.category_name }}</option>
                             {% else %}
                                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endif %}
@@ -48,7 +49,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix"></i>
-                    <textarea id="image_url" name="image_url" minlenght="4" maxlenght="200" class="materialize-textarea validate" required></textarea>
+                    <textarea id="image_url" name="image_url" minlenght="4" maxlenght="200" class="materialize-textarea validate" required>{{ recipe.image_url }}</textarea>
                     <label for="image_url">Image URL</label>
                 </div>
             </div>            

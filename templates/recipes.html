@@ -30,19 +30,38 @@
     </div>
 
     <div class="card">
-        <h6>About Reciprocate</h6><p>We are an online community of food & drink lovers sharing & discovering new tasty recipes. Create your own profile now to enjoy the full experience. Scroll down to view our favourite recipes.</p>
+        <h6>About Reciprocate</h6><p>We are an online community of food & drink lovers sharing & discovering new delicious recipes. Create your own profile now to enjoy the full experience. Scroll down to view our favourite recipes below.</p>
     </div>
 
     <h2 class="center-align">Our Favourite Recipes</h2>
+    <p class="info">Scroll down to view all recipes shared by our community.</p>
 
+    <div class="row card-panel">
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search-prefix"></i>
+                    <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                    <label for="query">Search for Recipes</label>
+                </div>
+                <div class="col s12 m4">
+                    <a href="{{ url_for('get_recipes') }}" class="btn-small">Clear</a>
+                    <button type="submit" class="btn-small">
+                        <i class="fas fa-search-left">Search</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% if recipes|length > 0 %}
     <ul class="collapsible">
         {% for recipe in recipes %}
         <li>
             <div class="collapsible-header">
-                <div class="col">
+                <div class="col s12">
                     <img class="activator" src="{{ recipe.image_url }}" alt="recipe">
                 </div>
-                <div class="col">
+                <div class="col s12">
                     <h4>{{ recipe.recipe_name }}</h4>
                     <h5>{{ recipe.category_name }}</h5>
                     <p>Click to reveal more details!</p>
@@ -70,5 +89,8 @@
             </div>
         {% endfor %}
     </ul>
+    {% else %}
+        <h6 class="center-align">No Results Found. Please try other words.</h6>
+    {% endif %}
 
 {% endblock %}
