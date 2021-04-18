@@ -8,11 +8,11 @@ In preparation for this project, I conducted research on friends, colleagues and
 
 The website was designed using CRUD functionality. Create, Read, Update, and Delete (CRUD) are the four basic functions available to users of the website. 
 
-Create — A function we can call when a new recipe is being added to the database. The user can supply the values for  `“category_name”`,  `“recipe_name”`,  `“recipe_ingredients”` and `"recipe_instructions"`. Additionally, a similar process can be followed if a user wishes to add a new recipe type to the database. The new entry is assigned a unique  `id`, which can be used to access the resource later.
+Create — A function we can call when a new recipe is being added to the database. The user can supply the values for  `“category_name”`,  `“recipe_name”`,  `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Additionally, a similar process can be followed if a user wishes to add a new recipe type to the database. The new entry is assigned a unique  `id`, which can be used to access the resource later.
 
 Read — A function we can call to see all of the recipes currently in the database. This function does not alter the recipes in the catalog - it would simply retrieve the resource and display the results. Again, a similar process can be followed if a user wishes to display the types of recipes contained in the database. 
 
-Update — A function we can call when information about a particular recipe must be changed. The user can supply the values for  `“category_name”`,  `“recipe_name”`,  `“recipe_ingredients”` and `"recipe_instructions"`.  After the function call, the corresponding entry in the  `recipes`  database would contain the new fields supplied. These steps can be followed if a user wishes to edit an existing category in the database. 
+Update — A function we can call when information about a particular recipe must be changed. The user can supply the values for  `“category_name”`,  `“recipe_name”`,  `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`.  After the function call, the corresponding entry in the  `recipes`  database would contain the new fields supplied. These steps can be followed if a user wishes to edit an existing category in the database. 
 
 Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the  `recipe`  resource should contain all of the books it had before, except for the one recipe we just deleted. A similar process can be followed if a user wishes to remove a category from the database. 
 
@@ -54,7 +54,7 @@ The website was designed with a community-based approach in mind. It was created
 -   To compiled the most popular recipes in a cookbook for publishing
     
 
-As mentioned, 
+The website focuses on the following three types of recipes but it is not limited. Users can choose to add a new category for different recipe types.
 
 **Smoothies:** are becoming more popular each year. Many people are opting for smoothies made up of fruit and vegetables as part of their daily intake. Our smoothie recipes provides users with choice while keeping up a healthy diet.
 

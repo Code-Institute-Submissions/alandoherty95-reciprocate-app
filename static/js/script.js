@@ -3,7 +3,7 @@
     $('.collapsible').collapsible();
     $('select').formSelect();
     $('.modal').modal();
-
+    // form validation
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #3c7c32", "box-shadow": "0 1px 0 0 #3c7c32" };

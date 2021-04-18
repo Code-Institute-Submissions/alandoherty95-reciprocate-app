@@ -1,15 +1,14 @@
 /*
-#87643e
 #ff6e4e
 #fea201
-#ffe02a
-#2d5500
+#d3d3d3
+#ffffff
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
 body {
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
   font-family: 'Merienda';
 }
 
@@ -42,7 +41,6 @@ p {
 
 .info {
   text-align: center;
-  color: #ff6e4e;
 }
 
 .btn-small, .btn-large {
@@ -136,10 +134,6 @@ h1 > span {
 }
 
 .footer-copyright .container {
-  color: #ff6e4e;
-}
-
-.footer-copyright .container a {
   color: #ff6e4e;
 }
 

@@ -16,6 +16,7 @@
     <h2 class="center-align">Our Favourite Recipes</h2>
     <p class="info">Scroll down to view all recipes shared by you.</p>
 
+    <!-- search bar -->
     <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -26,14 +27,12 @@
                 </div>
                 <div class="col s12 m4">
                     <a href="{{ url_for('get_recipes') }}" class="btn-small">Clear</a>
-                    <button type="submit" class="btn-small">
-                        <i class="fas fa-search-left">Search</i>
-                    </button>
+                    <button type="submit" class="btn-small">Search</button>
                 </div>
             </div>
         </form>
     </div>
-
+    <!-- all recipes -->
     <ul class="collapsible">
         {% for recipe in recipes %}
         <li>
@@ -58,11 +57,12 @@
                 <h6>Created by:</h6><p>{{ recipe.created_by }}</p>
             </div>
         </li>
-            <!-- modal to confrim action before deleting a recipe-->
+            <!-- modal to confirm action before deleting a recipe -->
             <div id="modal-{{recipe._id}}" class="modal">
                 <div class="modal-content">
                     <h5 class="text center-align">Are you sure you want to delete this tasty recipe?</h5>
                 </div>
+                <!-- cancel and delete buttons -->
                 <div class="modal-footer">
                     <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small">Cancel</a>
                     <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>

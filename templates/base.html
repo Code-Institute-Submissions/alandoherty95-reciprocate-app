@@ -16,7 +16,7 @@
 <body>
 
     <header>
-        <!-- Top Navigation Bar -->
+        <!-- top navigation bar -->
         <nav class="nav extended">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo recip">Recip<span>rocate</span></a>
@@ -35,7 +35,7 @@
                 </ul>
             </div>
         </nav>
-        <!-- Side Navigation Bar-->
+        <!-- side navigation bar -->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align brand-logo">Recip<span>rocate</span></h4></li>
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
@@ -69,7 +69,7 @@
 
         {% endblock %}
     </main>
-
+    <!-- footer -->
     <footer class="page-footer">
         <div class="container">
             <div class="row">
@@ -78,8 +78,7 @@
                     <p class="footer-tagline">
                         <span>verb</span><br>
                         re·​cip·​ro·​cate<br>
-                        <span>respond to (a gesture or action) by making a corresponding one.</span><br>
-                        "Reciprocate your favourite recipe ideas!"
+                        <span>respond to a gesture or action by making a corresponding one</span>
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
@@ -101,8 +100,8 @@
         <div class="footer-copyright">
             <div class="container">
                 © Doherty 2021
-                <a target="_blank" href="https://www.linkedin.com/in/alan-doherty-201855131/ "><i class="fa fa-linkedin"></i></a>
-                <a target="_blank" href="https://github.com/alandoherty95"><i class="fa fa-github"></i></a>
+                <a target="_blank" class="footer-icons" href="https://www.linkedin.com/in/alan-doherty-201855131/ "><i class="fa fa-linkedin"></i></a>
+                <a target="_blank" class="footer-icons" href="https://github.com/alandoherty95"><i class="fa fa-github"></i></a>
             </div>
         </div>
     </footer>

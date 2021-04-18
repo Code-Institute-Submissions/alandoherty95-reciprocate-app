@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!--greeting card-->
+    <!-- greeting card -->
     <div class="container valign-wrapper">
         <div class="row">
             <div class="col valign">
@@ -14,10 +14,12 @@
                             <p>Get involved today!</p>
                         </div>
                     </div>
+                    <!-- all new recipe button -->
                     {% if session.user %}
                         <div class="card-action center">
                             <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
                         </div>
+                    <!-- log in and register buttons -->
                     {% else %}
                         <div class="card-action center">
                             <a class="btn-large" href="{{ url_for('login') }}">Log In</a>
@@ -28,14 +30,15 @@
             </div>
         </div>
     </div>
-
+    <!-- application name and description -->
     <div class="card">
-        <h6>About Reciprocate</h6><p>We are an online community of food & drink lovers sharing & discovering new delicious recipes. Create your own profile now to enjoy the full experience. Scroll down to view our favourite recipes below.</p>
+        <h6>About Reciprocate</h6><p>We are an online community of food & drink lovers sharing & discovering new delicious recipes. Create your own profile now to enjoy the full experience. Search or scroll down to view our favourite recipes below.</p>
     </div>
 
     <h2 class="center-align">Our Favourite Recipes</h2>
-    <p class="info">Scroll down to view all recipes shared by our community.</p>
+    <p class="info">Search or scroll down to view all recipes shared by our community.</p>
 
+    <!-- search bar -->
     <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -46,13 +49,12 @@
                 </div>
                 <div class="col s12 m4">
                     <a href="{{ url_for('get_recipes') }}" class="btn-small">Clear</a>
-                    <button type="submit" class="btn-small">
-                        <i class="fas fa-search-left">Search</i>
-                    </button>
+                    <button type="submit" class="btn-small">Search</button>
                 </div>
             </div>
         </form>
     </div>
+    <!-- all recipes -->
     {% if recipes|length > 0 %}
     <ul class="collapsible">
         {% for recipe in recipes %}
@@ -77,11 +79,12 @@
                 <h6>Created by:</h6><p>{{ recipe.created_by }}</p>
             </div>
         </li>
-            <!-- modal to confrim action before deleting a recipe-->
+            <!-- modal to confirm action before deleting a recipe -->
             <div id="modal-{{recipe._id}}" class="modal">
                 <div class="modal-content">
                     <h5 class="text center-align">Are you sure you want to delete this tasty recipe?</h5>
                 </div>
+                <!-- cancel and delete buttons -->
                 <div class="modal-footer">
                     <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small">Cancel</a>
                     <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>                    
@@ -89,6 +92,7 @@
             </div>
         {% endfor %}
     </ul>
+    <!-- no search results found -->
     {% else %}
         <h6 class="center-align">No Results Found. Please try other words.</h6>
     {% endif %}

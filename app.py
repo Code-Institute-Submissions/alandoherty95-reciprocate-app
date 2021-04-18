@@ -10,7 +10,7 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
-
+# config vars
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -19,12 +19,14 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+# recipes page
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
+# search function
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -32,6 +34,7 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# registration page
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -57,6 +60,7 @@ def register():
     return render_template("register.html")
 
 
+# log in
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -85,6 +89,7 @@ def login():
     return render_template("login.html")
 
 
+# user profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # takes username of session user from mongo db
@@ -105,6 +110,7 @@ def profile(username):
         return redirect(url_for("login"))
 
 
+# log out
 @app.route("/logout")
 def logout():
     # removes user from current session
@@ -113,6 +119,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# add new recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -132,6 +139,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+# edit a recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -140,6 +148,7 @@ def edit_recipe(recipe_id):
         "edit_recipe.html", recipe=recipe, categories=categories)
 
 
+# delete a recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -147,12 +156,14 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+# categories
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
+# add new recipe type
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -166,6 +177,7 @@ def add_category():
     return render_template("add_category.html")
 
 
+# edit a category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
@@ -180,6 +192,7 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+# delete a category
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
