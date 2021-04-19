@@ -76,13 +76,14 @@
             <div class="collapsible-body">
                 <h6>What do I need?</h6><p>{{ recipe.recipe_ingredients }}</p>
                 <h6>What do I do?</h6><p>{{ recipe.recipe_instructions }}</p>
-                <h6>Created by:</h6><p>{{ recipe.created_by }}</p>
+                <h6>Shared by:</h6><p>{{ recipe.created_by }}</p>
             </div>
         </li>
             <!-- modal to confirm action before deleting a recipe -->
             <div id="modal-{{recipe._id}}" class="modal">
                 <div class="modal-content">
-                    <h5 class="text center-align">Are you sure you want to delete this tasty recipe?</h5>
+                    <h4 class="text center-align">Delete this tasty recipe?</h4>
+                    <p class="center-align">This recipe will be permanently deleted</p>
                 </div>
                 <!-- cancel and delete buttons -->
                 <div class="modal-footer">

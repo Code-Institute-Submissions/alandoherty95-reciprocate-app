@@ -161,10 +161,42 @@ The minimum features to be included in this project are as follows:
 
 ## Structure
 
+### Structure Plane
+
+—  **Front-End**  —
+
+-   **Homepage**  (`index.html`)  
+    The welcome page outlines the main purpose of the website. In the top navigation bar, there is a logo and tabs for the _Home_, _Login_ and _Register_ pages. There is a call-to-action button encouraging users to either log in or register. By scrolling down, users can browse all recipes and search using keywords.
+
+-   **Log In**  (`login.html`)  
+    The log in page allows users who already have an account to log in to their profile. When users log in successfully, they are redirected to their unique _Profile_ page. Additional tabs are visible to the user after logging in.
+    
+-   **Register**  (`register.html`)  
+    The registration page allows users to create an account by entering a distinct username and password. When users register successfully, they are redirected to their unique _Profile_ page. Additional tabs are visible to the user after logging in.
+    
+-   **Profile**  (`profile/<username>.html`)  
+    The profile page is unique to each user of the application. When users register successfully, they are redirected to their unique _Profile_ page. All recipes shared by the user are displayed on their profile page.
+    
+-   **New Recipe**  (`add_recipe.html`)  
+	The recipe page allows users to add a new recipe by submitting a form. The user will enter the fields for`“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The new recipe is displayed on the homepage and the profile page.
+
+-   **Recipe Types**  (`get_categories.html`)  
+		The recipe types page can be used to view the existing categories. There is also the option to edit or delete categories. New categories can also be created.
+    
+-   **Edit Recipe**  (`edit_recipe.html`)  
+	The edit recipe page allows users to edit a new recipe by editing a form. The user will update the fields for`“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Existing recipes can also be deleted by the user who created them.
+
+-   **Add Recipe Types**  (`add_category.html`)  
+		The add recipe types page allows users to add a new category. All categories can be selected from the drop-down in the recipe form.
+    
+-   **Edit Recipe Types**  (`edit_category.html`)  
+		The add recipe types page allows users to edit an existing category. All categories can be selected from the drop-down in the recipe form.
+
 
 
 #### Wireframe Mockups
 
+Wireframes can be found in this [folder](https://github.com/alandoherty95/reciprocate-app/tree/master/resources)
 
 ## Languages used
 

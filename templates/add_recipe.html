@@ -9,7 +9,7 @@
             <!-- recipe type selector -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix"></i>
+                    <i class="far fa-hand-pointer prefix"></i>
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Choose recipe type</option>
                         {% for category in categories %}
@@ -38,7 +38,7 @@
             <!-- recipe instructions input -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix"></i>
+                    <i class="fas fa-align-right prefix"></i>
                     <textarea id="recipe_instructions" name="recipe_instructions" minlenght="4" maxlenght="200" class="materialize-textarea validate" required></textarea>
                     <label for="recipe_instructions">Instructions</label>
                 </div>
@@ -46,7 +46,7 @@
             <!-- recipe image url input -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix"></i>
+                    <i class="far fa-image prefix"></i>
                     <textarea id="image_url" name="image_url" minlenght="4" maxlenght="200" class="materialize-textarea validate" required></textarea>
                     <label for="image_url">Image URL</label>
                 </div>
