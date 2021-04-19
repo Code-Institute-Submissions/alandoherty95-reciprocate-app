@@ -165,7 +165,7 @@ The minimum features to be included in this project are as follows:
 
 —  **Front-End**  —
 
--   **Homepage**  (`index.html`)  
+-   **Homepage**  (`recipes.html`)  
     The welcome page outlines the main purpose of the website. In the top navigation bar, there is a logo and tabs for the _Home_, _Login_ and _Register_ pages. There is a call-to-action button encouraging users to either log in or register. By scrolling down, users can browse all recipes and search using keywords.
 
 -   **Log In**  (`login.html`)  
