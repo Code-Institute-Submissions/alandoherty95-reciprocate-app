@@ -244,6 +244,8 @@ Wireframes can be found in this [folder](https://github.com/alandoherty95/recipr
 -   [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en)  A Google Chrome extension to show multiple screens in one view.
     
 -   [QuickTime Player](https://support.apple.com/downloads/quicktime)  QuickTime Player is an extensible multimedia framework developed by Apple Inc., capable of handling various formats of digital video, picture, sound, panoramic images, and interactivity.
+
+-   [Wireframes.cc](https://wireframe.cc/)  for designing simple black and white layouts providing structure for the website.
     
 ## Features
 
@@ -274,6 +276,77 @@ Wireframes can be found in this [folder](https://github.com/alandoherty95/recipr
 
 
 ## Testing
+
+
+## Version Control
+
+Throughout the production of this application, I used [Gitpod](https://gitpod.io/) as a local repository and [GitHub](https://github.com/)  as a remote repository.
+
+-- **Creating a Repository** --
+
+1.  Create a  repository in GitHub by clicking  'New repository'  in top right corner of the main page.  
+2.  Select the  Code Institute Template from drop-down options, enter the repository name (and description). 
+3.  Select 'Public' and then click 'Create Repository'.
+4.  Open the repository on Gitpod.
+
+—  **Commits**  —
+Commits were made frequently and consistently throughout the course of this project. It is important to commit often to ensure no work is lost during production. The work is saved securely in GitHub.
+
+* **git status** checks the current status of new or modified files and folders
+* **git add - A** adds files to the staging area before committing.
+* **git commit -m "initial commit"** commits the work on the stage before pushing it to GitHub.
+* **git push** updates the repository in GitHub to include new or modified files and folders.
+
+
+## Deployment
+
+The application was deployed using [Heroku](https://www.heroku.com/). Heroku is a cloud platform with a service supporting several programming languages including Python. GitHub can host a static websites but this particular project requires back-end technology such as a server and a database. I connected the GitHub repository with Heroku. 
+
+Before deploying the website to Heroku, please follow the necessary steps outlined below:
+
+1.  Create a `requirements.txt`  file containing the name of packages being used in Python. The file is updated whenever new packages or modules are installed during the project.
+2.  Create  a `Procfile`  containing the name of the application file. Procfile may have a blank line when it is created so remove it as it may cause problems
+3.  Push the two files above to GitHub to save.
+
+Once those steps are done, the website can be deployed and below are the steps of the deployment in Heroku.
+
+1.  Create an account in Heroku.
+2.  Click  'New'  and then  'Create new app' to get started.
+3.  Enter a unique  'App name' and 'Choose a region'. Then click 'Create app'.
+4.  Navigate to the 'Deploy' tab and click  'Connect to GithHub'.
+5.  Search for the name of the repository and click 'Connect'.
+6.  Navigate to the 'Settings' tab, click 'Reveal Config Vars' and enter the necessary keys and values.
+7.  Navigate back to the 'Deploy' tab and click  'Enable Automatic Deploys'
+8.  Click 'Deploy Branch'.
+9.  A message will appear saying 'Your app was successfully deployed.'
+10. Click 'View'. 
+
+## Credits
+
+## Code
+
+—  **HTML5**  —
+
+—  **CSS3**  —
+
+—  **JavaScript**  —
+
+—  **Python**  —
+
+## Contents
+
+## Media
+
+—  **Images**  —
+
+-   Images for recipes were found in [Pexels](https://www.pexels.com/)
+
+## ACKNOWLEDGEMENTS
+
+-   My Code Institute Mentor  [Nishant Kumar](https://github.com/nishant8BITS/)  for his continuous help and guidance.
+-   The Code Institute team for being available to answer any questions or queries I may have.
+-   My friends for lending me their time to demonstrate the website while offering proposals and constructive feedback.
+-   My family for putting up with me during this project and for providing ideas and feedback along the way.
 
 ### Feature Testing Table
 
@@ -322,6 +395,13 @@ Werkzeug
     
 -   [Stack Overflow](https://stackoverflow.com/)  for providing a platform for questions and answers by professional and enthusiast programmers.
     
+### General Resources
+
+-   Code Institute Course Material
+-   [Stack Overflow](https://stackoverflow.com/)
+-   [YouTube](https://www.youtube.com/)
+-   [W3schools](https://www.w3schools.com/)
+-   [Google](https://www.google.com/)
 
 ### Acknowledgements
 
