@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" type="text/css"/>
-    <!-- compiled and minified CSS -->
+    <!-- materialize compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
@@ -23,10 +24,14 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                    <!-- only visible in user session -->
                     {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
-                        <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
+                        <!-- only visible in admin session -->
+                        {% if session.user|lower =="admin"|lower %}
+                            <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
+                        {% endif %}
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
                         <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -37,17 +42,20 @@
         </nav>
         <!-- side navigation bar -->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align brand-logo">Recip<span>rocate</span></h4></li>
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+            <!-- only visible in user session -->
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
-                <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>     
+                <!-- only visible in admin session -->
+                {% if session.user|lower =="admin"|lower %}
+                    <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
-            {% endif %}           
+            {% endif %}
         </ul>
     </header>
 
@@ -69,6 +77,7 @@
 
         {% endblock %}
     </main>
+
     <!-- footer -->
     <footer class="page-footer">
         <div class="container">
@@ -104,7 +113,7 @@
         </div>
     </footer>
 
-
+    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
