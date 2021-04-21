@@ -2,9 +2,9 @@
 
 Welcome to **Reciprocate** - share your favourite recipes!
 
-**Reciprocate** is a community-based website designed to allow users to share and contribute recipes ideas with each other. Users utilise the website to share their own data with the community, and benefit from having convenient access to the data provided by all other members. 
+**Reciprocate** is a community-based website aimed at anyone who enjoys trying new recipes or sharing their favourites recipes with the world. It is designed to allow users to share and contribute recipes ideas with each other. Users can share their own food and drink ideas with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind so people of all ages can get involved.
 
-In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand. The three main recipes types we are focusing on are smoothies, cocktails and snacks. The most popular recipes will be compiled in a cookbook which can be published.
+In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand. The three main recipes types we are focusing on are smoothies, cocktails and snacks. The website does have the capability to add additional recipes types for selection.
 
 The website was designed using CRUD functionality. Create, Read, Update, and Delete (CRUD) are the four basic functions available to users of the website. 
 
@@ -56,14 +56,29 @@ The website was designed with a community-based approach in mind. It was created
 
 The website focuses on the following three types of recipes but it is not limited. Users can choose to add a new category for different recipe types.
 
-**Smoothies:** are becoming more popular each year. Many people are opting for smoothies made up of fruit and vegetables as part of their daily intake. Our smoothie recipes provides users with choice while keeping up a healthy diet.
+**Smoothies:** are becoming more popular each year. Many people are opting for smoothies made up of fruit and vegetables as part of their daily intake. Our smoothie recipes provide users with choice while keeping up a healthy diet.
 
-**Cocktails:** are also becoming increasingly popular among adults. People have grown to appreciate the variety of taste and beauty of these artisan drinks. Our cocktail recipes allows users to create popular drinks themselves without having to rely solely on bartenders.
+**Cocktails:** are also becoming increasingly popular among adults. People have grown to appreciate the variety of taste and beauty of these artisan drinks. Our cocktail recipes allow users to create popular drinks themselves without having to rely solely on bartenders.
 
 **Snacks:** have also been a significant part of our diet. People have become more creative and adventurous with their snacking habits in recent years. Our snack recipes offer choice for people constantly on-the-go.
 
 
 ### User Stories
+
+#### As a first-time visitor, I want:
+
+-   To immediately understand the purpose of the website
+-   To easily create an account
+-   To browse all recipes without having to register
+-   To be able to search for keywords 
+
+#### As a returning visitor, I want:
+
+-   To log in and out easily
+-   To add new recipes quickly and easily
+-   To edit or delete recipes I have already shared
+-   To view all recipes I have shared on my profile
+
 
 ### Users:
 
@@ -78,7 +93,7 @@ The website focuses on the following three types of recipes but it is not limite
 
 -   As the owner of this website I would like to provide a platform to encourage users to share their favourite recipes with other members of the community.
     
--   As the owner, I want to users to browse and find recipes that suit their tastes.
+-   As the owner, I want users to browse and find recipes that suit their tastes.
 
 -   As the owner, I want to allow users to create additional recipe types if they would like.
 
@@ -115,7 +130,7 @@ In order for this user to share recipe ideas:
 
 - Input details such as 'Recipe Type', 'Name of Recipe', 'Ingredients' and 'Instructions'.
 
-- Click 'Add New Recipe' button.
+- Click the 'Add New Recipe' button.
     
 **User Story 3:**  As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones.
 
@@ -246,7 +261,11 @@ Wireframes can be found in this [folder](https://github.com/alandoherty95/recipr
 -   [QuickTime Player](https://support.apple.com/downloads/quicktime)  QuickTime Player is an extensible multimedia framework developed by Apple Inc., capable of handling various formats of digital video, picture, sound, panoramic images, and interactivity.
 
 -   [Wireframes.cc](https://wireframe.cc/)  for designing simple black and white layouts providing structure for the website.
-    
+   
+## Database
+
+
+
 ## Features
 
 -   **Discover new recipes**  
@@ -284,7 +303,7 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
 -- **Creating a Repository** --
 
-1.  Create a  repository in GitHub by clicking  'New repository'  in top right corner of the main page.  
+1.  Create a  repository in GitHub by clicking  'New repository'  in the top right corner of the main page.  
 2.  Select the  Code Institute Template from drop-down options, enter the repository name (and description). 
 3.  Select 'Public' and then click 'Create Repository'.
 4.  Open the repository on Gitpod.
@@ -313,7 +332,7 @@ Once those steps are done, the website can be deployed and below are the steps o
 1.  Create an account in Heroku.
 2.  Click  'New'  and then  'Create new app' to get started.
 3.  Enter a unique  'App name' and 'Choose a region'. Then click 'Create app'.
-4.  Navigate to the 'Deploy' tab and click  'Connect to GithHub'.
+4.  Navigate to the 'Deploy' tab and click  'Connect to Github'.
 5.  Search for the name of the repository and click 'Connect'.
 6.  Navigate to the 'Settings' tab, click 'Reveal Config Vars' and enter the necessary keys and values.
 7.  Navigate back to the 'Deploy' tab and click  'Enable Automatic Deploys'
@@ -376,10 +395,9 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 - [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) for providing a framework including components like Jinja and Werkzeug. It was used for rendering templates, URI's, redirects, requests and flash messages.
     
-- [BSON](https://en.wikipedia.org/wiki/BSON) was used to access the data in MongoDB and to access ID's
-Werkzeug
+- [BSON](https://en.wikipedia.org/wiki/BSON) was used to access the data in MongoDB and to access ID's.
 
-- [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) was user to hash password entry when registering to the site and encrypting on MongoDB.
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) was used to hash password entry when registering to the site and encrypting on MongoDB.
 
 -   [W3Schools](https://www.w3schools.com/) for providing a wealth of information about HTML, CSS and JavaScript. It was a very informative and beneficial resource.
     
@@ -408,3 +426,4 @@ Werkzeug
 
 Input Fields: https://materializecss.com/text-inputs.html
 Buttons: https://materializecss.com/buttons.html
+
