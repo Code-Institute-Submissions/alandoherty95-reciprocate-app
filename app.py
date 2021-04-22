@@ -156,7 +156,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
-# categories
+# view categories
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))

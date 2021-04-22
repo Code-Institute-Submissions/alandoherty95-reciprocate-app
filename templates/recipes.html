@@ -4,14 +4,14 @@
     <!-- greeting card -->
     <div class="container valign-wrapper">
         <div class="row">
-            <div class="col s10 offset-s1 valign">
+            <div class="col valign">
                 <div class="card greeting-card">
                     <div class="card-content">
                         <div class="card-title center">
                             <h1 class="center-align">Recip<span>rocate</span></h1>
-                            <p>Share your favourite food & drink recipes with our community!</p>
+                            <p>Share your favourite food & drink recipes with others!</p>
                             <hr>
-                            <p>Get involved today!</p>
+                            <p>Join our growing community today!</p>
                         </div>
                     </div>
                     <!-- all new recipe button -->
@@ -32,7 +32,8 @@
     </div>
     <!-- application name and description -->
     <div class="card">
-        <h6>About Reciprocate</h6><p>Share your favourite food & drink recipes with our community! Create your own profile now to enjoy the full experience. Search or scroll down to browse delicious recipes shared by other members.</p>
+        <h6>About Reciprocate</h6><p>Share your favourite food & drink recipes with other smoothie makers and cocktail shakers in our community!</p> 
+        <p>Create your own profile now to enjoy the full experience. Search or scroll down to browse delicious recipes shared by other members.</p>
     </div>
 
     <!-- search bar -->
@@ -41,12 +42,12 @@
             <h2 class="center-align">Our Favourite Recipes</h2>
             <p class="info">Search or scroll down to view all recipes shared by our community.</p>
             <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
+                <div class="input-field col s12">
                     <i class="fas fa-search-prefix"></i>
                     <input type="text" name="query" id="query" minlenght="3" class="validate" required>
                     <label for="query">Search for Recipes</label>
                 </div>
-                <div class="col s12 m4">
+                <div class="col s12">
                     <a href="{{ url_for('get_recipes') }}" class="btn-small">Clear</a>
                     <button type="submit" class="btn-small">Search</button>
                 </div>

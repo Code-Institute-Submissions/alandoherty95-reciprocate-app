@@ -66,6 +66,7 @@ p {
 
 .extended .recip {
   color: #ff6e4e;
+  margin-left: 0.5rem;
 }
 
 .brand-logo > span {
@@ -87,6 +88,7 @@ p {
 
 .flashes h4 {
   line-height: 2;
+  color: #ffffff;
 }
 
 .btn-small {
@@ -112,8 +114,8 @@ h1 > span {
 }
 
 .greeting-card {
-  margin: 2rem;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 1rem;
   background-color: #ffffff;
 }
 
@@ -168,11 +170,32 @@ img.activator {
 }
 
 /* media queries */
-/*
-@media only screen and (min-width: 992px) {
 
+@media only screen and (min-width: 992px) {
+    img.activator {
+    height: auto;
+    width: 18rem;
+  }
+
+  h1 {
+    color: #ff6e4e;
+    font-size: 2.4rem;
+  }
+  
+  h2 {
+    color: #ff6e4e;
+    font-size: 2.4rem;
+  }
+  
+  h6 {
+    color: #ff6e4e;
+    font-size: 1.4rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
 }
-*/
 
 @media only screen and (min-width: 768px) {
   img.activator {
