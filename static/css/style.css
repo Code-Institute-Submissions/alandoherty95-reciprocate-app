@@ -56,6 +56,10 @@ p {
   background-color: #fea201;
 }
 
+.btn-small:after, .btn-large:after {
+  background-color: #fea201;
+}
+
 .extended {
   background-color: #ffffff;
 }
@@ -152,6 +156,12 @@ h1 > span {
 }
 
 img.activator {
+  height: auto;
+  width: 20rem;
+  margin-right: 2rem;
+}
+
+.card-image img.activator {
   height: auto;
   width: 20rem;
   margin-right: 2rem;
