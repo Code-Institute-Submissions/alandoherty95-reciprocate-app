@@ -3,22 +3,18 @@
 
     <div class="row">
         <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
-                <h2 class="profile center-align">{{ username }}'s Profile</h2>
+            <div class="card-panel center-align">
+                <h2 class="profile">{{ username }}'s Profile</h2>
+                <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
             </div>
         </div>
     </div>
 
-    <div class="card-action center">
-        <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
-    </div>
-
-    <h2 class="center-align">Our Favourite Recipes</h2>
-    <p class="info">Scroll down to view all recipes shared by you.</p>
-
     <!-- search bar -->
     <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <h2 class="center-align">Our Favourite Recipes</h2>
+            <p class="info center-align">Search or scroll down to view all recipes shared by you.</p>
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 m8">
                     <i class="fas fa-search-prefix"></i>
@@ -70,5 +66,28 @@
             </div>
         {% endfor %}
     </ul>
+    <div class="card">
+        <div class="card-image">
+            <img class="activator" src="https://www.shsonline.ie/wp-content/uploads/2019/08/boxer_2_group-177x142.jpg">
+        </div>
+        <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">SHS</i></span>
+            <p><a href="https://www.shsonline.ie/">Visit SHS Website</a></p>
+        </div>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Shannon Hotel Supplies<i class="material-icons right">Close</i></span>
+            <h6>Address:</h6>
+            <p>Shannon Hotel Supplies
+            Unit 6D, Docklands Business Park,
+            Dock Rd, Limerick, Ireland</p>
+            <h6>Phone:</h6>
+            <p>Sales No: 1850 20 04 05
+            Phone: 061 410 622
+            Fax: 061 410 123</p>
+            <h6>Email:</h6>
+            <p>info@shsonline.ie</p>
+          <a href="https://www.shsonline.ie/" class="btn-small">Visit SHS Website</a>
+        </div>
+      </div>
 
 {% endblock %}

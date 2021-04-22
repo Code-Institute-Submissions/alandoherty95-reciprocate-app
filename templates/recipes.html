@@ -4,11 +4,11 @@
     <!-- greeting card -->
     <div class="container valign-wrapper">
         <div class="row">
-            <div class="col s10 valign">
+            <div class="col s10 offset-s1 valign">
                 <div class="card greeting-card">
                     <div class="card-content">
                         <div class="card-title center">
-                            <h1>Recip<span>rocate</span></h1>
+                            <h1 class="center-align">Recip<span>rocate</span></h1>
                             <p>Share your favourite food & drink recipes with our community!</p>
                             <hr>
                             <p>Get involved today!</p>
@@ -35,12 +35,11 @@
         <h6>About Reciprocate</h6><p>Share your favourite food & drink recipes with our community! Create your own profile now to enjoy the full experience. Search or scroll down to browse delicious recipes shared by other members.</p>
     </div>
 
-    <h2 class="center-align">Our Favourite Recipes</h2>
-    <p class="info">Search or scroll down to view all recipes shared by our community.</p>
-
     <!-- search bar -->
     <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <h2 class="center-align">Our Favourite Recipes</h2>
+            <p class="info">Search or scroll down to view all recipes shared by our community.</p>
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 m8">
                     <i class="fas fa-search-prefix"></i>
