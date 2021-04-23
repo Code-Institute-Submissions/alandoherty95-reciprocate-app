@@ -2,9 +2,42 @@
 
 Welcome to **Reciprocate** - share your favourite recipes!
 
+@@ Insert mockups
+@@ Insert live demo 
+
 **Reciprocate** is a community-based website aimed at anyone who enjoys trying new recipes or sharing their favourites recipes with the world. It is designed to allow users to share and contribute recipes ideas with each other. Users can share their own food and drink ideas with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind so people of all ages can get involved.
 
-In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand. The three main recipes types we are focusing on are smoothies, cocktails and snacks. The website does have the capability to add additional recipes types for selection.
+## Table of Contents
+
+1.  [**Context**]()
+
+2. [**UX**]()
+    
+3.  [**Scope**]()
+    
+4.  [**Structure**]()
+    
+5.  [**Wireframes**]()
+    
+6.  [**Technologies**]()
+
+7.  [**Database**]()
+    
+8.  [**Features**]()
+    
+9.  [**Testing**]()
+    
+10.  [**Bugs**]()
+    
+11.  [**Deployment**]()
+    
+12.  [**Credits**]()
+    
+13.  [**Acknowledgements**]()
+
+## Context 
+
+In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand. The three main recipes types we are focusing on are smoothies, cocktails and healthy snacks. The website does have the capability to add additional recipes types for selection.
 
 The website was designed using CRUD functionality. Create, Read, Update, and Delete (CRUD) are the four basic functions available to users of the website. 
 
@@ -16,34 +49,11 @@ Update — A function we can call when information about a particular recipe mus
 
 Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the  `recipe`  resource should contain all of the books it had before, except for the one recipe we just deleted. A similar process can be followed if a user wishes to remove a category from the database. 
 
-## Table of Contents
-
-1.  [**UX**]()
-    
-2.  [**Scope**]()
-    
-3.  [**Structure**]()
-    
-4.  [**Wireframe Mockups**]()
-    
-5.  [**Technologies**]()
-    
-6.  [**Features**]()
-    
-7.  [**Testing**]()
-    
-8.  [**Bugs**]()
-    
-9.  [**Deployment**]()
-    
-10.  [**Credits**]()
-    
-11.  [**Acknowledgements**]()
-    
-
 ----------
 
 ## User Experience (UX)
+
+### Overview
 
 The website was designed with a community-based approach in mind. It was created with three main objectives in mind:
 
@@ -51,7 +61,7 @@ The website was designed with a community-based approach in mind. It was created
     
 -   To allow convenient access to the recipes provided by all other members
     
--   To compiled the most popular recipes in a cookbook for publishing
+-   To promote a local catering supplier
     
 
 The website focuses on the following three types of recipes but it is not limited. Users can choose to add a new category for different recipe types.
@@ -60,31 +70,31 @@ The website focuses on the following three types of recipes but it is not limite
 
 **Cocktails:** are also becoming increasingly popular among adults. People have grown to appreciate the variety of taste and beauty of these artisan drinks. Our cocktail recipes allow users to create popular drinks themselves without having to rely solely on bartenders.
 
-**Snacks:** have also been a significant part of our diet. People have become more creative and adventurous with their snacking habits in recent years. Our snack recipes offer choice for people constantly on-the-go.
+**Healthy Snacks:** have also been a significant part of our diet. People have become more creative and adventurous with their snacking habits in recent years. Our snack recipes offer choice for people constantly on-the-go.
 
 
 ### User Stories
 
-#### As a first-time visitor, I want:
+#### As a first-time visitor, I want to:
 
--   To immediately understand the purpose of the website
--   To easily create an account
--   To browse all recipes without having to register
--   To be able to search for keywords 
+-   Immediately understand the purpose of the website
+-   Easily create an account
+-   Browse all recipes without having to register
+-   Be able to search for keywords 
 
-#### As a returning visitor, I want:
+#### As a returning visitor, I want to:
 
--   To log in and out easily
--   To add new recipes quickly and easily
--   To edit or delete recipes I have already shared
--   To view all recipes I have shared on my profile
+-   Log in and out easily
+-   Add new recipes quickly and easily
+-   Edit or delete recipes I have already shared
+-   View all recipes I have shared on my profile
 
 
 ### Users:
 
 -   As an individual who likes to keep a healthy lifestyle, I want to find tasty food and drink recipes to try at home.
     
--   As a food lover, I would like to share recipe ideas for light snacks and smoothies with other people with similar interests.
+-   As a food lover, I would like to share recipe ideas for healthy snacks and smoothies with other people with similar interests.
     
 -   As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones. 
     
@@ -114,7 +124,7 @@ In order for this user to browse all recipes:
     
 -   Click on any selection to view additional information about the recipe.
     
-**User Story 2:**  As a food lover, I would like to share recipe ideas for light snacks and smoothies with other people with similar interests.
+**User Story 2:**  As a food lover, I would like to share recipe ideas for healthy snacks and smoothies with other people with similar interests.
 
 When I am logged into my profile, I can add a new recipe in just a few steps.
 
@@ -149,13 +159,16 @@ In order for this user to browse all recipes:
 ### Design
 
 -   #### Colour Scheme
+    The colour scheme chosen for this project was inspired by natural colours found in fruit and vegetables. These colours give the website an attractive, vibrant look.
     
+@@ Insert colour scheme
 
 -   #### Typography
     
 
 
 -   #### Imagery
+Images used on this website were chosen from [Pexels](https://www.pexels.com/). 
     
 ## Scope 
 
@@ -209,9 +222,9 @@ The minimum features to be included in this project are as follows:
 
 
 
-#### Wireframe Mockups
+#### Wireframes
 
-Wireframes can be found in this [folder](https://github.com/alandoherty95/reciprocate-app/tree/master/resources)
+Wireframe mockups can be found in this [folder](https://github.com/alandoherty95/reciprocate-app/tree/master/resources)
 
 ## Languages used
 
@@ -264,9 +277,53 @@ Wireframes can be found in this [folder](https://github.com/alandoherty95/recipr
    
 ## Database
 
+MongoDB was chosen as the database program for this application. It is a source-available cross-platform document-oriented database program. MongoDB's non-relational database structure was suitable because the number of collections is small as well as the relationships between them.
+
+@@ Insert table for MongoDB collection
+
+  **Categories**
+  **Recipes**
+  **Users**
 
 
 ## Features
+
+**Materialize CSS**:
+
+-   [Cards](https://materializecss.com/cards.html)
+-   [Forms](https://materializecss.com/text-inputs.html)
+-   [Menu dropdown](https://materializecss.com/dropdown.html)
+-   [Modals](https://materializecss.com/modals.html)
+-   [Sidenav](https://materializecss.com/sidenav.html)
+
+**2. Secure Registration**
+
+In order to register an account, the user must enter a unique username and a password. The password is hashed so it is not visible to the owner of the database. Werkzeug was used to hash the password entry when registering to the site and encrypting on MongoDB.
+
+**3. CRUD functionality**
+
+New visitors have the ability to:
+
+-   View all recipes shared by other members.
+
+Users with an account have the ability to:
+
+-   Share their own recipes.
+-   View all recipes shared by other members.
+-   Edit their own recipes.
+-   Delete their own activities.
+
+The admin has the ability to:
+
+-   Share their own recipes.
+-   View all recipes shared by other members.
+-   Edit their own recipes.
+-   Delete their own activities.
+-   Add a new recipe type.
+-   Edit an existing recipes type.
+-   Delete an existing recipes type.
+
+----
 
 -   **Discover new recipes**  
     The homepage displays all recipes that have been shared on the application. Each selection shows the recipe type, the recipe name and an image. Users can reveal more information about the recipe by clicking on each selection. Users can view the suggested ingredients, instructions and the username of the person who shared the idea.
@@ -287,11 +344,13 @@ Wireframes can be found in this [folder](https://github.com/alandoherty95/recipr
 ### Features to Implement in the Future
 
 -   **Like your favourite recipes**  
-    Users will be able to like or vote for their favourite recipe ideas. Recipes with the most votes or likes will be promoted more favourably than the rest. These recipes will be compiled and published in a recipe book.
+    Users will be able to like or favourite their favourite recipe ideas. Recipes with the most votes or likes will be promoted more favourably than the rest. These recipes will be compiled and published in a recipe book.
     
--   **Compiled a recipe book**
-	The most popular recipes shared on the application will be compiled and published in a recipe book. The recipe book will contain details and images of the recipe. It will also give recognition to the users who originally shared the recipe. 
+-   **Up Vote/Down Vote**
+	Users could have the option of voting in favour of or against certain recipes. This feature could be considered instead of a 'like' feature.
 
+-   **Share your recipes**
+	Users could have the option of sharing their favourite recipes via email or on social media. 
 
 
 ## Testing
@@ -426,4 +485,3 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 Input Fields: https://materializecss.com/text-inputs.html
 Buttons: https://materializecss.com/buttons.html
-
