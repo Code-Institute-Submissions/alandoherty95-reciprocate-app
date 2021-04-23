@@ -60,15 +60,15 @@
         {% for recipe in recipes %}
         <li>
             <div class="collapsible-header">
-                <div class="col s12">
-                    <img class="activator" src="{{ recipe.image_url }}" alt="Image of Recipe">
+                <div class="col">
+                    <img class="activator" src="{{ recipe.image_url }}" alt="recipe">
                 </div>
-                <div class="col s12">
+                <div class="col">
+                    <i class="fas fa-carret-down"></i>
                     <h4>{{ recipe.recipe_name }}</h4>
                     <h5>{{ recipe.category_name }}</h5>
-                    <p>Click to reveal more details!</p>
                     {% if session.user|lower == recipe.created_by|lower %}
-                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
+                        <a href="#modal-{{recipe._id}}" class="btn-small modal-trigger">Delete</a>
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>
                     {% endif %}
                 </div>
@@ -88,14 +88,14 @@
                 <!-- cancel and delete buttons -->
                 <div class="modal-footer">
                     <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small">Cancel</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>                    
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
                 </div>
             </div>
         {% endfor %}
     </ul>
     <!-- no search results found -->
-    {% else %}
-        <h6 class="center-align">No Results Found. Please try other words.</h6>
-    {% endif %}
+        {% else %}
+            <h6 class="center-align">No Results Found. Please try other words.</h6>
+        {% endif %}
 
 {% endblock %}

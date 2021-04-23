@@ -171,7 +171,7 @@ def add_category():
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.insert_one(category)
-        flash("New category was successfully added")
+        flash("New recipe type was successfully added")
         return redirect(url_for("get_categories"))
 
     return render_template("add_category.html")
@@ -185,7 +185,7 @@ def edit_category(category_id):
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
-        flash('Category was successfully updated!')
+        flash('Recipe type was successfully updated!')
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
@@ -196,7 +196,7 @@ def edit_category(category_id):
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash('Category was successfully deleted!')
+    flash('Recipe type was successfully deleted!')
     return redirect(url_for("get_categories"))
 
 
