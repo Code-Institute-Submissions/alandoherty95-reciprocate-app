@@ -1,101 +1,109 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="row">
     <!-- greeting card -->
-    <div class="container valign-wrapper">
-        <div class="row">
-            <div class="col valign">
-                <div class="card greeting-card">
-                    <div class="card-content">
-                        <div class="card-title center">
-                            <h1 class="center-align">Recip<span>rocate</span></h1>
-                            <p>Share your favourite food & drink recipes with others!</p>
-                            <hr>
-                            <p>Join our growing community today!</p>
-                        </div>
+    <div class="col s12 m6 l6">
+            <div class="card greeting-card">
+                <div class="card-content">
+                    <div class="card-title center">
+                        <h1 class="center-align">Recip<span>rocate</span></h1>
+                        <p>Join our growing community today!</p>
                     </div>
-                    <!-- all new recipe button -->
-                    {% if session.user %}
-                        <div class="card-action center">
-                            <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
-                        </div>
-                    <!-- log in and register buttons -->
-                    {% else %}
-                        <div class="card-action center">
-                            <a class="btn-large" href="{{ url_for('login') }}">Log In</a>
-                            <a class="btn-large" href="{{ url_for('register') }}">Register</a>
-                        </div>
-                    {% endif %}
                 </div>
+                <!-- all new recipe button -->
+                {% if session.user %}
+                <div class="card-action center">
+                    <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+                </div>
+                <!-- log in and register buttons -->
+                {% else %}
+                <div class="card-action center">
+                    <a class="btn-large" href="{{ url_for('login') }}">Log In</a>
+                    <a class="btn-large" href="{{ url_for('register') }}">Register</a>
+                </div>
+                {% endif %}
+            </div>
+    </div>
+    <div class="col s12 m6 l6">
+            <div class="card greeting-card">
+                <!-- application name and description -->
+                <div class="card-title">
+                    <h6>About Reciprocate</h6>
+                    <p>Share your favourite food & drink recipes with other smoothie makers and cocktail shakers in our
+                        community!</p>
+                    <p>Create your own profile now to enjoy the full experience. Search or scroll down to browse delicious
+                        recipes shared by other members.</p>
+                </div>
+            </div>
+    </div>
+</div>    
+<!-- search bar -->
+<div class="row card-panel">
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+        <h2 class="center-align">Our Favourite Recipes</h2>
+        <p class="info">Search or scroll down to view all recipes shared by our community.</p>
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12">
+                <i class="fas fa-search-prefix"></i>
+                <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                <label for="query">Search for Recipes</label>
+            </div>
+            <div class="col s12">
+                <a href="{{ url_for('get_recipes') }}" class="btn-small">Clear</a>
+                <button type="submit" class="btn-small">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- all recipes displayed -->
+{% if recipes|length > 0 %}
+<div class="row">
+    {% for recipe in recipes %}
+    <div class="col s12 m6 l6">
+        <div class="card card-recipe">
+            <div class="card-image">
+                <img class="activator" src="{{ recipe.image_url }}">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator">
+                    <h4>{{ recipe.recipe_name }}</h4>
+                    <p>{{ recipe.category_name }}</p>
+                </span>
+                <a href="#modal-{{recipe._id}}" class="btn-small modal-trigger">Delete</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title">
+                    <h4>{{ recipe.recipe_name }}</h4>
+                    <i class="far fa-times-circle right"></i>
+                </span>
+                <h6>What do I need?</h6>
+                <p>{{ recipe.recipe_ingredients }}</p>
+                <h6>What do I do?</h6>
+                <p>{{ recipe.recipe_instructions }}</p>
+                <h6>Shared by:</h6>
+                <p>{{ recipe.created_by }}</p>
+            </div>
+        </div>
+        <!-- modal to confirm action before deleting a recipe -->
+        <div id="modal-{{recipe._id}}" class="modal">
+            <div class="modal-content">
+                <h4 class="text center-align">Delete this tasty recipe?</h4>
+                <p class="center-align">This recipe will be permanently deleted</p>
+            </div>
+            <!-- cancel and delete buttons -->
+            <div class="modal-footer">
+                <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small">Cancel</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
             </div>
         </div>
     </div>
-    <!-- application name and description -->
-    <div class="card">
-        <h6>About Reciprocate</h6><p>Share your favourite food & drink recipes with other smoothie makers and cocktail shakers in our community!</p> 
-        <p>Create your own profile now to enjoy the full experience. Search or scroll down to browse delicious recipes shared by other members.</p>
-    </div>
-
-    <!-- search bar -->
-    <div class="row card-panel">
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <h2 class="center-align">Our Favourite Recipes</h2>
-            <p class="info">Search or scroll down to view all recipes shared by our community.</p>
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12">
-                    <i class="fas fa-search-prefix"></i>
-                    <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                    <label for="query">Search for Recipes</label>
-                </div>
-                <div class="col s12">
-                    <a href="{{ url_for('get_recipes') }}" class="btn-small">Clear</a>
-                    <button type="submit" class="btn-small">Search</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <!-- all recipes -->
-    {% if recipes|length > 0 %}
-    <ul class="collapsible">
-        {% for recipe in recipes %}
-        <li>
-            <div class="collapsible-header">
-                <div class="col">
-                    <img class="activator" src="{{ recipe.image_url }}" alt="recipe">
-                </div>
-                <div class="col">
-                    <i class="fas fa-carret-down"></i>
-                    <h4>{{ recipe.recipe_name }}</h4>
-                    <h5>{{ recipe.category_name }}</h5>
-                    {% if session.user|lower == recipe.created_by|lower %}
-                        <a href="#modal-{{recipe._id}}" class="btn-small modal-trigger">Delete</a>
-                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="collapsible-body">
-                <h6>What do I need?</h6><p>{{ recipe.recipe_ingredients }}</p>
-                <h6>What do I do?</h6><p>{{ recipe.recipe_instructions }}</p>
-                <h6>Shared by:</h6><p>{{ recipe.created_by }}</p>
-            </div>
-        </li>
-            <!-- modal to confirm action before deleting a recipe -->
-            <div id="modal-{{recipe._id}}" class="modal">
-                <div class="modal-content">
-                    <h4 class="text center-align">Delete this tasty recipe?</h4>
-                    <p class="center-align">This recipe will be permanently deleted</p>
-                </div>
-                <!-- cancel and delete buttons -->
-                <div class="modal-footer">
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small">Cancel</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
-                </div>
-            </div>
-        {% endfor %}
-    </ul>
-    <!-- no search results found -->
-        {% else %}
-            <h6 class="center-align">No Results Found. Please try other words.</h6>
-        {% endif %}
+    {% endfor %}
+</div>
+<!-- no search results found -->
+{% else %}
+<h6 class="center-align">No Results Found. Please try again.</h6>
+{% endif %}
 
 {% endblock %}

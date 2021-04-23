@@ -1,28 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="center-align">Add New Recipe Type</h2>
-    <p class="info">Add a new category by entering the name below.</p>
+<h2 class="center-align">Add New Recipe Type</h2>
+<p class="info">Add a new category by entering the name below.</p>
 
-    <div class="row card-panel">
-        <form class="col s12" method="POST" action="{{ url_for('add_category') }}">
-            <!-- category name input -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix"></i>
-                    <input id="category_name" name="category_name" minlenght="4" maxlenght="28" type="text" class="validate" required>
-                    <label for="category_name">Name of Category</label>
-                </div>
-            </div>            
-            <!-- submit button -->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <button type="submit" class="btn-large">
-                        Add New Category <i class="fas fa-plus-square right"></i>
-                    </button>
-                </div>
+<div class="row card-panel">
+    <form class="col s12" method="POST" action="{{ url_for('add_category') }}">
+        <!-- category name input -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix"></i>
+                <input id="category_name" name="category_name" minlenght="4" maxlenght="28" type="text" class="validate"
+                    required>
+                <label for="category_name">Name of Category</label>
             </div>
-        </form>
-    </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large">
+                    Add New Category <i class="fas fa-plus-square right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

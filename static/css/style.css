@@ -43,6 +43,22 @@ p {
   font-size: 1.2rem;
 }
 
+.greeting-card p {
+  font-size: 1.3rem;
+}
+
+.greeting-card h6 {
+  font-size: 1.6rem;
+}
+
+.card-title {
+  padding: 0.5rem;
+}
+
+.card-panel {
+  padding: 0;
+}
+
 .info {
   text-align: center;
 }
@@ -119,8 +135,8 @@ h1 > span {
   background-color: #ffffff;
 }
 
-.card {
-  padding: 3rem;
+.card-recipe {
+  min-height: 350px;
 }
 
 .card .card-action {
@@ -157,15 +173,13 @@ h1 > span {
   padding: 1rem;
 }
 
-img.activator {
-  height: auto;
-  width: 20rem;
-  margin-right: 2rem;
+.card {
+  padding: 0.5rem;
 }
 
 .card-image img.activator {
   height: auto;
-  width: 20rem;
+  width: 100%;
   margin-right: 2rem;
 }
 

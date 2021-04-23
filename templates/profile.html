@@ -1,103 +1,114 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="card-panel center-align">
-                <h2 class="profile">{{ username }}'s Profile</h2>
-                <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
-            </div>
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel center-align">
+            <h2 class="profile">{{ username }}'s Profile</h2>
+            <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
         </div>
     </div>
+</div>
 
-    <!-- search bar -->
-    <div class="row card-panel">
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <h2 class="center-align">Our Favourite Recipes</h2>
-            <p class="info center-align">Search or scroll down to view all recipes shared by you.</p>
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search-prefix"></i>
-                    <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                    <label for="query">Search for Recipes</label>
-                </div>
-                <div class="col s12 m4">
-                    <a href="{{ url_for('get_recipes') }}" class="btn-small">Clear</a>
-                    <button type="submit" class="btn-small">Search</button>
-                </div>
+<!-- search bar -->
+<div class="row card-panel">
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+        <h2 class="center-align">Our Favourite Recipes</h2>
+        <p class="info center-align">Search or scroll down to view all recipes shared by you.</p>
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search-prefix"></i>
+                <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                <label for="query">Search for Recipes</label>
             </div>
-        </form>
-    </div>
-    <!-- all recipes -->
-    <ul class="collapsible">
-        {% for recipe in recipes %}
-        <li>
-            <div class="collapsible-header">
-                <div class="col">
-                    <img class="activator" src="{{ recipe.image_url }}" alt="recipe">
-                </div>
-                <div class="col">
-                    <i class="fas fa-carret-down"></i>
+            <div class="col s12 m4">
+                <a href="{{ url_for('get_recipes') }}" class="btn-small">Clear</a>
+                <button type="submit" class="btn-small">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- all recipes -->
+{% if recipes|length > 0 %}
+<div class="row">
+    {% for recipe in recipes %}
+    <div class="col s12 m6 l6">
+        <div class="card card-recipe">
+            <div class="card-image">
+                <img class="activator" src="{{ recipe.image_url }}">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator">
                     <h4>{{ recipe.recipe_name }}</h4>
-                    <h5>{{ recipe.category_name }}</h5>
-                    {% if session.user|lower == recipe.created_by|lower %}
-                        <a href="#modal-{{recipe._id}}" class="btn-small modal-trigger">Delete</a>
-                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>
-                    {% endif %}
-                </div>
+                    <p>{{ recipe.category_name }}</p>
+                </span>
+                <a href="#modal-{{recipe._id}}" class="btn-small modal-trigger">Delete</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>
             </div>
-            <div class="collapsible-body">
-                <h6>What do I need?</h6><p>{{ recipe.recipe_ingredients }}</p>
-                <h6>What do I do?</h6><p>{{ recipe.recipe_instructions }}</p>
-                <h6>Shared by:</h6><p>{{ recipe.created_by }}</p>
+            <div class="card-reveal">
+                <span class="card-title">
+                    <h4>{{ recipe.recipe_name }}</h4>
+                    <i class="far fa-times-circle right"></i>
+                </span>
+                <h6>What do I need?</h6>
+                <p>{{ recipe.recipe_ingredients }}</p>
+                <h6>What do I do?</h6>
+                <p>{{ recipe.recipe_instructions }}</p>
+                <h6>Shared by:</h6>
+                <p>{{ recipe.created_by }}</p>
             </div>
-        </li>
-            <!-- modal to confirm action before deleting a recipe -->
-            <div id="modal-{{recipe._id}}" class="modal">
-                <div class="modal-content">
-                    <h4 class="text center-align">Delete this tasty recipe?</h4>
-                    <p class="center-align">This recipe will be permanently deleted</p>
-                </div>
-                <!-- cancel and delete buttons -->
-                <div class="modal-footer">
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small">Cancel</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
-                </div>
-            </div>
-        {% endfor %}
-    </ul>
-    <!-- no search results found -->
-        {% else %}
-            <h6 class="center-align">No Results Found. Please try other words.</h6>
-        {% endif %}
-    <div class="card">
-        <div class="card-image">
-            <img class="activator" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png">
         </div>
-        <div class="card-content">
-            <span class="card-title activator">
+        <!-- modal to confirm action before deleting a recipe -->
+        <div id="modal-{{recipe._id}}" class="modal">
+            <div class="modal-content">
+                <h4 class="text center-align">Delete this tasty recipe?</h4>
+                <p class="center-align">This recipe will be permanently deleted</p>
+            </div>
+            <!-- cancel and delete buttons -->
+            <div class="modal-footer">
+                <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small">Cancel</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>}
+<!-- no search results found -->
+{% else %}
+<h6 class="center-align">No Results Found. Please try again.</h6>
+{% endif %}
+
+<div class="card">
+    <div class="card-image">
+        <img class="activator" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png">
+    </div>
+    <div class="card-content">
+        <span class="card-title activator">
             <h4>Shannon Hotel Supplies</h4>
-            <p>Click to reveal more about SHS. The family business originated from our dedicated service base in Limerick which traditionally covered the mid-west region of the country.</p>
+            <p>Click to reveal more about SHS. The family business originated from our dedicated service base in
+                Limerick which traditionally covered the mid-west region of the country.</p>
             <p>Browse through the range of smoothie makers and cocktail shakers!</p>
-            </span>
-            <p><a href="https://www.shsonline.ie/" target="_blank" class="btn-small">Visit SHS Website</a></p>
-        </div>
-        <div class="card-reveal">
-            <span class="card-title"><h4>Shannon Hotel Supplies</h4><i class="far fa-times-circle right"></i></span>
-            <h6>Address:</h6>
-            <ul>
-                <li>Shannon Hotel Supplies,</li>
-                <li>Unit 6D,</li>
-                <li>Docklands Business Park,</li>
-                <li>Dock Rd,</li>
-                <li>Limerick.</li>
-            </ul>
-            <h6>Phone:</h6>
-            <p>1850 20 04 05</p>
-            <h6>Email:</h6>
-            <p>info@shsonline.ie</p>
-          <a href="https://www.shsonline.ie/" target="_blank" class="btn-small">Visit SHS Website</a>
-        </div>
-      </div>
+        </span>
+        <p><a href="https://www.shsonline.ie/" target="_blank" class="btn-small">Visit SHS Website</a></p>
+    </div>
+    <div class="card-reveal">
+        <span class="card-title">
+            <h4>Shannon Hotel Supplies</h4><i class="far fa-times-circle right"></i>
+        </span>
+        <h6>Address:</h6>
+        <ul>
+            <li>Shannon Hotel Supplies,</li>
+            <li>Unit 6D,</li>
+            <li>Docklands Business Park,</li>
+            <li>Dock Rd,</li>
+            <li>Limerick.</li>
+        </ul>
+        <h6>Phone:</h6>
+        <p>1850 20 04 05</p>
+        <h6>Email:</h6>
+        <p>info@shsonline.ie</p>
+        <a href="https://www.shsonline.ie/" target="_blank" class="btn-small">Visit SHS Website</a>
+    </div>
+</div>
 
 {% endblock %}
