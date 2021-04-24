@@ -1,6 +1,5 @@
   $(document).ready(function(){
-    $(".sidenav").sidenav();
-    $('.collapsible').collapsible();
+    $(".sidenav").sidenav({edge: "right"});
     $('select').formSelect();
     $('.modal').modal();
 

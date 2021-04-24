@@ -62,7 +62,7 @@
         <div id="modal-{{recipe._id}}" class="modal">
             <div class="modal-content">
                 <h4 class="text center-align">Delete this tasty recipe?</h4>
-                <p class="center-align">This recipe will be permanently deleted</p>
+                <h5 class="center-align">This recipe will be permanently deleted</h5>
             </div>
             <!-- cancel and delete buttons -->
             <div class="modal-footer">
@@ -75,7 +75,7 @@
 </div>}
 <!-- no search results found -->
 {% else %}
-<h6 class="center-align">No Results Found. Please try again.</h6>
+    <h6 class="center-align no-result">No Results Found. Please try a different word or press clear.</h6>
 {% endif %}
 
 <div class="card">

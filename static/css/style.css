@@ -16,6 +16,14 @@ nav ul a {
   color: #ff6e4e;
 }
 
+.container {
+  width: 100%;
+}
+
+.sidenav ul {
+  color: #ff6e4e;
+}
+
 h1 {
   color: #ff6e4e;
   font-size: 3rem;
@@ -43,6 +51,37 @@ p {
   font-size: 1.2rem;
 }
 
+#home-top-section {
+  overflow: hidden;
+  position: relative;
+  height: 50em;
+  width: 100%;
+}
+
+#home-cover-image {
+  height: 50em;
+  width: 100%;
+  background-image: url("https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  animation-name: hero-zoom;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.card-title p {
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.card-title > span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .greeting-card p {
   font-size: 1.3rem;
 }
@@ -53,10 +92,6 @@ p {
 
 .card-title {
   padding: 0.5rem;
-}
-
-.card-panel {
-  padding: 0;
 }
 
 .info {
@@ -177,10 +212,19 @@ h1 > span {
   padding: 0.5rem;
 }
 
+.card-recipe {
+  max-height: 60%;
+}
+
 .card-image img.activator {
-  height: auto;
   width: 100%;
-  margin-right: 2rem;
+  height: auto;
+}
+
+.no-result {
+  background-color:#ff6e4e;
+  color: #ffffff;
+  line-height: 3;
 }
 
 /* media queries */
