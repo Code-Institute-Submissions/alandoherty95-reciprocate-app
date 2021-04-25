@@ -82,14 +82,6 @@ p {
   right: 0;
 }
 
-.greeting-card p {
-  font-size: 1.3rem;
-}
-
-.greeting-card h6 {
-  font-size: 1.6rem;
-}
-
 .card-title {
   padding: 0.5rem;
 }
@@ -164,14 +156,8 @@ h1 > span {
   color: #fea201;
 }
 
-.greeting-card {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: #ffffff;
-}
-
 .card-recipe {
-  min-height: 350px;
+  max-height: 50rem;
 }
 
 .card .card-action {
@@ -208,17 +194,13 @@ h1 > span {
   padding: 1rem;
 }
 
-.card {
-  padding: 0.5rem;
-}
-
-.card-recipe {
-  max-height: 60%;
-}
-
 .card-image img.activator {
-  width: 100%;
-  height: auto;
+  width: 80%;
+  height: 28rem;
+  padding: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .no-result {
@@ -230,11 +212,6 @@ h1 > span {
 /* media queries */
 
 @media only screen and (min-width: 992px) {
-    img.activator {
-    height: auto;
-    width: 18rem;
-  }
-
   h1 {
     color: #ff6e4e;
     font-size: 2.4rem;
@@ -256,11 +233,6 @@ h1 > span {
 }
 
 @media only screen and (min-width: 768px) {
-  img.activator {
-    height: auto;
-    width: 15rem;
-  }
-
   h1 {
     color: #ff6e4e;
     font-size: 2.4rem;
@@ -282,10 +254,6 @@ h1 > span {
 }
 
 @media only screen and (max-width: 600px) {
-  img.activator {
-    height: auto;
-    width: 10rem;
-  }
   h1 {
     color: #ff6e4e;
     font-size: 2rem;
