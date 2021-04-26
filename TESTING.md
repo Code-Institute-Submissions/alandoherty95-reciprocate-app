@@ -125,7 +125,7 @@ The following tests have been carried out manually without raising an issue:
  
 - Navbar is visible at the top of the screen displaying:
  
-- - **Users not logged in**: Home, Log In & Register.
+- **Users not logged in**: Home, Log In & Register.
  
 - **Users logged in**: Home, Profile, New Recipe & Log Out.
  

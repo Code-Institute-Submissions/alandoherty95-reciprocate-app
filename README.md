@@ -109,53 +109,6 @@ The website focuses on the following three types of recipes but it is not limite
 
 -   As the owner, I want to compile the most popular recipes shared by users to create a cookbook.
 
-
-### Testing - User Stories
-
-**User Story 1:**  As an individual who likes to keep a healthy lifestyle, I want to find tasty food and drink recipes to try at home.
-
-I can open the main homepage and scroll down to quickly view all recipes that have been shared by other members of the community.
-
-In order for this user to browse all recipes:
-
--   Open homepage of website.
-    
--   Scroll down slightly to view ‘Our Favourite Recipes'.
-    
--   Click on any selection to view additional information about the recipe.
-    
-**User Story 2:**  As a food lover, I would like to share recipe ideas for healthy snacks and smoothies with other people with similar interests.
-
-When I am logged into my profile, I can add a new recipe in just a few steps.
-
-In order for this user to share recipe ideas:
-
--   Open homepage of website.
-    
--   Click on the 'Log In' button.
-    
--   Enter 'Username' and 'Password' and click the 'Log In' button.
-    
--   Navigate to the 'Add New Recipe' tab in the Navigation Bar.
-
-- Input details such as 'Recipe Type', 'Name of Recipe', 'Ingredients' and 'Instructions'.
-
-- Click the 'Add New Recipe' button.
-    
-**User Story 3:**  As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones.
-
-I can open the main homepage and scroll down to quickly view all recipes that have been shared by other members of the community.
-
-In order for this user to browse all recipes:
-
--   Open homepage of website.
-    
--   Scroll down slightly to view ‘Our Favourite Recipes'.
-    
--   Click on any selection to view additional information about the recipe.
-
-    
-
 ### Design
 
 -   #### Colour Scheme
@@ -441,7 +394,11 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 ### Known Bugs
 
-- Input fields are not populating on the edit_recipe page.
+- Edit Recipe form fields not populating: when editing a recipe, the existing information was not displayed in each of the fields to allow editing.
+- Deletion modal not functioning: The modal used for confirming an action before deleting was not popping up and the selection was deleted without confirmation
+-  Error in console due to one or more images not displaying.
+-  Website is loading slowly due to large number of images, compress images?
+- Recipe Types page is not displaying, only accessible for admin, enable admin function for username: aland
 
 
 ## Credits
