@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- home -->
 <section id="home-top-section">
     <!-- home cover image -->
     <div id="home-cover-image">
@@ -11,7 +12,7 @@
                 <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
         <!-- log in and register buttons -->
         {% else %}
-                <p>Join our growing community today!</p>
+                <p>Join our growing recipe-sharing community today!</p>
                 <!-- log in and register buttons -->
                 <a class="btn-large" href="{{ url_for('login') }}">Log In</a>
                 <a class="btn-large" href="{{ url_for('register') }}">Register</a>
