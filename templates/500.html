@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- 404 error handling -->
 <div class="container valign-wrapper">
    <div class="row">
       <div class="col valign">
@@ -12,6 +13,7 @@
                <p class="hometext center-align">Looks like something is not quite right!</p>
             </div>
             <div class="card-action center">
+               <!-- home button -->
                <a href="{{ url_for('get_recipes') }}" class="btn-large">Return to Home</a>
             </div>
          </div>

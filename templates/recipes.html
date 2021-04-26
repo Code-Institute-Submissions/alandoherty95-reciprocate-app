@@ -48,7 +48,7 @@
             <div class="card-image">
                 <img class="activator center" src="{{ recipe.image_url }}">
             </div>
-            <div class="card-content">
+            <div class="card-content center-align">
                 <span class="card-title activator">
                     <h4>{{ recipe.recipe_name }}</h4>
                     <h5>{{ recipe.category_name }}</h5>
@@ -60,13 +60,14 @@
             </div>
             <div class="card-reveal">
                 <span class="card-title">
-                    <h4>{{ recipe.recipe_name }}</h4>
                     <i class="far fa-times-circle right"></i>
+                    <h4>{{ recipe.recipe_name }}</h4>
+                    <h5>{{ recipe.category_name }}</h5><br>
                 </span>
                 <h6>What do I need?</h6>
-                <p>{{ recipe.recipe_ingredients }}</p>
+                <p>{{ recipe.recipe_ingredients }}</p><br>
                 <h6>What do I do?</h6>
-                <p>{{ recipe.recipe_instructions }}</p>
+                <p>{{ recipe.recipe_instructions }}</p><br>
                 <h6>Shared by:</h6>
                 <p>{{ recipe.created_by }}</p>
             </div>

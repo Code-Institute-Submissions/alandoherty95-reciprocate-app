@@ -11,7 +11,7 @@
 </div>
 
 <!-- search bar -->
-<div class="row card-panel">
+<div class="row card-panel search">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
         <h2 class="center-align">Our Favourite Recipes</h2>
         <p class="info center-align">Search or scroll down to view all recipes shared by you.</p>
@@ -37,7 +37,7 @@
             <div class="card-image">
                 <img class="activator" src="{{ recipe.image_url }}">
             </div>
-            <div class="card-content">
+            <div class="card-content center-align">
                 <span class="card-title activator">
                     <h4>{{ recipe.recipe_name }}</h4>
                     <h5>{{ recipe.category_name }}</h5>
@@ -72,7 +72,7 @@
         </div>
     </div>
     {% endfor %}
-</div>}
+</div>
 <!-- no search results found -->
 {% else %}
     <h6 class="center-align no-result">No Results Found. Please try a different word or press clear.</h6>
@@ -80,21 +80,24 @@
 
 <div class="card">
     <div class="card-image">
-        <img class="activator" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png">
+        <img class="activator shs-image" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png">
     </div>
-    <div class="card-content">
+    <div class="card-content center-align">
         <span class="card-title activator">
             <h4>Shannon Hotel Supplies</h4>
-            <p>Click to reveal more about SHS. The family business originated from our dedicated service base in
-                Limerick which traditionally covered the mid-west region of the country.</p>
-            <p>Browse through the range of smoothie makers and cocktail shakers!</p>
+            <p class="black-text">Click to reveal more about SHS.</p>
         </span>
         <p><a href="https://www.shsonline.ie/" target="_blank" class="btn-small">Visit SHS Website</a></p>
     </div>
     <div class="card-reveal">
         <span class="card-title">
-            <h4>Shannon Hotel Supplies</h4><i class="far fa-times-circle right"></i>
+            <i class="far fa-times-circle right"></i>
+            <h4>Shannon Hotel Supplies</h4>
         </span>
+        <ul>
+            <li>The family business originated from our dedicated service base in Limerick which traditionally covered the mid-west region of the country.</li>
+            <li>Browse through the range of smoothie makers and cocktail shakers!</li>
+        </ul>
         <h6>Address:</h6>
         <ul>
             <li>Shannon Hotel Supplies,</li>
@@ -107,7 +110,7 @@
         <p>1850 20 04 05</p>
         <h6>Email:</h6>
         <p>info@shsonline.ie</p>
-        <a href="https://www.shsonline.ie/" target="_blank" class="btn-small">Visit SHS Website</a>
+        <a href="https://www.shsonline.ie/" target="_blank" class="right btn-small">Visit SHS Website</a>
     </div>
 </div>
 

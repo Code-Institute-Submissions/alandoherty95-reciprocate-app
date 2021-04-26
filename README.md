@@ -485,3 +485,4 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 Input Fields: https://materializecss.com/text-inputs.html
 Buttons: https://materializecss.com/buttons.html
+Footer: https://materializecss.com/footer.html
