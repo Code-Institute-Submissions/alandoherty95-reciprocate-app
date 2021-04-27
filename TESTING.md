@@ -255,6 +255,18 @@ Recipe Cards:
 
 <span id="version-control"></span>
 
+### Lighthouse Opportunities
+
+ - Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles.
+
+ - Background and foreground colors do not have a sufficient contrast ratio: Low-contrast text is difficult or impossible for many users to read
+
+ - Displays images with incorrect aspect ratio: Image display dimensions should match natural aspect ratio.
+
+ - Document does not have a meta description: Meta descriptions may be included in search results to concisely summarize page content.
+
+ - 
+
 ## Version Control
 
 Throughout the production of this application, I used [Gitpod](https://gitpod.io/) as a local repository and [GitHub](https://github.com/) as a remote repository.
@@ -317,5 +329,7 @@ Once those steps are done, the website can be deployed and below are the steps o
 - Recipe Types page is not displaying, only accessible for admin, enable admin function for username: aland
 
 - Drop-down field in add new recipe form changes color to red after selecting next field
+
+- Favicons not displaying 
 
 <a href="#top">Return to Top</a>

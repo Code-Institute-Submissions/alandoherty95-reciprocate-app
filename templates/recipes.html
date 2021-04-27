@@ -6,7 +6,6 @@
         <!-- home cover image -->
         <div id="home-cover-image">
             <div class="card-title center">
-                <h1 class="center-align white-text">Recip<span>rocate</span></h1>
                 {% if session.user %}
                 <!-- add new recipe button -->
                 <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
@@ -50,7 +49,7 @@
         <div class="col s12 m6 l6">
             <div class="card card-recipe">
                 <div class="card-image">
-                    <img class="activator center" src="{{ recipe.image_url }}">
+                    <img class="activator center" src="{{ recipe.image_url }}" alt="Recipe Image">
                 </div>
                 <div class="card-content center-align">
                     <span class="card-title activator">
