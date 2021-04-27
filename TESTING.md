@@ -316,4 +316,6 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 - Recipe Types page is not displaying, only accessible for admin, enable admin function for username: aland
 
+- Drop-down field in add new recipe form changes color to red after selecting next field
+
 <a href="#top">Return to Top</a>

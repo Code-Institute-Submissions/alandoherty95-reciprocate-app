@@ -3,12 +3,17 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from flask_paginate import Pagination, get_page_args
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
 
+# pagination limit
+PER_PAGE = 4
+
+# flask app setup
 app = Flask(__name__)
 # config vars
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -18,12 +23,37 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# pagination
+# https://betterprogramming.pub/simple-flask-pagination-example-4190b12c2e2e
+def paginate(recipes):
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page')
+    offset = page * PER_PAGE - PER_PAGE
+
+    return recipes[offset: offset + PER_PAGE]
+
+
+def pagination_args(recipes):
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page')
+    total = len(recipes)
+
+    return Pagination(page=page, per_page=PER_PAGE, total=total)
+
+
+# routing
+
 @app.route("/")
 # recipes page
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    paginated_recipes = paginate(recipes)
+    pagination = pagination_args(recipes)
+    return render_template(
+        "recipes.html",
+        recipes=paginated_recipes,
+        pagination=pagination)
 
 
 # search function

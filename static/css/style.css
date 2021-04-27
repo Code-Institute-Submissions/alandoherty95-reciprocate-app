@@ -165,6 +165,16 @@ h1 > span {
   padding: 6rem;
 }
 
+/* pagination */
+
+.pagination {
+  text-align: center;
+}
+
+.pagination li.active {
+  background-color: #ff6e4e;
+}
+
 .page-footer {
   background-color: #ffffff;
   color: #fea201;
