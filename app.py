@@ -67,7 +67,7 @@ def search():
     return render_template(
         "recipes.html",
         recipes=recipes,
-        recipes=paginated_recipes,
+        paginated_recipes=paginated_recipes,
         pagination=pagination)
 
 
@@ -138,7 +138,7 @@ def profile(username):
         user = mongo.db.users.find_one({"username": session["user"]})
         user = list(user)
         recipes = mongo.db.recipes.find(
-            {"created_by": session["user"]}.sort("_id", -1))
+            {"created_by": session["user"]})
         recipes = list(recipes)
         return render_template(
             "profile.html",
