@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 
 body {
   background-color: #ffffff;
-  font-family: 'Merienda';
+  font-family: 'Orelega One', cursive;
 }
 
 nav ul a {
@@ -20,49 +21,50 @@ nav ul a {
 h1 {
   color: #ff6e4e;
   font-size: 3rem;
+  font-family: 'Merienda One', cursive;
 }
 
 h2 {
   color: #ff6e4e;
   font-size: 2.8rem;
+  font-family: 'Merienda One', cursive;
 }
 
 h4 {
   color: #ff6e4e;
+  font-family: 'Merienda One', cursive;
 }
 
 h5 {
   color: #fea201;
+  font-family: 'Merienda One', cursive;
 }
 
 h6 {
   color: #ff6e4e;
   font-size: 1.4rem;
+  font-family: 'Merienda One', cursive;
 }
 
 p {
   font-size: 1.2rem;
 }
 
-#home-top-section {
-  overflow: hidden;
-  position: relative;
-  height: 50em;
-  width: 100%;
+.cover-card {
+  background-color: #ff6e4e;
+  font-size: 2rem;
+  min-height: 30rem;
+  height: auto;
+  vertical-align: bottom;
+  letter-spacing: 1px;
 }
 
-#home-cover-image {
-  height: 50em;
-  width: 100%;
-  background-image: url("https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  position: absolute;
+.cover-card h5 {
+  font-size: 3rem;
 }
 
 .card {
-  border: 0.1rem solid #fea201;
+  border: 0.2rem solid #A9A9A9;
 }
 
 .card-title p {
@@ -97,6 +99,7 @@ p {
 
 .extended {
   background-color: #ffffff;
+  font-family: 'Merienda One', cursive;
 }
 
 .extended .recip {
@@ -158,6 +161,7 @@ h1 > span {
 
 .card-panel {
   padding: 0.5rem;
+  border: 0.2rem solid #A9A9A9;
 }
 
 .shs-image {
@@ -239,6 +243,10 @@ h1 > span {
     font-size: 1.2rem;
   }
 
+  .cover-card {
+    font-size: 1.8rem;
+  }
+
   .card-title p {
     font-size: 1.4rem;
   }
@@ -259,6 +267,10 @@ h1 > span {
   
   p {
     font-size: 1rem;
+  }
+
+  .cover-card {
+    font-size: 1.6rem;
   }
 
   .card-title p {
