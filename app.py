@@ -47,7 +47,7 @@ def pagination_args(recipes):
 # recipes page
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("_id", -1))
     paginated_recipes = paginate(recipes)
     pagination = pagination_args(recipes)
     return render_template(
@@ -60,8 +60,15 @@ def get_recipes():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipes.html", recipes=recipes)
+    recipes = list(mongo.db.recipes.find({
+        "$text": {"$search": query}}).sort("_id", -1))
+    paginated_recipes = paginate(recipes)
+    pagination = pagination_args(recipes)
+    return render_template(
+        "recipes.html",
+        recipes=recipes,
+        recipes=paginated_recipes,
+        pagination=pagination)
 
 
 # registration page
@@ -130,7 +137,8 @@ def profile(username):
         # displays all recipes shared by session user
         user = mongo.db.users.find_one({"username": session["user"]})
         user = list(user)
-        recipes = mongo.db.recipes.find({"created_by": session["user"]})
+        recipes = mongo.db.recipes.find(
+            {"created_by": session["user"]}.sort("_id", -1))
         recipes = list(recipes)
         return render_template(
             "profile.html",

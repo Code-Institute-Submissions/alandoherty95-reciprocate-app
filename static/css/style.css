@@ -12,6 +12,7 @@ nav ul a {
 
 .container {
   width: 100%;
+  max-width: none;
 }
 
 .sidenav ul {
@@ -53,7 +54,7 @@ p {
 .cover-card {
   background-color: #ff6e4e;
   font-size: 2rem;
-  min-height: 30rem;
+  min-height: 25rem;
   height: auto;
   vertical-align: bottom;
   letter-spacing: 1px;
@@ -80,6 +81,7 @@ p {
 
 .info {
   text-align: center;
+  font-size: 2rem;
 }
 
 .btn-small, .btn-large {
@@ -165,7 +167,6 @@ h1 > span {
 }
 
 .shs-image {
-  width: 40%;
   padding: 6rem;
 }
 
@@ -200,8 +201,9 @@ h1 > span {
   color: #ff6e4e;
 }
 
-.footer-copyright .container {
+.footer-copyright p {
   color: #ff6e4e;
+  margin: 0.4rem;
 }
 
 .forms {
@@ -210,12 +212,12 @@ h1 > span {
 }
 
 .card-image img.activator {
-  width: 80%;
-  height: 28rem;
   padding: 1rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 80%;
+  height: 28rem;
 }
 
 .no-result {
@@ -243,10 +245,6 @@ h1 > span {
     font-size: 1.2rem;
   }
 
-  .cover-card {
-    font-size: 1.8rem;
-  }
-
   .card-title p {
     font-size: 1.4rem;
   }
@@ -270,7 +268,7 @@ h1 > span {
   }
 
   .cover-card {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .card-title p {
@@ -293,6 +291,10 @@ h1 > span {
   
   p {
     font-size: 0.8rem;
+  }
+
+  .cover-card {
+    font-size: 1.2rem;
   }
 
   .card-title p {

@@ -4,7 +4,17 @@
 <!-- home -->
 <div id="home-cover">
     <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l4">
+            <div class="card-panel cover-card white-text">
+                <h5 class="white-text">Reciprocate</h5>
+                <ul>
+                    <li>verb</li>
+                    <li>re·​cip·​ro·​cate</li>
+                    <li>To respond to a gesture or action by making a corresponding one.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col s12 m6 l8">
             <div class="card-panel cover-card white-text">
                 <span>
                     {% if session.user %}
@@ -26,16 +36,6 @@
                     <a class="btn-large" href="{{ url_for('register') }}">Register</a>
                     {% endif %}
                 </span>
-            </div>
-        </div>
-        <div class="col s12 m6 l6">
-            <div class="card-panel cover-card white-text">
-                <h5 class="white-text">Reciprocate</h5>
-                <ul>
-                    <li>→ verb</li>
-                    <li>→ re·​cip·​ro·​cate</li>
-                    <li>→ To respond to a gesture or action by making a corresponding one.</li>
-                </ul>
             </div>
         </div>
     </div>

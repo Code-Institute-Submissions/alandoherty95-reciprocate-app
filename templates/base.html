@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicons/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename='favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ url_for('static', filename='favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ url_for('static', filename='favicons/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='favicons/site.webmanifest') }}">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -32,16 +35,16 @@
                     <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
                     <!-- only visible in user session -->
                     {% if session.user %}
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
-                    <!-- only visible in admin session -->
-                    {% if session.user|lower =="admin"|lower %}
-                    <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
-                    {% endif %}
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
+                        <!-- only visible in admin session -->
+                        {% if session.user|lower == "admin"|lower %}
+                            <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
+                        {% endif %}
+                            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -51,16 +54,16 @@
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
             <!-- only visible in user session -->
             {% if session.user %}
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
-            <!-- only visible in admin session -->
-            {% if session.user|lower =="admin"|lower %}
-            <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
-            {% endif %}
-            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
+                <!-- only visible in admin session -->
+                {% if session.user|lower =="admin"|lower %}
+                    <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
+                {% endif %}
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
     </header>
@@ -68,13 +71,13 @@
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div class="row flashes">
-            <h4 class="center-align">{{ message }}</h4>
-        </div>
-        {% endfor %}
-        {% endif %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="center-align">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
         {% endwith %}
     </section>
 
@@ -101,13 +104,13 @@
                     <h5>Links</h5>
                     <ul class="footer-links">
                         {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
-                        <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
-                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                            <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
+                            <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
+                            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                            <li><a href="{{ url_for('login') }}">Log In</a></li>
+                            <li><a href="{{ url_for('register') }}">Register</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -115,18 +118,17 @@
         </div>
         <!-- copyright -->
         <div class="footer-copyright">
-            <div class="container">
-                © Doherty 2021
-            </div>
+                <p>© Doherty 2021</p>
         </div>
     </footer>
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
+    <!-- materialize compiled and minified javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
     {% block scripts %}
     {% endblock %}
 </body>
