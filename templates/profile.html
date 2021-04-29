@@ -1,37 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
-
-<!-- profile -->
-<div class="row">
-    <div class="col s12 m8 offset-m2">
-        <div class="card-panel center-align">
-            <h3 class="profile">{{ username }}'s Profile</h3>
-            <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+<div class="card-panel cover-card">
+    <div class="row">
+        <div class="col s12 m12 l6">
+                <h3 class="profile"><strong>{{ username }}</strong> is logged in.</h3>
+                <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
         </div>
-    </div>
-</div>
-
-<!-- search bar -->
-<div class="row card-panel search">
-    <form action="{{ url_for('search') }}" method="post" class="col s12">
-        <h2 class="center-align">Our Favourite Recipes</h2>
-        <p class="info center-align">Search or scroll down to view all recipes shared by you.</p>
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m8">
-                <i class="fas fa-search-prefix"></i>
-                <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                <label for="query">Search for Recipes</label>
-            </div>
-            <div class="col s12 m4">
-                <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large"><i class="fas fa-ban"></i> Clear</a>
-                <button type="submit" class="waves-effect waves-light btn-large"><i class="fas fa-search"></i> Search</button>
-            </div>
+        <!-- search bar -->
+        <div class="col s12 m12 l4 offset-l2">
+            <form action="{{ url_for('search') }}" method="post" class="col s12">
+                <p class="info">Search or scroll down to view all recipes shared by our community.</p>
+                <div class="row">
+                    <div class="input-field center-align">
+                        <i class="fas fa-search-prefix"></i>
+                        <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                        <label for="query">Search for Recipes</label>
+                        <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large">
+                        <i class="fas fa-ban"></i> Clear</a>
+                        <button type="submit" class="waves-effect waves-light btn-large">
+                        <i class="fas fa-search"></i> Search</button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </form>
+   </div>
 </div>
 <!-- all recipes -->
 {% if recipes|length > 0 %}
 <div class="row">
+    <h4 class="center-align">Recipes shared by {{ username }}</h4>
     {% for recipe in recipes %}
     <div class="col s12 m6 l4">
         <div class="card card-recipe">
@@ -83,12 +80,12 @@
 <!-- local catering company -->
 <div class="card">
     <div class="card-image">
-        <img class="activator shs-image" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png">
+        <img class="activator shs-image" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png" alt="SHS Logo">
     </div>
     <div class="card-content center-align">
         <span class="card-title activator">
             <h4>Shannon Hotel Supplies</h4>
-            <p class="black-text">Click to reveal more about SHS.</p>
+            <p class="black-text">Click to reveal more information.</p>
         </span>
         <p><a href="https://www.shsonline.ie/" target="_blank" alt="SHS Logo" class="waves-effect waves-light btn-small">Visit SHS Website</a>
         </p>

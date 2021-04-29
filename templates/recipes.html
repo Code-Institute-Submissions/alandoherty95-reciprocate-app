@@ -10,6 +10,7 @@
                 <li>re·​cip·​ro·​cate</li>
                 <li>To respond to a gesture or action by making a corresponding one.</li>
             </ul>
+            <br>
             {% if session.user %}
                 <!-- add new recipe button -->
                 <ul>
@@ -34,7 +35,6 @@
         <!-- search bar -->
         <div class="col s12 m12 l4 offset-l2">
             <form action="{{ url_for('search') }}" method="post" class="col s12">
-                <h4 class="center-align">Our Favourite Recipes</h4>
                 <p class="info">Search or scroll down to view all recipes shared by our community.</p>
                 <div class="row">
                     <div class="input-field center-align">
@@ -54,16 +54,17 @@
 <!-- all recipes displayed -->
 {% if recipes|length > 0 %}
 <div class="row">
-   {% for recipe in recipes %}
-   <div class="col s12 m6 l4">
-      <div class="card card-recipe">
-         <div class="card-image">
-            <img class="activator center" src="{{ recipe.image_url }}" alt="Recipe Image">
-         </div>
-         <div class="card-content center-align">
+    <h4 class="center-align">Browse All Recipes</h4>
+    {% for recipe in recipes %}
+    <div class="col s12 m6 l4">
+        <div class="card card-recipe">
+            <div class="card-image">
+                <img class="activator center" src="{{ recipe.image_url }}" alt="Recipe Image">
+            </div>
+        <div class="card-content center-align">
             <span class="card-title">
-               <h4>{{ recipe.recipe_name }}</h4>
-               <h5 class="black-text">{{ recipe.category_name }}</h5>
+                <h4>{{ recipe.recipe_name }}</h4>
+                <h5 class="black-text">{{ recipe.category_name }}</h5>
             </span>
             {% if session.user|lower == recipe.created_by|lower %}
             <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger"><i
@@ -71,13 +72,13 @@
             <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
                class="waves-effect waves-light btn-large"><i class="far fa-trash-alt"></i> Edit</a>
             {% endif %}
-         </div>
-         <div class="card-reveal">
+        </div>
+        <div class="card-reveal">
             <span class="card-title">
-               <i class="far fa-times-circle right"></i>
-               <h4>{{ recipe.recipe_name }}</h4>
-               <h5>{{ recipe.category_name }}</h5>
-               <br>
+                <i class="far fa-times-circle right"></i>
+                <h4>{{ recipe.recipe_name }}</h4>
+                <h5>{{ recipe.category_name }}</h5>
+                <br>
             </span>
             <h6>What do I need?</h6>
             <p>{{ recipe.recipe_ingredients }}</p>
@@ -87,26 +88,26 @@
             <br>
             <h6>Shared by:</h6>
             <p>{{ recipe.created_by }}</p>
-         </div>
-      </div>
-      <!-- modal to confirm action before deleting a recipe -->
-      <div id="modal-{{recipe._id}}" class="modal">
-         <div class="modal-content">
+        </div>
+    </div>
+    <!-- modal to confirm action before deleting a recipe -->
+    <div id="modal-{{recipe._id}}" class="modal">
+        <div class="modal-content">
             <h4 class="text center-align">Delete this tasty recipe?</h4>
             <p class="center-align">This recipe will be permanently deleted</p>
-         </div>
-         <!-- cancel and delete buttons -->
-         <div class="modal-footer">
+        </div>
+        <!-- cancel and delete buttons -->
+        <div class="modal-footer">
             <a href="{{ url_for('profile', username=session['user']) }}"
                class="waves-effect waves-light btn-small modal-trigger"><i class="fas fa-ban"></i>
             Cancel</a>
             <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                class="waves-effect waves-light btn-small modal-trigger"><i class="far fa-trash-alt"></i>
             Delete</a>
-         </div>
-      </div>
-   </div>
-   {% endfor %}
+        </div>
+    </div>
+</div>
+    {% endfor %}
 </div>
 <!-- pagination -->
 {{ pagination.links }}
