@@ -6,15 +6,19 @@
 <p class="info">Enter your username and password to log in.</p>
 
 <div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+    <form class="col s12 m6 offset-m4" method="POST" action="{{ url_for('login') }}">
         <div class="card-panel">
             <!-- input username -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-plus prefix"></i>
                     <input id="username" name="username" type="text" minlength="4" maxlength="18"
-                        pattern="^[a-zA-Z0-9]{4,18}$" class="validate" required>
+                        pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
                     <label for="username">Username</label>
+                    <span class="helper-text" data-error="Username must be 4-20 characters long, containing only letters and numbers."
+                    data-success="Validated">
+                        Username must be 4-20 characters long, containing only numbers and letters.
+                    </span>
                 </div>
             </div>
             <!-- input password -->
@@ -22,8 +26,12 @@
                 <div class="input-field col s12">
                     <i class="fas fa-user-lock prefix"></i>
                     <input id="password" name="password" type="password" minlength="4" maxlength="18"
-                        pattern="^[a-zA-Z0-9]{4,18}$" class="validate" required>
+                        pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
                     <label for="password">Password</label>
+                    <span class="helper-text" data-error="Password must be 4-20 characters long, containing only letters and numbers."
+                    data-success="Validated">
+                        Password must be 4-20 characters long, containing only numbers and letters.
+                    </span>
                 </div>
             </div>
             <!-- login button -->
