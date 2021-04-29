@@ -1,117 +1,117 @@
 {% extends "base.html" %}
 {% block content %}
-
 <!-- home -->
-<div id="home-cover">
+<div class="card-panel cover-card">
     <div class="row">
-        <div class="col s12 m6 l4">
-            <div class="card-panel cover-card">
-                <h1>Reciprocate</h1>
+        <div class="col s12 m12 l6">
+            <h4>Reciprocate</h4>
+            <ul>
+                <li>verb</li>
+                <li>re·​cip·​ro·​cate</li>
+                <li>To respond to a gesture or action by making a corresponding one.</li>
+            </ul>
+            {% if session.user %}
+                <!-- add new recipe button -->
                 <ul>
-                    <li>verb</li>
-                    <li>re·​cip·​ro·​cate</li>
-                    <li>To respond to a gesture or action by making a corresponding one.</li>
+                    <li>View recipes shared by other members.</li>
+                    <li>Share your favourite recipe ideas.</li>
                 </ul>
-            </div>
-        </div>
-        <div class="col s12 m6 l6">
-            <div class="card-panel cover-card">
-                <span>
-                    {% if session.user %}
-                    <!-- add new recipe button -->
+                <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+            {% else %}
                     <ul>
-                        <li>→ View recipes shared by other members!</li><br>
-                        <li>→ Share your favourite recipes!</li><br>
-                    </ul>
-                    <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
-                    {% else %}
-                    <ul>
-                        <li>→ Join our growing recipe-sharing community today!</li><br>
-                        <li>→ View recipes shared by other members!</li><br>
-                        <li>→ Share your favourite recipes!</li><br>
-                        <li>→ Create your own profile now to enjoy the full experience.</li>
+                        <li>Join our growing recipe-sharing community today!</li>
+                        <li>View recipes shared by other members.</li>
+                        <li>Share your favourite recipe ideas.</li>
+                        <li>Create your own profile now to enjoy the full experience.</li>
                     </ul>
                     <!-- log in and register buttons -->
-                    <a class="waves-effect waves-light btn-large" href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i> Log In</a>
-                    <a class="waves-effect waves-light btn-large" href="{{ url_for('register') }}"><i class="fas fa-sign-in-alt"></i> Register</a>
-                    {% endif %}
-                </span>
-            </div>
-        </div>
-    </div>
-    <!-- search bar -->
-    <div class="row card-panel">
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <h2 class="center-align">Our Favourite Recipes</h2>
-            <p class="info">Search or scroll down to view all recipes shared by our community.</p>
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12">
-                    <i class="fas fa-search-prefix"></i>
-                    <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                    <label for="query">Search for Recipes</label>
-                </div>
-                <div class="col s12">
-                    <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large"><i class="fas fa-ban"></i> Clear</a>
-                    <button type="submit" class="waves-effect waves-light btn-large"><i class="fas fa-search"></i> Search</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <!-- all recipes displayed -->
-    {% if recipes|length > 0 %}
-    <div class="row">
-        {% for recipe in recipes %}
-        <div class="col s12 m6 l4">
-            <div class="card card-recipe">
-                <div class="card-image">
-                    <img class="activator center" src="{{ recipe.image_url }}" alt="Recipe Image">
-                </div>
-                <div class="card-content center-align">
-                    <span class="card-title activator">
-                        <h4>{{ recipe.recipe_name }}</h4>
-                        <h5>{{ recipe.category_name }}</h5>
-                    </span>
-                    {% if session.user|lower == recipe.created_by|lower %}
-                    <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger"><i class="far fa-trash-alt"></i> Delete</a>
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-large"><i class="far fa-trash-alt"></i> Edit</a>
+                    <a class="waves-effect waves-light btn-large" href="{{ url_for('login') }}">
+                    <i class="fas fa-sign-in-alt"></i> Log In</a>
+                    <a class="waves-effect waves-light btn-large" href="{{ url_for('register') }}">
+                    <i class="fas fa-sign-in-alt"></i> Register</a>
                     {% endif %}
                 </div>
-                <div class="card-reveal">
-                    <span class="card-title">
-                        <i class="far fa-times-circle right"></i>
-                        <h4>{{ recipe.recipe_name }}</h4>
-                        <h5>{{ recipe.category_name }}</h5><br>
-                    </span>
-                    <h6>What do I need?</h6>
-                    <p>{{ recipe.recipe_ingredients }}</p><br>
-                    <h6>What do I do?</h6>
-                    <p>{{ recipe.recipe_instructions }}</p><br>
-                    <h6>Shared by:</h6>
-                    <p>{{ recipe.created_by }}</p>
+        <!-- search bar -->
+        <div class="col s12 m12 l4 offset-l2">
+            <form action="{{ url_for('search') }}" method="post" class="col s12">
+                <h4 class="center-align">Our Favourite Recipes</h4>
+                <p class="info">Search or scroll down to view all recipes shared by our community.</p>
+                <div class="row">
+                    <div class="input-field center-align">
+                        <i class="fas fa-search-prefix"></i>
+                        <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                        <label for="query">Search for Recipes</label>
+                        <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large">
+                        <i class="fas fa-ban"></i> Clear</a>
+                        <button type="submit" class="waves-effect waves-light btn-large">
+                        <i class="fas fa-search"></i> Search</button>
+                    </div>
                 </div>
-            </div>
-            <!-- modal to confirm action before deleting a recipe -->
-            <div id="modal-{{recipe._id}}" class="modal">
-                <div class="modal-content">
-                    <h4 class="text center-align">Delete this tasty recipe?</h4>
-                    <p class="center-align">This recipe will be permanently deleted</p>
-                </div>
-                <!-- cancel and delete buttons -->
-                <div class="modal-footer">
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="fas fa-ban"></i> Cancel</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="far fa-trash-alt"></i> Delete</a>
-                </div>
-            </div>
+            </form>
         </div>
-        {% endfor %}
-    </div>
-
-    <!-- pagination -->
-    {{ pagination.links }}
-
-    <!-- no search results found -->
-    {% else %}
-    <h6 class="center-align no-result">No Results Found. Please try a different word or press clear.</h6>
-    {% endif %}
-
-    {% endblock %}
+   </div>
+</div>
+<!-- all recipes displayed -->
+{% if recipes|length > 0 %}
+<div class="row">
+   {% for recipe in recipes %}
+   <div class="col s12 m6 l4">
+      <div class="card card-recipe">
+         <div class="card-image">
+            <img class="activator center" src="{{ recipe.image_url }}" alt="Recipe Image">
+         </div>
+         <div class="card-content center-align">
+            <span class="card-title">
+               <h4>{{ recipe.recipe_name }}</h4>
+               <h5 class="black-text">{{ recipe.category_name }}</h5>
+            </span>
+            {% if session.user|lower == recipe.created_by|lower %}
+            <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger"><i
+               class="far fa-trash-alt"></i> Delete</a>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+               class="waves-effect waves-light btn-large"><i class="far fa-trash-alt"></i> Edit</a>
+            {% endif %}
+         </div>
+         <div class="card-reveal">
+            <span class="card-title">
+               <i class="far fa-times-circle right"></i>
+               <h4>{{ recipe.recipe_name }}</h4>
+               <h5>{{ recipe.category_name }}</h5>
+               <br>
+            </span>
+            <h6>What do I need?</h6>
+            <p>{{ recipe.recipe_ingredients }}</p>
+            <br>
+            <h6>What do I do?</h6>
+            <p>{{ recipe.recipe_instructions }}</p>
+            <br>
+            <h6>Shared by:</h6>
+            <p>{{ recipe.created_by }}</p>
+         </div>
+      </div>
+      <!-- modal to confirm action before deleting a recipe -->
+      <div id="modal-{{recipe._id}}" class="modal">
+         <div class="modal-content">
+            <h4 class="text center-align">Delete this tasty recipe?</h4>
+            <p class="center-align">This recipe will be permanently deleted</p>
+         </div>
+         <!-- cancel and delete buttons -->
+         <div class="modal-footer">
+            <a href="{{ url_for('profile', username=session['user']) }}"
+               class="waves-effect waves-light btn-small modal-trigger"><i class="fas fa-ban"></i>
+            Cancel</a>
+            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+               class="waves-effect waves-light btn-small modal-trigger"><i class="far fa-trash-alt"></i>
+            Delete</a>
+         </div>
+      </div>
+   </div>
+   {% endfor %}
+</div>
+<!-- pagination -->
+{{ pagination.links }}
+<!-- no search results found -->
+{% else %}
+<h6 class="center-align no-result">No Results Found. Please try a different word or press clear.</h6>
+{% endif %}
+{% endblock %}

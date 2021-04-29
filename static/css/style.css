@@ -7,7 +7,7 @@
 --*/
 
 body {
-  background-color: #ffffff;
+  background-color: #D3D3D3;
   font-family: 'Orelega One', cursive;
 }
 
@@ -45,19 +45,19 @@ p {
   padding: 0;
 }
 
+.brand-logo {
+  margin-left: 0.5rem;
+}
+
 .cover-card {
   height: auto;
   vertical-align: bottom;
   letter-spacing: 1px;
+  line-height: 3rem;
 }
 
-.cover-card h5 {
-  font-size: 3rem;
-}
-
-.card-title p {
-  color: #ffffff;
-  font-size: 1.8rem;
+.cover-card li {
+  font-size: 1.4rem;
 }
 
 .card-title > span {
@@ -68,21 +68,12 @@ p {
 
 .info {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .btn-small, .btn-large {
   margin: 0.2rem;
-  border: 0.2rem solid #ffffff;
   border-radius: 12px;
-}
-
-.btn-small:hover, .btn-large:hover {
-  background-color: #fea201;
-}
-
-.btn-small:after, .btn-large:after {
-  background-color: #fea201;
 }
 
 .extended {
@@ -90,20 +81,17 @@ p {
   font-family: 'Merienda One', cursive;
 }
 
-.extended .recip {
-  margin-left: 0.5rem;
-}
-
-.brand-logo > span {
-  color: red;
+.extended a {
+  color:#a62632;
+  font-size: 1.6rem;
 }
 
 .sidenav-trigger {
   color: red;
 }
 
-.recip {
-  color: red;
+#definition ul {
+  list-style-type: disc;
 }
 
 .flashes {
@@ -115,17 +103,9 @@ p {
   color: #ffffff;
 }
 
-.btn-small {
-  margin: 4px;
-}
-
 .collapsible-header {
   margin: 6px;
   line-height: 1;
-}
-
-.collapsible-header h4 {
-  font-size: 2rem;
 }
 
 .collapsible-body {
@@ -137,16 +117,7 @@ h1 > span {
 }
 
 .card-recipe {
-  min-height: 45rem;
-}
-
-.card .card-action {
-  font-size: large;
-}
-
-.card-panel {
-  padding: 0.5rem;
-  border: 0.2rem solid #A9A9A9;
+  min-height: 42rem;
 }
 
 .shs-image {
@@ -167,18 +138,6 @@ h1 > span {
   background-color: #ffffff;
 }
 
-.footer-tagline {
-  font-size: large;
-}
-
-.footer-tagline > span {
-  color: red;
-}
-
-.footer-logo {
-  font-size: larger;
-}
-
 .footer-links a {
   color: red;
 }
@@ -197,8 +156,7 @@ h1 > span {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
-  height: 28rem;
+  max-height: 28rem;
 }
 
 .no-result {
