@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Orelega+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 
+/*-- 
+#26a69a button
+#a62632 complementary
+--*/
+
 body {
   background-color: #ffffff;
   font-family: 'Orelega One', cursive;
-}
-
-nav ul a {
-  color: #ff6e4e;
 }
 
 .container {
@@ -15,46 +16,36 @@ nav ul a {
   max-width: none;
 }
 
-.sidenav ul {
-  color: #ff6e4e;
-}
-
 h1 {
-  color: #ff6e4e;
-  font-size: 3rem;
   font-family: 'Merienda One', cursive;
+  color: #a62632;
 }
 
 h2 {
-  color: #ff6e4e;
-  font-size: 2.8rem;
   font-family: 'Merienda One', cursive;
+  color: #a62632;
 }
 
 h4 {
-  color: #ff6e4e;
   font-family: 'Merienda One', cursive;
+  color: #a62632;
 }
 
 h5 {
-  color: #fea201;
   font-family: 'Merienda One', cursive;
+  color: #a62632;
 }
 
 h6 {
-  color: #ff6e4e;
-  font-size: 1.4rem;
   font-family: 'Merienda One', cursive;
+  color: #a62632;
 }
 
 p {
-  font-size: 1.2rem;
+  padding: 0;
 }
 
 .cover-card {
-  background-color: #ff6e4e;
-  font-size: 2rem;
-  min-height: 25rem;
   height: auto;
   vertical-align: bottom;
   letter-spacing: 1px;
@@ -62,10 +53,6 @@ p {
 
 .cover-card h5 {
   font-size: 3rem;
-}
-
-.card {
-  border: 0.2rem solid #A9A9A9;
 }
 
 .card-title p {
@@ -85,7 +72,6 @@ p {
 }
 
 .btn-small, .btn-large {
-  background-color: #ff6e4e;
   margin: 0.2rem;
   border: 0.2rem solid #ffffff;
   border-radius: 12px;
@@ -105,25 +91,23 @@ p {
 }
 
 .extended .recip {
-  color: #ff6e4e;
   margin-left: 0.5rem;
 }
 
 .brand-logo > span {
-  color: #fea201;
+  color: red;
 }
 
 .sidenav-trigger {
-  color: #ff6e4e;
+  color: red;
 }
 
 .recip {
-  color: #ff6e4e;
+  color: red;
 }
 
 .flashes {
   background-color: rgb(169,169,169, 0.75);
-  color: #ffffff;
 }
 
 .flashes h4 {
@@ -138,7 +122,6 @@ p {
 .collapsible-header {
   margin: 6px;
   line-height: 1;
-  color: #ff6e4e;
 }
 
 .collapsible-header h4 {
@@ -150,7 +133,7 @@ p {
 }
 
 h1 > span {
-  color: #fea201;
+  color: red;
 }
 
 .card-recipe {
@@ -177,12 +160,11 @@ h1 > span {
 }
 
 .pagination li.active {
-  background-color: #ff6e4e;
+  background-color: red;
 }
 
 .page-footer {
   background-color: #ffffff;
-  color: #fea201;
 }
 
 .footer-tagline {
@@ -190,7 +172,7 @@ h1 > span {
 }
 
 .footer-tagline > span {
-  color: #ff6e4e;
+  color: red;
 }
 
 .footer-logo {
@@ -198,11 +180,10 @@ h1 > span {
 }
 
 .footer-links a {
-  color: #ff6e4e;
+  color: red;
 }
 
 .footer-copyright p {
-  color: #ff6e4e;
   margin: 0.4rem;
 }
 
@@ -221,8 +202,6 @@ h1 > span {
 }
 
 .no-result {
-  background-color:#ff6e4e;
-  color: #ffffff;
   line-height: 3;
 }
 
@@ -230,74 +209,18 @@ h1 > span {
 
 @media only screen and (min-width: 992px) {
   h1 {
-    font-size: 2.4rem;
-  }
-  
-  h2 {
-    font-size: 2.4rem;
-  }
-  
-  h6 {
-    font-size: 1.4rem;
-  }
-  
-  p {
-    font-size: 1.2rem;
-  }
-
-  .card-title p {
-    font-size: 1.4rem;
-  }
+    padding: 0;
+  }  
 }
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 2.4rem;
-  }
-  
-  h2 {
-    font-size: 2.4rem;
-  }
-  
-  h6 {
-    font-size: 1.2rem;
-  }
-  
-  p {
-    font-size: 1rem;
-  }
-
-  .cover-card {
-    font-size: 1.5rem;
-  }
-
-  .card-title p {
-    font-size: 1.6rem;
-  }
+    padding: 0;
+  } 
 }
 
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
-  h6 {
-    font-size: 1rem;
-  }
-  
-  p {
-    font-size: 0.8rem;
-  }
-
-  .cover-card {
-    font-size: 1.2rem;
-  }
-
-  .card-title p {
-    font-size: 1rem;
-  }
+    padding: 0;
+  } 
 }

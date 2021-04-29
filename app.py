@@ -11,7 +11,7 @@ if os.path.exists("env.py"):
 
 
 # pagination limit
-PER_PAGE = 4
+PER_PAGE = 9
 
 # flask app setup
 app = Flask(__name__)

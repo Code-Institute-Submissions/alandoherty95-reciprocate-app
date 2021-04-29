@@ -5,8 +5,8 @@
 <div id="home-cover">
     <div class="row">
         <div class="col s12 m6 l4">
-            <div class="card-panel cover-card white-text">
-                <h5 class="white-text">Reciprocate</h5>
+            <div class="card-panel cover-card">
+                <h1>Reciprocate</h1>
                 <ul>
                     <li>verb</li>
                     <li>re·​cip·​ro·​cate</li>
@@ -14,8 +14,8 @@
                 </ul>
             </div>
         </div>
-        <div class="col s12 m6 l8">
-            <div class="card-panel cover-card white-text">
+        <div class="col s12 m6 l6">
+            <div class="card-panel cover-card">
                 <span>
                     {% if session.user %}
                     <!-- add new recipe button -->
@@ -23,7 +23,7 @@
                         <li>→ View recipes shared by other members!</li><br>
                         <li>→ Share your favourite recipes!</li><br>
                     </ul>
-                    <a class="btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+                    <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
                     {% else %}
                     <ul>
                         <li>→ Join our growing recipe-sharing community today!</li><br>
@@ -32,8 +32,8 @@
                         <li>→ Create your own profile now to enjoy the full experience.</li>
                     </ul>
                     <!-- log in and register buttons -->
-                    <a class="btn-large" href="{{ url_for('login') }}">Log In</a>
-                    <a class="btn-large" href="{{ url_for('register') }}">Register</a>
+                    <a class="waves-effect waves-light btn-large" href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                    <a class="waves-effect waves-light btn-large" href="{{ url_for('register') }}"><i class="fas fa-sign-in-alt"></i> Register</a>
                     {% endif %}
                 </span>
             </div>
@@ -51,8 +51,8 @@
                     <label for="query">Search for Recipes</label>
                 </div>
                 <div class="col s12">
-                    <a href="{{ url_for('get_recipes') }}" class="btn-large">Clear</a>
-                    <button type="submit" class="btn-large">Search</button>
+                    <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large"><i class="fas fa-ban"></i> Clear</a>
+                    <button type="submit" class="waves-effect waves-light btn-large"><i class="fas fa-search"></i> Search</button>
                 </div>
             </div>
         </form>
@@ -61,7 +61,7 @@
     {% if recipes|length > 0 %}
     <div class="row">
         {% for recipe in recipes %}
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l4">
             <div class="card card-recipe">
                 <div class="card-image">
                     <img class="activator center" src="{{ recipe.image_url }}" alt="Recipe Image">
@@ -72,8 +72,8 @@
                         <h5>{{ recipe.category_name }}</h5>
                     </span>
                     {% if session.user|lower == recipe.created_by|lower %}
-                    <a href="#modal-{{recipe._id}}" class="btn-small modal-trigger">Delete</a>
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>
+                    <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger"><i class="far fa-trash-alt"></i> Delete</a>
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-large"><i class="far fa-trash-alt"></i> Edit</a>
                     {% endif %}
                 </div>
                 <div class="card-reveal">
@@ -98,8 +98,8 @@
                 </div>
                 <!-- cancel and delete buttons -->
                 <div class="modal-footer">
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small">Cancel</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="fas fa-ban"></i> Cancel</a>
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="far fa-trash-alt"></i> Delete</a>
                 </div>
             </div>
         </div>
