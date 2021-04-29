@@ -21,9 +21,7 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 8.  <a href="#features">**Features**</a>
 9.  <a href="#testing">**Testing**</a>
 10. <a href="#deployment">**Deployment**</a>
-
 11. <a href="#credits">**Credits**</a>
-
 12. <a href="#acknowledgments">**Acknowledgements**</a>
 
 <span id="context"></span>
