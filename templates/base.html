@@ -90,14 +90,10 @@
     </main>
 
     <!-- footer -->
-    <footer class="page-footer">
-        <div class="container">
+    <footer class="base-footer">
             <div class="row">
-                <div class="col l6 s12">
-                    <a href="{{ url_for('get_recipes') }}" class="brand-logo">Reciprocate</a>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5>Links</h5>
+                <div class="col l4 m4 s12">
+                    <a href="{{ url_for('get_recipes') }}">Reciprocate</a>
                     <ul class="footer-links">
                         {% if session.user %}
                             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
@@ -110,12 +106,15 @@
                         {% endif %}
                     </ul>
                 </div>
-            </div>
-        </div>
-        <!-- copyright -->
-        <div class="footer-copyright">
-                <p>© Doherty 2021</p>
-        </div>
+                <div class="col l4 m4 s12 dev-links">
+                    <a target="_blank" href="https://www.linkedin.com/in/alan-doherty-201855131/ "><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="https://github.com/alandoherty95"><i class="fab fa-github-square"></i></a>
+                </div>
+                <div class="col l4 m4 s12">
+                    <!-- copyright -->
+                    <p>© Doherty 2021</p>
+                </div>
+            </div>  
     </footer>
 
     <!-- jquery -->

@@ -3,7 +3,7 @@
 <!-- home -->
 <div class="card-panel cover-card">
     <div class="row">
-        <div class="col s12 m12 l6">
+        <div class="col s12 m12 l7">
             {% if session.user %}
                 <!-- add new recipe button -->
                 <ul>
@@ -34,7 +34,7 @@
             {% endif %}
         </div>
         <!-- search bar -->
-        <div class="col s12 m12 l4 offset-l2">
+        <div class="col s12 m12 l3 offset-l2">
             <form action="{{ url_for('search') }}" method="post" class="col s12">
                 <p class="info">Search or scroll down to view all recipes shared by our community.</p>
                 <div class="row">

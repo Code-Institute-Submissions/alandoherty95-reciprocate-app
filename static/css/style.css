@@ -90,11 +90,7 @@ p {
 }
 
 .sidenav-trigger {
-  color: red;
-}
-
-#definition ul {
-  list-style-type: disc;
+  color: #a62632;
 }
 
 .flashes {
@@ -116,7 +112,7 @@ p {
 }
 
 h1 > span {
-  color: red;
+  color: #a62632;
 }
 
 .card-recipe {
@@ -130,19 +126,26 @@ h1 > span {
 }
 
 .pagination li.active {
-  background-color: red;
+  background-color: #000000;
 }
 
-.page-footer {
+.base-footer {
   background-color: #ffffff;
+  text-align: center;
 }
 
-.footer-links a {
-  color: red;
+.base-footer a {
+  color:#a62632;
+  font-size: 1.6rem;
 }
 
-.footer-copyright p {
-  margin: 0.4rem;
+.base-footer p {
+  font-size: 1.2rem;
+}
+
+.dev-links i {
+  font-size: 2rem;
+  margin: 0.5rem;
 }
 
 .forms {
