@@ -169,6 +169,10 @@ h1 > span {
   max-height: 28rem;
 }
 
+.shs-image img.activator {
+  padding: 3rem;
+}
+
 .no-result {
   line-height: 3;
 }
