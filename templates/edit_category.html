@@ -2,10 +2,11 @@
 {% block content %}
 
 <!-- edit recipe types -->
-<h2 class="center-align">Edit Recipe Types</h2>
-<p class="info">Edit category by updating the fields below.</p>
-
-<div class="row card-panel">
+<div class="heading-info">
+    <h2 class="center-align">Edit Recipe Types</h2>
+    <p class="info">Edit category by updating the fields below.</p>
+</div>
+<div class="row heading-panel">
     <form class="col s12" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
         <!-- category name input -->
         <div class="row">

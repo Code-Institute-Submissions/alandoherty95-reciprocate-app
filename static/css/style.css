@@ -49,6 +49,14 @@ p {
   margin-left: 0.5rem;
 }
 
+.heading-info {
+  padding: 4px;
+  border-radius: 2px;
+  
+  text-align: center;
+  background-color: #fff;
+}
+
 .cover-card {
   height: auto;
   vertical-align: bottom;

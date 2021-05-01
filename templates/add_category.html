@@ -2,9 +2,10 @@
 {% block content %}
 
 <!-- add new recipe type (admin only) -->
-<h2 class="center-align">Add New Recipe Type</h2>
-<p class="info">Add a new category by entering the name below.</p>
-
+<div class="heading-info">
+    <h2 class="center-align">Add New Recipe Type</h2>
+    <p class="info">Add a new category by entering the name below.</p>
+</div>
 <div class="row card-panel">
     <form class="col s12" method="POST" action="{{ url_for('add_category') }}">
         <!-- category name input -->

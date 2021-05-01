@@ -2,9 +2,10 @@
 {% block content %}
 
 <!-- add new recipe -->
-<h2 class="center-align">Add New Recipe</h2>
-<p class="info">Add a new recipe by filling out the form below.</p>
-
+<div class="heading-info">
+    <h2 class="center-align">Add New Recipe</h2>
+    <p class="info">Add a new recipe by filling out the form below.</p>
+</div>
 <div class="row forms">
     <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
         <!-- recipe type selector -->
