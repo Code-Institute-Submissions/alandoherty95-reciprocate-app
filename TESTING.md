@@ -1050,9 +1050,9 @@ Recipe Cards:
 
   
 
-  
+  ![Desktop Report](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/desktop-report.png?raw=true)
 
-  
+  ![Mobile Report](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mobile-report.png?raw=true)
 
 <span id="version-control"></span>
 
@@ -1064,21 +1064,20 @@ Recipe Cards:
 
 ### Lighthouse Opportunities
 
-  
+-  Properly size images: Serve images that are appropriately-sized to save cellular data and improve load time
 
-  
-
-  
+ - Defer offscreen images: Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive.
 
 - Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles.
 
-  
+-  Remove unused JavaScript: Remove unused JavaScript to reduce bytes consumed by network activity
 
-  
+ - Remove unused CSS: Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity
 
-  
+- Image elements do not have explicit  `width`  and  `height`
 
-- Background and foreground colors do not have a sufficient contrast ratio: Low-contrast text is difficult or impossible for many users to read
+- Set an explicit width and height on image elements to reduce layout shifts and improve CLS.
+
 
   
 
@@ -1102,7 +1101,7 @@ Recipe Cards:
 
   
 
--
+
 
   
 
@@ -1331,7 +1330,7 @@ Once those steps are done, the website can be deployed and below are the steps o
 - Deletion modal not functioning, the modal used for confirming an action before deleting was not popping up and the selection was deleted without confirmation: the class `modal-trigger` was added to the modal function to trigger to pop up window before deleting.
 
   
-  
+ - Background and foreground colours do not have a sufficient contrast ratio. Low-contrast text is difficult or impossible for many users to read: Colour scheme was altered to be more visually pleasing.
 
 - Favicon not displaying: graphic image displayed correctly after changing the file path.
 
