@@ -612,6 +612,8 @@ Before deploying the website to Heroku, please follow the necessary steps outlin
 
 3. Push the two files above to GitHub to save.
 
+pip install -r requirements.txt
+
   
 
 Once those steps are done, the website can be deployed and below are the steps of the deployment in Heroku.

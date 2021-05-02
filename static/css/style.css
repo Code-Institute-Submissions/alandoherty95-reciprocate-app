@@ -175,6 +175,7 @@ h1 > span {
 
 .no-result {
   line-height: 3;
+  padding: 4rem;
 }
 
 /* media queries */
