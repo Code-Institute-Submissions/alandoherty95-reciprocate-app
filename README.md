@@ -1,28 +1,16 @@
 **[Reciprocate](https://reciprocate-application.herokuapp.com/)**
 
-  
-
 Welcome to **Reciprocate** - a community for sharing your favourite recipes!
-
-  
 
 @@ Insert mockups
 
 @@ Insert live demo
 
-  
-
 <span id="top"></span>
 
-  
+**[Reciprocate](https://reciprocate-application.herokuapp.com/)** is a community-based application created for anyone who enjoys trying new recipes or sharing their favourites recipes with others. It was designed to allow users to share and contribute recipes with each other. Users can share their own food and drink recipe ideas with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind so people of all ages can get involved. Users will have the option of creating an account to create, locate, display, edit and delete records.
 
-**[Reciprocate](https://reciprocate-application.herokuapp.com/)** is a community-based application created for anyone who enjoys trying new recipes or sharing their favourites recipes with others. It was designed to allow users to share and contribute recipes with each other. Users can share their own food and drink recipe ideas with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind so people of all ages can get involved.
-
-  
-
-## [Table of Contents]()
-
-  
+## Table of Contents
 
 1. <a href="#context">**Context**</a>
 
@@ -48,87 +36,47 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
 12. <a href="#acknowledgements">**Acknowledgements**</a>
 
-  
-
 <span id="context"></span>
 
-  
-
-## Context
-
-  
+## 1. Context
 
 In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand. The website focuses on three main recipes types: smoothies, cocktails and healthy snacks. The website admin has the capability to add additional recipes types for selection by other users.
 
-  
-
 The application was designed using CRUD functionality. Create, Read, Update, and Delete are the four primary functions available to users of the website.
-
-  
 
 Create — A function we can call when a new recipe is being added to the database. The user can supply the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The new entry is assigned a unique `id`, which can be used to access the resource later. The website admin has the capability to create new recipes types for selection.
 
-  
-
 Read — A function we can call to see all of the recipes currently in our database. This function does not alter the recipes in the catalog - it simply retrieves the information and displays the results. Again, a similar process can be followed if the website admin wishes to view the recipe types contained in the database.
-
-  
 
 Update — A function we can call when information about a particular recipe must be changed. The user can edit the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. After the function is called, the corresponding entry in the `recipes` database will contain the new fields provided. This option is only available to the creator of each recipe. These steps can be followed if the website admin wishes to edit an existing recipe type in the database.
 
-  
-
 Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the `recipe` resource should contain all of the books it had before, except for the one recipe we just deleted. This option is only available to the creator of the recipe. A similar process can be followed if the website admin wishes to remove a recipe type from the database.
-
-  
 
 <span id="ux"></span>
 
-  
-
-## User Experience (UX)
-
-  
+## 2. User Experience (UX)
 
 ### Overview
 
-  
-
 The website was designed with a community-based approach in mind. It was created with three main objectives in mind:
 
-  
-
-- To encourage people to share their favourite recipes with all other members
+- To encourage people to share their favourite recipes with other members
 
 - To allow convenient access to the recipes provided by all other members
 
-- To promote a local catering supplier
+- To promote a local catering supplies company
 
-  
-
-The website focuses on the following three types of recipes but it is not limited. Users can choose to add a new category for different recipe types.
-
-  
+The website focuses on the following three types of recipes but it is not limited. The admin has the capability to add a new category for different recipe types.
 
 **Smoothies:** are becoming increasingly more popular each year. Many people are opting for smoothies made up of fruit and vegetables as part of their daily calorie intake. Our smoothie recipes provide users with real choice while keeping up a healthy diet.
 
-  
-
 **Cocktails:** are also becoming increasingly popular among adults. People have grown to appreciate the variety of taste and beauty of these artisan drinks. Our cocktail recipes allow users to create popular drinks themselves without having to rely solely on bartenders.
-
-  
 
 **Healthy Snacks:** have always been a significant part of our diet. People have become more creative and adventurous with their snacking habits in recent years. Our snack recipes offer variety for people constantly on-the-go who need a quick source of energy.
 
-  
-
 ### User Stories
 
-  
-
 #### As a first-time visitor, I want to:
-
-  
 
 - Immediately understand the purpose of the website
 
@@ -138,11 +86,7 @@ The website focuses on the following three types of recipes but it is not limite
 
 - Be able to search for keywords
 
-  
-
 #### As a returning visitor, I want to:
-
-  
 
 - Log in and out easily
 
@@ -152,11 +96,7 @@ The website focuses on the following three types of recipes but it is not limite
 
 - View all recipes I have shared on my profile
 
-  
-
 ### Users:
-
-  
 
 - As an individual who likes to keep a healthy lifestyle, I want to find tasty food and drink recipes to try at home.
 
@@ -164,11 +104,7 @@ The website focuses on the following three types of recipes but it is not limite
 
 - As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones.
 
-  
-
 ### Owner:
-
-  
 
 - As the owner of this website I would like to provide a platform to encourage users to share their favourite recipes with other members of the community.
 
@@ -178,49 +114,42 @@ The website focuses on the following three types of recipes but it is not limite
 
 - As the owner, I want to promote a local catering supplies company.
 
-  
-
 ### Design
 
-  
+#A62632 - Crimson
+#FFFFFF - White
+#26A69A - Persian Green
 
-- #### Colour Scheme
+![enter image description here](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/color-scheme.png?raw=true)
 
-  
+The colour scheme chosen for this project was inspired by vibrant colours to give the website an attractive, vibrant look. Crimson and Persian Green complement each other nicely. The white background gives a sleek, neutral look to the application.
 
-The colour scheme chosen for this project was inspired by natural colours found in fruit and vegetables. These colours give the website an attractive, vibrant look.
+- **Crimson** is used for all headings, giving a consistent feel throughout the website.
+- **White** is the backdrop of all headings and text on the website. The bright colour emphasises clarity and removes visual clutter.
+-
+- **Persian Green** is used for all buttons with intuitive labels. This provides a congruent look on each page, allowing users to easily find their desired button.
 
-  
+#### Typography
 
-@@ Insert colour scheme
+[Merienda One](https://fonts.google.com/specimen/Merienda+One) was used for the main headings and navigation links on the website to grab the users attention. 'Merienda' is a Spanish term for "afternoon snack", which seems fitting for the purpose of this application. Merienda has soft shapes, is slightly condensed, and has a rhythm which is an invitation to read short pieces of text.
 
-  
-
-- #### Typography
+[Oswald](https://fonts.google.com/specimen/Oswald) was used for the primary text because it is easy to read. Oswald is designed to be used freely across the internet by web browsers on desktop computers, laptops and mobile devices.
 
 - #### Imagery
 
-Images used on this website were chosen from [Pexels](https://www.pexels.com/).
-
-  
+Images used on this website were selected from [Pexels](https://www.pexels.com/).
 
 <span id="scope"></span>
 
-  
-
 ## Scope
 
-  
-
 The minimum features to be included in this project are as follows:
-
-  
 
 - **Home Page** attracts first-time visitors and presents the purpose of the website. The two call-to-action buttons invite users to either log in or register. All recipes in our database are displayed below.
 
 - **Recipe Types** allows the website admin to manage the categories of recipe. The admin can add or delete categories. Users can select from any recipe type in the database when creating a new recipe.
 
-- **Register** invites visitors to create an account in order to share new recipes as well as edit or delete recipes they have already shared. 
+- **Register** invites visitors to create an account in order to share new recipes as well as edit or delete recipes they have already shared.
 
 - **Login** invites users to log in to their account. This allows users to view, edit or delete recipes they have already shared as well as sharing new recipe ideas.
 
@@ -236,23 +165,13 @@ The minimum features to be included in this project are as follows:
 
 - **Search Function** allows users to search for specific recipes using keywords. The search function targets the `“recipe_name”` and `“recipe_ingredients”` fields.
 
-  
-
 <span id="structure"></span>
-
-  
 
 ## Structure
 
-  
-
 ### Structure Plane
 
-  
-
 **Front-End**
-
-  
 
 - **Home** (`recipes.html`)
 
@@ -290,23 +209,13 @@ The add recipe types page allows the website admin to add a new recipe type. All
 
 The add recipe types page allows the website admin to edit an existing category. All categories can be selected from the drop-down in the recipe form.
 
-  
-
 <span id="wireframes"></span>
-
-  
 
 ## Wireframes
 
-  
-
 Wireframe mockups can be found in this [folder](https://github.com/alandoherty95/reciprocate-app/tree/master/resources)
 
-  
-
 ## Languages used
-
-  
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML)
 
@@ -316,15 +225,9 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
 - [Python](https://www.python.org/)
 
-  
-
 <span id="technologies"></span>
 
-  
-
 ## Technologies
-
-  
 
 - [MongoDB](https://www.mongodb.com//) MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.
 
@@ -337,6 +240,8 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 - [Materialize](https://materializecss.com/getting-started.html) is a modern responsive front-end framework based on Material Design.
 
 - [GitHub](https://github.com/) GitHub was used for hosting for software development and version control using Git.
+
+- [Coolors](https://coolors.co/) Coolors was used to generate the colour scheme.
 
 - [Slack](https://slack.com/intl/en-ie/) Slack was used for motivation and to ask questions to peers.
 
@@ -362,19 +267,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
 - [Wireframes.cc](https://wireframe.cc/) for designing simple black and white layouts providing structure for the website.
 
-  
-
 <span id="database"></span>
-
-  
 
 ## Database
 
-  
-
 MongoDB was chosen as the database program for this application. It is a source-available cross-platform document-oriented database program. MongoDB's non-relational database structure was suitable because the number of collections is small as well as the relationships between them.
-
-  
 
 | Categories | | |
 
@@ -385,8 +282,6 @@ MongoDB was chosen as the database program for this application. It is a source-
 | \_id | ObjectId | |
 
 | category_name | string | Category name is also called recipe types. The admin can add, edit or delete recipe types from the Types page. |
-
-  
 
 | Recipes | | |
 
@@ -408,8 +303,6 @@ MongoDB was chosen as the database program for this application. It is a source-
 
 | recipe_name | string | Name of the recipe is entered in the form. |
 
-  
-
 | Users | | |
 
 | -------- | -------- | ---------------------------------------------------------------------- |
@@ -422,55 +315,17 @@ MongoDB was chosen as the database program for this application. It is a source-
 
 | username | string | A unique username is chosen when registering. |
 
-  
-
 <span id="features"></span>
-
-  
 
 ## Features
 
-  
-
-**Materialize CSS**:
-
-  
-
-- [Cards](https://materializecss.com/cards.html)
-
-- [Forms](https://materializecss.com/text-inputs.html)
-
-- [Menu dropdown](https://materializecss.com/dropdown.html)
-
-- [Modals](https://materializecss.com/modals.html)
-
-- [Sidenav](https://materializecss.com/sidenav.html)
-
-  
-
-**Secure Registration**
-
-  
-
-In order to register an account, the user must enter a unique username and a password. The password is hashed so it is not visible to the owner of the database. Werkzeug was used to hash the password entry when registering to the site and encrypting on MongoDB.
-
-  
-
 **CRUD Functionality**
-
-  
 
 New visitors have the ability to:
 
-  
-
 - View all recipes shared by other members.
 
-  
-
 Users with an account have the ability to:
-
-  
 
 - Share their own recipes.
 
@@ -480,11 +335,7 @@ Users with an account have the ability to:
 
 - Delete their own activities.
 
-  
-
 The admin has the ability to:
-
-  
 
 - Share their own recipes.
 
@@ -500,11 +351,23 @@ The admin has the ability to:
 
 - Delete an existing recipes type.
 
-  
+**Materialize CSS**:
+
+- [Cards](https://materializecss.com/cards.html)
+
+- [Forms](https://materializecss.com/text-inputs.html)
+
+- [Menu dropdown](https://materializecss.com/dropdown.html)
+
+- [Modals](https://materializecss.com/modals.html)
+
+- [Sidenav](https://materializecss.com/sidenav.html)
+
+**Secure Registration**
+
+In order to register an account, the user must enter a unique username and a password. The password is hashed so it is not visible to the owner of the database. Werkzeug was used to hash the password entry when registering to the site and encrypting on MongoDB. Both the username and password must be between 4 and 20 characters using`a-zA-Z0-9`.
 
 ---
-
-  
 
 - **Discover new recipes**
 
@@ -520,17 +383,19 @@ In addition to adding new recipes, users can also edit recipes they have already
 
 - **Delete your recipes**
 
-Users have the option to delete recipes they have submitted. Users must confirm they would like to delete a selection before it is removed from the database.
+Users have the option to delete recipes they have submitted. Users must confirm if they would like to delete a selection before it is removed from the database. This adds an extra layer of protection to prevent records being deleted accidentally.
 
 - **Register an account**
 
 The application encourages users to register an account for a better experience. Users are required to enter a unique `"username"` and `"password"` when registering. There is a large call-to-action button on the homepage attracting users to either log in or register. Users can view all recipes without logging in. However, users are required to log in in order to share a new recipe and edit or delete an existing recipe.
 
-  
+- **Search all recipes**
+  The application has a search feature allowing users to search using keywords within the recipe name or ingredients. A message will display if no results are found.
+
+- **Error handling**
+  Additional pages were created to handle 404 and 500 errors on the website. Both pages will redirect users back to the homepage.
 
 ### Features to Implement in the Future
-
-  
 
 - **Like your favourite recipes** Users will be able to like their favourite recipe ideas. Recipes with the most votes or likes will be promoted more favourably than the rest.
 
@@ -538,31 +403,17 @@ The application encourages users to register an account for a better experience.
 
 - **Share your recipes** Users could have the option of sharing their favourite recipes via email or on social media.
 
-  
-
 <span id="testing"></span>
-
-  
 
 ## Testing
 
-  
-
 Please see [TESTING.md](https://github.com/alandoherty95/reciprocate-app/blob/master/TESTING.md) file for more details.
-
-  
 
 ### Version Control
 
-  
-
 Throughout the production of this application, I used [Gitpod](https://gitpod.io/) as a local repository and [GitHub](https://github.com/) as a remote repository.
 
-  
-
 **Creating a Repository**
-
-  
 
 1. Create a repository in GitHub by clicking 'New repository' in the top right corner of the main page.
 
@@ -572,13 +423,9 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
 4. Open the repository on Git Pod.
 
-  
-
 **Commits**
 
 Commits were made frequently and consistently throughout the course of this project. It is important to commit often to ensure no work is lost during production. The work is saved securely in GitHub.
-
-  
 
 - **git status** checks the current status of new or modified files and folders
 
@@ -588,23 +435,13 @@ Commits were made frequently and consistently throughout the course of this proj
 
 - **git push** updates the repository in GitHub to include new or modified files and folders.
 
-  
-
 <span id="deployment"></span>
-
-  
 
 ## Deployment
 
-  
-
 The application was deployed using [Heroku](https://www.heroku.com/). Heroku is a cloud platform with a service supporting several programming languages including Python. GitHub can host static websites but this particular project requires back-end technology such as a server and a database. I connected the GitHub repository with Heroku.
 
-  
-
 Before deploying the website to Heroku, please follow the necessary steps outlined below:
-
-  
 
 1. Create a `requirements.txt` file containing the name of packages being used in Python. The file is updated whenever new packages or modules are installed during the project.
 
@@ -614,11 +451,7 @@ Before deploying the website to Heroku, please follow the necessary steps outlin
 
 pip install -r requirements.txt
 
-  
-
 Once those steps are done, the website can be deployed and below are the steps of the deployment in Heroku.
-
-  
 
 1. Create an account in Heroku.
 
@@ -640,71 +473,19 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 10. Click 'View'.
 
-  
-
 ## Code
-
-  
 
 **HTML5**
 
-  
-
 **CSS3**
-
-  
 
 **JavaScript**
 
-  
-
 **Python**
-
-  
-
-### Contents
-
-  
-
-### Media
-
-  
-
-### Images
-
-  
-
-- Images for recipes were found in [Pexels](https://www.pexels.com/)
-
-  
-
-## Bugs
-
-  
-
-### Known Bugs
-
-  
-
-- Edit Recipe form fields not populating: when editing a recipe, the existing information was not displayed in each of the fields to allow editing.
-
-- Deletion modal not functioning: The modal used for confirming an action before deleting was not popping up and the selection was deleted without confirmation
-
-- Error in console due to one or more images not displaying.
-
-- Website is loading slowly due to large number of images, compress images?
-
-- Recipe Types page is not displaying, only accessible for admin, enable admin function for username: aland
-
-  
 
 <span id="credits"></span>
 
-  
-
 ## Credits
-
-  
 
 - [MongoDB](https://www.mongodb.com//) for providing a scalable and flexible database system.
 
@@ -732,11 +513,7 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 - [Stack Overflow](https://stackoverflow.com/) for providing a platform for questions and answers by professional and enthusiast programmers.
 
-  
-
 ### General Resources
-
-  
 
 - Code Institute Course Material
 
@@ -748,15 +525,9 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 - [Google](https://www.google.com/)
 
-  
-
 <span id="acknowledgements"></span>
 
-  
-
 ## Acknowledgements
-
-  
 
 - My Code Institute Mentor [Nishant Kumar](https://github.com/nishant8BITS/) for his continuous help and guidance.
 
@@ -766,6 +537,8 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 - My family for putting up with me during this project and for providing ideas and feedback along the way.
 
-  
+### Disclaimer
+
+This website was developed for educational purposes.
 
 <a href="#top">Return to Top</a>

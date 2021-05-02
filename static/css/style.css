@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Orelega+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 /*-- 
 #26a69a button
@@ -8,7 +8,7 @@
 
 body {
   background-color: #D3D3D3;
-  font-family: 'Orelega One', cursive;
+  font-family: 'Oswald', sans-serif;
 }
 
 .container {
@@ -43,6 +43,7 @@ h6 {
 
 p {
   padding: 0;
+  font-size: 1.2rem;
 }
 
 .brand-logo {
@@ -63,7 +64,7 @@ p {
 }
 
 .cover-card li {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .card-title > span {
@@ -73,11 +74,11 @@ p {
 }
 
 .intro {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .info {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
