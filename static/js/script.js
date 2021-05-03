@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('select').formSelect();
     $('.modal').modal();
 
-    // Self Invoking Function
+    // validate Materialize select fields, self invoking function
     (function validateMaterializeSelect() {
         const classValid = {
             "border-bottom": "1px solid #3c7c32",

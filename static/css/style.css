@@ -162,7 +162,6 @@ h1 > span {
   background-color: #ffffff;
   padding: 1rem;
   margin-top: 1rem;
-  width: 50%;
 }
 
 .card-image img.activator {
@@ -172,8 +171,15 @@ h1 > span {
   width: 100% !important;
 }
 
+.shs-image {
+  height: 25rem;
+  text-align: center;
+}
 .shs-image img.activator {
-  padding: 3rem;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
 }
 
 .no-result {
