@@ -14,11 +14,11 @@
                     <div class="input-field center-align">
                         <i class="fas fa-search-prefix"></i>
                         <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                        <label for="query">Search for Recipes</label>
+                        <label for="query">Search Recipes</label>
                         <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large">
-                        <i class="fas fa-ban"></i> Clear</a>
+                        <i class="fas fa-redo-alt"></i></a>
                         <button type="submit" class="waves-effect waves-light btn-large">
-                        <i class="fas fa-search"></i> Search</button>
+                        <i class="fas fa-search"></i></button>
                     </div>
                 </div>
             </form>
@@ -28,7 +28,7 @@
 <!-- all recipes -->
 <div class="heading-info">
     <h4 class="center-align">Recipes shared by {{ username }}</h4>
-    <p class="info">Recipes below can be edited or deleted.</p>
+    <p class="info">Your recipes can be edited or deleted</p>
 </div>
 {% if recipes|length > 0 %}
 <div class="row">
@@ -78,7 +78,7 @@
 </div>
 <!-- no search results found -->
 {% else %}
-<h6 class="center-align no-result">No Results Found. Please try a different word or press clear.</h6>
+<h6 class="center-align no-result">No Results Found. Please clear or try a different word.</h6>
 {% endif %}
 
 <!-- local catering company -->
@@ -89,7 +89,7 @@
     <div class="card-content center-align">
         <span class="card-title activator">
             <h4>Shannon Hotel Supplies</h4>
-            <p class="black-text">Click to reveal more information.</p>
+            <p class="black-text">Click image to reveal more info</p>
         </span>
         <p><a href="https://www.shsonline.ie/" target="_blank" alt="SHS Logo" class="waves-effect waves-light btn-large">Visit SHS Website</a>
         </p>

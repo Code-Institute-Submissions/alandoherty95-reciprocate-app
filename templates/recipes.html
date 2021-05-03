@@ -36,16 +36,16 @@
         <!-- search bar -->
         <div class="col s12 m12 l3 offset-l2">
             <form action="{{ url_for('search') }}" method="post" class="col s12">
-                <p class="info">Search or scroll down to view all recipes shared by our community.</p>
+                <p class="info">Search or scroll down to view all recipes shared by our community</p>
                 <div class="row">
                     <div class="input-field center-align">
                         <i class="fas fa-search-prefix"></i>
                         <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                        <label for="query">Search for Recipes</label>
+                        <label for="query">Search Recipes</label>
                         <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large">
-                        <i class="fas fa-ban"></i> Clear</a>
+                        <i class="fas fa-redo-alt"></i></a>
                         <button type="submit" class="waves-effect waves-light btn-large">
-                        <i class="fas fa-search"></i> Search</button>
+                        <i class="fas fa-search"></i></button>
                     </div>
                 </div>
             </form>
@@ -55,7 +55,7 @@
 <!-- all recipes displayed -->
 <div class="heading-info">
     <h4 class="center-align">{{ page_heading }}</h4>
-    <p class="info">Click on an image to reveal more info.</p>
+    <p class="info">Click on image to reveal more info</p>
 </div>
 {% if recipes|length > 0 %}
 <div class="row">
@@ -118,6 +118,6 @@
 {{ pagination.links }}
 <!-- no search results found -->
 {% else %}
-<h6 class="center-align no-result">No Results Found. Please try a different word or press clear.</h6>
+<h6 class="center-align no-result">No Results Found. Please clear or try a different word.</h6>
 {% endif %}
 {% endblock %}
