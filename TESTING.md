@@ -1,4 +1,7 @@
+
 <span id="top"></span>
+
+  
 
   
 
@@ -7,6 +10,7 @@
 # [Reciprocate](https://reciprocate-application.herokuapp.com/)
 
   
+
   
 
   
@@ -17,9 +21,15 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
+  
+
 View [README](README.md) file.
 
+  
+
 View [Reciprocate](https://reciprocate-application.herokuapp.com/) website.
+
+  
 
   
 
@@ -31,7 +41,11 @@ View [Reciprocate](https://reciprocate-application.herokuapp.com/) website.
 
   
 
+  
+
 - <a href="#overview">Overview</a>
+
+  
 
   
 
@@ -43,7 +57,11 @@ View [Reciprocate](https://reciprocate-application.herokuapp.com/) website.
 
   
 
+  
+
 - <a href="#manual">Manual Testing</a>
+
+  
 
   
 
@@ -55,7 +73,11 @@ View [Reciprocate](https://reciprocate-application.herokuapp.com/) website.
 
   
 
+  
+
 - <a href="#version-control">Version Control</a>
+
+  
 
   
 
@@ -67,13 +89,19 @@ View [Reciprocate](https://reciprocate-application.herokuapp.com/) website.
 
   
 
+  
+
 - <a href="#resolved-bugs">Resolved Bugs</a>
 
   
 
   
 
+  
+
 - <a href="#unresolved-bugs">Unresolved Bugs</a>
+
+  
 
   
 
@@ -89,7 +117,11 @@ View [Reciprocate](https://reciprocate-application.herokuapp.com/) website.
 
   
 
+  
+
 <span id="overview"></span>
+
+  
 
   
 
@@ -105,13 +137,19 @@ View [Reciprocate](https://reciprocate-application.herokuapp.com/) website.
 
   
 
+  
+
 **Consistency**
 
   
 
   
 
+  
+
 This website was designed to remain consistent wherever possible across the various pages:
+
+  
 
   
 
@@ -127,7 +165,11 @@ This website was designed to remain consistent wherever possible across the vari
 
   
 
+  
+
 - All headings are clear and consistent on each page.
+
+  
 
   
 
@@ -143,7 +185,11 @@ This website was designed to remain consistent wherever possible across the vari
 
   
 
+  
+
 - Buttons are standardised throughout the website using either small or large buttons with the same styling.
+
+  
 
   
 
@@ -157,7 +203,11 @@ This website was designed to remain consistent wherever possible across the vari
 
   
 
+  
+
 Designing a platform with easy navigation was front of mind during the development of this project:
+
+  
 
   
 
@@ -173,7 +223,11 @@ Designing a platform with easy navigation was front of mind during the developme
 
   
 
+  
+
 - Headings are clear and descriptive of the content displayed below.
+
+  
 
   
 
@@ -189,10 +243,15 @@ Designing a platform with easy navigation was front of mind during the developme
 
   
 
+  
+
 - Most views or actions can be reached within four clicks or taps.
 
   
+
 **Visually appealing**
+
+  
 
   
 
@@ -208,7 +267,11 @@ Designing a platform with easy navigation was front of mind during the developme
 
   
 
+  
+
 - Striking images were used to attract users to the website.
+
+  
 
   
 
@@ -223,11 +286,14 @@ Designing a platform with easy navigation was front of mind during the developme
   
 
   
+
   
 
   
 
 **Intuitive design**
+
+  
 
   
 
@@ -243,7 +309,11 @@ Designing a platform with easy navigation was front of mind during the developme
 
   
 
+  
+
 - Familiar icons are used throughout the website for typical actions e.g. add, edit, delete, search, logout.
+
+  
 
   
 
@@ -259,7 +329,11 @@ Designing a platform with easy navigation was front of mind during the developme
 
   
 
+  
+
 - A modal pops up to confirm deletion of recipes or categories of recipe.
+
+  
 
   
 
@@ -275,7 +349,11 @@ Designing a platform with easy navigation was front of mind during the developme
 
   
 
+  
+
 - All pages respond to a variety of different screen sizes with help from the Materialize elements.
+
+  
 
   
 
@@ -291,7 +369,11 @@ Designing a platform with easy navigation was front of mind during the developme
 
   
 
+  
+
 - I added the`loading="lazy"`attribute to recipe images to keep loading time down as the number of images on the website increases.
+
+  
 
   
 
@@ -307,14 +389,20 @@ Designing a platform with easy navigation was front of mind during the developme
 
   
 
+  
+
 - Passwords are hashed using Werkzeug Security to ensure they are not visible to the owner of the database or anyone else.
 
   
 
   
 
+  
+  
 
 <span id="user-stories"></span>
+
+  
 
   
 
@@ -330,7 +418,11 @@ Designing a platform with easy navigation was front of mind during the developme
 
   
 
+  
+
 **User Story 1:** As an individual who likes to keep a healthy lifestyle, I want to find tasty food and drink recipes to try at home.
+
+  
 
   
 
@@ -346,7 +438,11 @@ I can open the main homepage and scroll down to quickly view all recipes that ha
 
   
 
+  
+
 In order for this user to browse all recipes:
+
+  
 
   
 
@@ -362,6 +458,8 @@ In order for this user to browse all recipes:
 
   
 
+  
+
 - Scroll down slightly to view ‘Our Favourite Recipes'.
 
   
@@ -370,7 +468,11 @@ In order for this user to browse all recipes:
 
   
 
+  
+
 - Click on any selection to view additional information about the recipe.
+
+  
 
   
 
@@ -386,7 +488,11 @@ In order for this user to browse all recipes:
 
   
 
+  
+
 When I am logged into my profile, I can add a new recipe in just a few steps.
+
+  
 
   
 
@@ -402,7 +508,11 @@ In order for this user to share recipe ideas:
 
   
 
+  
+
 - Open homepage of website.
+
+  
 
   
 
@@ -418,7 +528,11 @@ In order for this user to share recipe ideas:
 
   
 
+  
+
 - Enter 'Username' and 'Password' and click the 'Log In' button.
+
+  
 
   
 
@@ -434,7 +548,11 @@ In order for this user to share recipe ideas:
 
   
 
+  
+
 - Input details such as 'Recipe Type', 'Name of Recipe', 'Ingredients' and 'Instructions'.
+
+  
 
   
 
@@ -450,7 +568,11 @@ In order for this user to share recipe ideas:
 
   
 
+  
+
 **User Story 3:** As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones.
+
+  
 
   
 
@@ -466,7 +588,11 @@ I can open the main homepage and scroll down to quickly view all recipes that ha
 
   
 
+  
+
 In order for this user to browse all recipes:
+
+  
 
   
 
@@ -482,7 +608,11 @@ In order for this user to browse all recipes:
 
   
 
+  
+
 - Scroll down slightly to view ‘Our Favourite Recipes'.
+
+  
 
   
 
@@ -498,7 +628,11 @@ In order for this user to browse all recipes:
 
   
 
+  
+
 <span id="manual"></span>
+
+  
 
   
 
@@ -514,7 +648,11 @@ In order for this user to browse all recipes:
 
   
 
+  
+
 The following tests have been carried out manually without raising an issue:
+
+  
 
   
 
@@ -530,7 +668,11 @@ The following tests have been carried out manually without raising an issue:
 
   
 
+  
+
 - Navbar is visible at the top of the screen displaying:
+
+  
 
   
 
@@ -546,7 +688,11 @@ The following tests have been carried out manually without raising an issue:
 
   
 
+  
+
 - **Users logged in**: Home, Profile, New Recipe & Log Out.
+
+  
 
   
 
@@ -562,7 +708,11 @@ The following tests have been carried out manually without raising an issue:
 
   
 
+  
+
 - Clicking on the Reciprocate logo takes users to the homepage displaying all recipes.
+
+  
 
   
 
@@ -578,7 +728,11 @@ The following tests have been carried out manually without raising an issue:
 
   
 
+  
+
 - If the user is logged in, clicking 'Log Out' will remove the user from a session by logging them out.
+
+  
 
   
 
@@ -594,7 +748,11 @@ Mobile Device:
 
   
 
+  
+
 - The hamburger menu replaces the names of each tab.
+
+  
 
   
 
@@ -610,7 +768,11 @@ Mobile Device:
 
   
 
+  
+
 **Footer**
+
+  
 
   
 
@@ -626,7 +788,11 @@ Mobile Device:
 
   
 
+  
+
 - Clicking on each link takes the user to the relevant page.
+
+  
 
   
 
@@ -642,7 +808,11 @@ Mobile Device:
 
   
 
+  
+
 **Home page**
+
+  
 
   
 
@@ -658,7 +828,11 @@ Mobile Device:
 
   
 
+  
+
 - The search bar returns results relevant to the key words entered.
+
+  
 
   
 
@@ -674,7 +848,11 @@ Mobile Device:
 
   
 
+  
+
 **Register page**
+
+  
 
   
 
@@ -686,7 +864,11 @@ Mobile Device:
 
   
 
+  
+
 - Entering a unique username and password creates a profile for the user.
+
+  
 
   
 
@@ -702,7 +884,11 @@ Mobile Device:
 
   
 
+  
+
 - If an existing username is submitted, a flash message will notify the user: 'Unfortunately, this username already exists!'
+
+  
 
   
 
@@ -718,7 +904,11 @@ Mobile Device:
 
   
 
+  
+
 - Upon successful registration, the new username and password are added to the Users collection in the MongoDB database.
+
+  
 
   
 
@@ -734,7 +924,11 @@ Mobile Device:
 
   
 
+  
+
 **Log In page**
+
+  
 
   
 
@@ -746,7 +940,11 @@ Mobile Device:
 
   
 
+  
+
 - When the 'Log In' button is clicked after inputting valid details, the user is redirected to their unique 'Profile' page.
+
+  
 
   
 
@@ -762,7 +960,11 @@ Mobile Device:
 
   
 
+  
+
 - A flash message notifies the user: 'Welcome to your profile, <username>!'
+
+  
 
   
 
@@ -778,7 +980,11 @@ Mobile Device:
 
   
 
+  
+
 **Profile page**
+
+  
 
   
 
@@ -794,7 +1000,11 @@ Search Function:
 
   
 
+  
+
 - After entering a term in the search field and either tapping/clicking the search icon or pressing Enter, the correct results are displayed from the fields `recipe_name` and `recipe_ingredients`.
+
+  
 
   
 
@@ -810,7 +1020,11 @@ Search Function:
 
   
 
+  
+
 Recipe Cards:
+
+  
 
   
 
@@ -826,7 +1040,11 @@ Recipe Cards:
 
   
 
+  
+
 - Clicking on 'Edit' allows users to edit recipes submitted by them. The input fields are already populating with the current content.
+
+  
 
   
 
@@ -842,7 +1060,11 @@ Recipe Cards:
 
   
 
+  
+
 **New Recipe page**
+
+  
 
   
 
@@ -854,7 +1076,11 @@ Recipe Cards:
 
   
 
+  
+
 - A user who is logged in can add a new recipe by entering the required field in the form.
+
+  
 
   
 
@@ -870,7 +1096,11 @@ Recipe Cards:
 
   
 
+  
+
 - Clicking the 'Add New Recipe' button:
+
+  
 
   
 
@@ -886,7 +1116,11 @@ Recipe Cards:
 
   
 
+  
+
 - Refreshes the page to allow users to easily create another recipe
+
+  
 
   
 
@@ -902,7 +1136,11 @@ Recipe Cards:
 
   
 
+  
+
 **Edit Recipe page**
+
+  
 
   
 
@@ -918,7 +1156,11 @@ Recipe Cards:
 
   
 
+  
+
 - Fields are populated correctly with current information.
+
+  
 
   
 
@@ -934,7 +1176,11 @@ Recipe Cards:
 
   
 
+  
+
 - Adds the recipe to the 'Recipes' collection.
+
+  
 
   
 
@@ -950,7 +1196,11 @@ Recipe Cards:
 
   
 
+  
+
 **Recipe Types page**
+
+  
 
   
 
@@ -966,7 +1216,11 @@ Recipe Cards:
 
   
 
+  
+
 - All recipe types from the categories collection are displayed on an individual card.
+
+  
 
   
 
@@ -982,7 +1236,11 @@ Recipe Cards:
 
   
 
+  
+
 - The 'Delete' button allows the admin to delete each recipe type. A modal pops up to confirm before deleting category.
+
+  
 
   
 
@@ -998,6 +1256,8 @@ Recipe Cards:
 
   
 
+  
+
 - The '404 Page Not Found' error handling page displays if users end up on an invalid page.
 
   
@@ -1006,7 +1266,11 @@ Recipe Cards:
 
   
 
+  
+
 - The prominent 'Return to Home' button redirects users back to the homepage.
+
+  
 
   
 
@@ -1022,7 +1286,11 @@ Recipe Cards:
 
   
 
+  
+
 - The '500 Page Not Found' error handling page displays if the server encountered an unexpected condition that prevented it from fulfilling the request.
+
+  
 
   
 
@@ -1038,7 +1306,11 @@ Recipe Cards:
 
   
 
+  
+
 <span id="auto"></span>
+
+  
 
   
 
@@ -1050,9 +1322,15 @@ Recipe Cards:
 
   
 
-  ![Desktop Report](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/desktop-report.png?raw=true)
+  
 
-  ![Mobile Report](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mobile-report.png?raw=true)
+![Desktop Report](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/desktop-report.png?raw=true)
+
+  
+
+![Mobile Report](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mobile-report.png?raw=true)
+
+  
 
 <span id="version-control"></span>
 
@@ -1062,22 +1340,40 @@ Recipe Cards:
 
   
 
+  
+
 ### Lighthouse Opportunities
 
--  Properly size images: Serve images that are appropriately-sized to save cellular data and improve load time
+  
 
- - Defer offscreen images: Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive.
+- Properly size images: Serve images that are appropriately-sized to save cellular data and improve load time
+
+  
+
+- Defer offscreen images: Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive.
+
+  
 
 - Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles.
 
--  Remove unused JavaScript: Remove unused JavaScript to reduce bytes consumed by network activity
+  
 
- - Remove unused CSS: Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity
+- Remove unused JavaScript: Remove unused JavaScript to reduce bytes consumed by network activity
 
-- Image elements do not have explicit  `width`  and  `height`
+  
+
+- Remove unused CSS: Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity
+
+  
+
+- Image elements do not have explicit `width` and `height`
+
+  
 
 - Set an explicit width and height on image elements to reduce layout shifts and improve CLS.
 
+  
+  
 
   
 
@@ -1093,6 +1389,8 @@ Recipe Cards:
 
   
 
+  
+
 - Document does not have a meta description: Meta descriptions may be included in search results to concisely summarize page content.
 
   
@@ -1101,7 +1399,9 @@ Recipe Cards:
 
   
 
-
+  
+  
+  
 
   
 
@@ -1117,7 +1417,11 @@ Recipe Cards:
 
   
 
+  
+
 Throughout the production of this application, I used [Gitpod](https://gitpod.io/) as a local repository and [GitHub](https://github.com/) as a remote repository.
+
+  
 
   
 
@@ -1133,7 +1437,11 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
   
 
+  
+
 1. Create a repository in GitHub by clicking 'New repository' in the top right corner of the main page.
+
+  
 
   
 
@@ -1145,13 +1453,19 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
   
 
+  
+
 3. Select 'Public' and then click 'Create Repository'.
 
   
 
   
 
+  
+
 4. Open the repository on Git Pod.
+
+  
 
   
 
@@ -1167,7 +1481,11 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
   
 
+  
+
 - **git status** checks the current status of new or modified files and folders
+
+  
 
   
 
@@ -1179,13 +1497,19 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
   
 
+  
+
 - **git commit -m "initial commit"** commits the work on the stage before pushing it to GitHub.
 
   
 
   
 
+  
+
 - **git push** updates the repository in GitHub to include new or modified files and folders.
+
+  
 
   
 
@@ -1201,7 +1525,11 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
   
 
+  
+
 ## Deployment
+
+  
 
   
 
@@ -1217,7 +1545,11 @@ The application was deployed using [Heroku](https://www.heroku.com/). Heroku is 
 
   
 
+  
+
 Before deploying the website to Heroku, please follow the necessary steps outlined below:
+
+  
 
   
 
@@ -1231,13 +1563,19 @@ Before deploying the website to Heroku, please follow the necessary steps outlin
 
   
 
+  
+
 2. Create a `Procfile` containing the name of the application file. Procfile may have a blank line when it is created so remove it as it may cause problems
 
   
 
   
 
+  
+
 3. Push the two files above to GitHub to save.
+
+  
 
   
 
@@ -1253,7 +1591,11 @@ Once those steps are done, the website can be deployed and below are the steps o
 
   
 
+  
+
 1. Create an account in Heroku.
+
+  
 
   
 
@@ -1265,7 +1607,11 @@ Once those steps are done, the website can be deployed and below are the steps o
 
   
 
+  
+
 3. Enter a unique 'App name' and 'Choose a region'. Then click 'Create app'.
+
+  
 
   
 
@@ -1277,7 +1623,11 @@ Once those steps are done, the website can be deployed and below are the steps o
 
   
 
+  
+
 5. Search for the name of the repository and click 'Connect'.
+
+  
 
   
 
@@ -1289,7 +1639,11 @@ Once those steps are done, the website can be deployed and below are the steps o
 
   
 
+  
+
 7. Navigate back to the 'Deploy' tab and click 'Enable Automatic Deploys'
+
+  
 
   
 
@@ -1301,13 +1655,19 @@ Once those steps are done, the website can be deployed and below are the steps o
 
   
 
+  
+
 9. A message will appear saying 'Your app was successfully deployed.'
 
   
 
   
 
+  
+
 10. Click 'View'.
+
+  
 
   
 
@@ -1323,22 +1683,37 @@ Once those steps are done, the website can be deployed and below are the steps o
 
   
 
+  
+
 ## Resolved Bugs
+
+  
 
   
 
 - Deletion modal not functioning, the modal used for confirming an action before deleting was not popping up and the selection was deleted without confirmation: the class `modal-trigger` was added to the modal function to trigger to pop up window before deleting.
 
   
- - Background and foreground colours do not have a sufficient contrast ratio. Low-contrast text is difficult or impossible for many users to read: Colour scheme was altered to be more visually pleasing.
+
+- Background and foreground colours do not have a sufficient contrast ratio. Low-contrast text is difficult or impossible for many users to read: Colour scheme was altered to be more visually pleasing.
+
+  
 
 - Favicon not displaying: graphic image displayed correctly after changing the file path.
 
+  
+
 - Form fields not populating when editing a recipe, the existing information was not displayed in each of the fields to allow editing: tweaked input to `value="{{ recipe.recipe_name }}"`
+
+  Search feature was functioning but did not display search words after submitting. The `{page_heading}` variable was added to display the missing information. e.g. `"Showing Results for 'banana'"`
+
+The recipe images did not fit well within the card. The `-o-object-fit: contain;`styling was added so the image will keep its aspect ratio, but is resized to fit within the given dimension.
 
   
 
 <span id="unresolved"></span>
+
+  
 
   
 
@@ -1347,6 +1722,7 @@ Once those steps are done, the website can be deployed and below are the steps o
   
 
   
+
   
 
   
@@ -1365,7 +1741,11 @@ Once those steps are done, the website can be deployed and below are the steps o
 
   
 
+  
+
 - Website is loading slowly due to large number of images, compress images?
+
+  
 
   
 
@@ -1381,12 +1761,17 @@ Once those steps are done, the website can be deployed and below are the steps o
 
   
 
+  
+
 - Drop-down field in add new recipe form changes color to red after selecting next field
 
   
+
   
 
 - Materialize select dropdown does not function correctly on iOS: known bug with Materialize meaning either the dropdown does not appear or selects the wrong item when tapped/clicked.
+
+  
 
   
 
@@ -1394,7 +1779,11 @@ Warning reported by Chrome console, `[DOM] Input elements should have autocomple
 
   
 
+  
+
 **Issues reported by GitPod**
+
+  
 
   
 
@@ -1402,7 +1791,11 @@ Special characters must be escaped : [ > ] [Jinja documentation](https://jinja.p
 
   
 
+  
+
 Doctype must be declared first: This issue relates to GitPod's inability to recognise the `!DOCTYPE html` in the base.html, is being passed through to all other HTML templates.
+
+  
 
   
 
