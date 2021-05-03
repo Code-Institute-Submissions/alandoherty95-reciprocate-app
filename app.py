@@ -53,7 +53,8 @@ def get_recipes():
     return render_template(
         "recipes.html",
         recipes=paginated_recipes,
-        pagination=pagination)
+        pagination=pagination,
+        page_heading="Browse All Recipes")
 
 
 # search function
@@ -68,7 +69,8 @@ def search():
         "recipes.html",
         recipes=recipes,
         paginated_recipes=paginated_recipes,
-        pagination=pagination)
+        pagination=pagination,
+        page_heading="Showing Results for '{}'".format(query))
 
 
 # registration page
