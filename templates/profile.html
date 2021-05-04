@@ -39,19 +39,19 @@
                 <img class="activator" src="{{ recipe.image_url }}" alt="Recipe Image">
             </div>
             <div class="card-content center-align">
-                <span class="card-title activator">
+                <div class="card-title activator">
                     <h4>{{ recipe.recipe_name }}</h4>
                     <h5 class="black-text">{{ recipe.category_name }}</h5>
-                </span>
+                </div>
                 <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger">Delete</a>
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-large">Edit</a>
             </div>
             <div class="card-reveal">
-                <span class="card-title">
+                <div class="card-title">
                     <h4>{{ recipe.recipe_name }}</h4>
                     <h5 class="black-text">{{ recipe.category_name }}</h5>
                     <i class="far fa-times-circle right"></i>
-                </span>
+                </div>
                 <br>
                 <h6>What do I need?</h6>
                 <p>{{ recipe.recipe_ingredients }}</p>
@@ -87,20 +87,20 @@
         <img class="activator" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png" alt="SHS Logo">
     </div>
     <div class="card-content center-align">
-        <span class="card-title activator">
+        <div class="card-title activator">
             <h4>Shannon Hotel Supplies</h4>
             <p class="black-text">Click image to reveal more info</p>
-        </span>
+        </div>
         <p><a href="https://www.shsonline.ie/" target="_blank" alt="SHS Logo" class="waves-effect waves-light btn-large">Visit SHS Website</a>
         </p>
     </div>
     <div class="card-reveal">
         <div class="row">
             <div class="col s12 m6 l6">
-                <span class="card-title">
+                <div class="card-title">
                     <i class="far fa-times-circle left"></i>
                     <h4>Shannon Hotel Supplies</h4>
-                </span>
+                </div>
                 <p>The family business originated from our dedicated service base in Limerick which traditionally covered the mid-west region of the country. Browse through the range of smoothie makers and cocktail shakers!</p>
             </div>  
             <div class="col s12 m6 l6">

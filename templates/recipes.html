@@ -66,10 +66,10 @@
                 <img class="activator center" src="{{ recipe.image_url }}" alt="Recipe Image">
             </div>
         <div class="card-content center-align">
-            <span class="card-title">
+            <div class="card-title">
                 <h4>{{ recipe.recipe_name }}</h4>
                 <h5 class="black-text">{{ recipe.category_name }}</h5>
-            </span>
+            </div>
             {% if session.user|lower == recipe.created_by|lower %}
             <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger"><i
                class="far fa-trash-alt"></i> Delete</a>
@@ -78,12 +78,12 @@
             {% endif %}
         </div>
         <div class="card-reveal">
-            <span class="card-title">
+            <div class="card-title">
                 <i class="far fa-times-circle right"></i>
                 <h4>{{ recipe.recipe_name }}</h4>
                 <h5 class="black-text">{{ recipe.category_name }}</h5>
                 <br>
-            </span>
+            </div>
             <br>
             <h6>What do I need?</h6>
             <p>{{ recipe.recipe_ingredients }}</p>
