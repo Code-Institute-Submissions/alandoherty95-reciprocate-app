@@ -63,19 +63,13 @@
     <div class="col s12 m6 l4">
         <div class="card card-recipe">
             <div class="card-image">
-                <img class="activator center" src="{{ recipe.image_url }}" alt="Recipe Image">
+                <img class="activator center" src="{{ recipe.image_url }}" alt="Recipe Image" onerror="this.onerror=null;this.src='resources/default-image.jpeg';">
             </div>
         <div class="card-content center-align">
             <div class="card-title">
                 <h4>{{ recipe.recipe_name }}</h4>
                 <h5 class="black-text">{{ recipe.category_name }}</h5>
             </div>
-            {% if session.user|lower == recipe.created_by|lower %}
-            <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger"><i
-               class="far fa-trash-alt"></i> Delete</a>
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-               class="waves-effect waves-light btn-large"><i class="far fa-trash-alt"></i> Edit</a>
-            {% endif %}
         </div>
         <div class="card-reveal">
             <div class="card-title">
@@ -84,7 +78,6 @@
                 <h5 class="black-text">{{ recipe.category_name }}</h5>
                 <br>
             </div>
-            <br>
             <h6>What do I need?</h6>
             <p>{{ recipe.recipe_ingredients }}</p>
             <br>
@@ -93,6 +86,12 @@
             <br>
             <h6>Shared by:</h6>
             <p>{{ recipe.created_by }}</p>
+            {% if session.user|lower == recipe.created_by|lower %}
+            <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger"><i
+               class="far fa-trash-alt"></i> Delete</a>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+               class="waves-effect waves-light btn-large"><i class="far fa-trash-alt"></i> Edit</a>
+            {% endif %}
         </div>
     </div>
     <!-- modal to confirm action before deleting a recipe -->

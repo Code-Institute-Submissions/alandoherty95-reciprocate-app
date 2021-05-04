@@ -4,6 +4,13 @@ $(document).ready(function () {
     });
     $('select').formSelect();
     $('.modal').modal();
+    $('.card').hover(
+        function() {
+            $(this).find('> .card-image > img.activator').click();
+        }, function() {
+            $(this).find('> .card-reveal > .card-title').click();
+        }
+    );
 
     // validate Materialize select fields, self invoking function
     (function validateMaterializeSelect() {

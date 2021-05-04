@@ -57,6 +57,14 @@ p {
   background-color: #ffffff;
 }
 
+.card-reveal {
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
+
 .cover-card {
   height: auto;
   vertical-align: bottom;
@@ -101,13 +109,9 @@ p {
   color: #a62632;
 }
 
-.flashes {
-  background-color: rgb(169,169,169, 0.75);
-}
-
 .flashes h4 {
-  line-height: 2;
-  color: #ffffff;
+  color: #000000;
+  line-height: 1.5;
 }
 
 .collapsible-header {
@@ -177,8 +181,7 @@ h1 > span {
 }
 .shs-image img.activator {
   height: 20rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   padding: 1rem;
 }
 
