@@ -8,7 +8,7 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
 <span id="top"></span>
 
-**[Reciprocate](https://reciprocate-application.herokuapp.com/)** is a community-based application created for anyone who enjoys trying new recipes or sharing their favourites recipes with others. It was designed to allow users to share and contribute recipes with each other. Users can share their own food and drink recipe ideas with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind so people of all ages can get involved. Users will have the option of creating an account to create, locate, display, edit and delete records.
+**[Reciprocate](https://reciprocate-application.herokuapp.com/)** is a community-based application created for anyone who enjoys trying new recipes or sharing their favourites recipes with others. It was designed to allow users to freely share recipes with each other. Users can share their own food and drink recipes with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind so people of all ages can get involved. Users will have the option of setting up an account to create, locate, display, edit and delete records from the collection of recipes.
 
 ## Table of Contents
 
@@ -40,17 +40,17 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
 ## 1. Context
 
-In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand. The website focuses on three main recipes types: smoothies, cocktails and healthy snacks. The website admin has the capability to add additional recipes types for selection by other users.
+In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand at this time. The website focuses on three main recipes types: smoothies, cocktails and healthy snacks. The website admin has the capability to add additional recipes types for selection by other users.
 
-The application was designed using CRUD functionality. Create, Read, Update, and Delete are the four primary functions available to users of the website.
+The application was designed using CRUD functionality. Create, Read, Update, and Delete are the four primary functions available to users of the website. Any user who creates an account will have the ability to create, read, edit and delete records from the recipe collection.
 
 Create — A function we can call when a new recipe is being added to the database. The user can supply the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The new entry is assigned a unique `id`, which can be used to access the resource later. The website admin has the capability to create new recipes types for selection.
 
-Read — A function we can call to see all of the recipes currently in our database. This function does not alter the recipes in the catalog - it simply retrieves the information and displays the results. Again, a similar process can be followed if the website admin wishes to view the recipe types contained in the database.
+Read — A function we can call to see all of the recipes currently in our database. This function does not alter the recipes in the catalog - it simply retrieves the information and displays the results. Again, a similar process can be followed if the website admin wishes to view the recipe types contained in the database. All visitors the website can browse all recipes without having to create an account.
 
 Update — A function we can call when information about a particular recipe must be changed. The user can edit the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. After the function is called, the corresponding entry in the `recipes` database will contain the new fields provided. This option is only available to the creator of each recipe. These steps can be followed if the website admin wishes to edit an existing recipe type in the database.
 
-Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the `recipe` resource should contain all of the books it had before, except for the one recipe we just deleted. This option is only available to the creator of the recipe. A similar process can be followed if the website admin wishes to remove a recipe type from the database.
+Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the `recipe` resource should contain all of the recipes it had before, except for the one recipe we just deleted. This option is only available to the creator of the recipe. A similar process can be followed if the website admin wishes to remove a recipe type from the database.
 
 <span id="ux"></span>
 
@@ -58,7 +58,7 @@ Delete — A function we can call to remove a particular recipe from the catalog
 
 ### Overview
 
-The website was designed with a community-based approach in mind. It was created with three main objectives in mind:
+The website was designed with a community-based approach in mind. It was created with three main objectives:
 
 - To encourage people to share their favourite recipes with other members
 
@@ -90,7 +90,7 @@ The website focuses on the following three types of recipes but it is not limite
 
 - Log in and out easily
 
-- Add new recipes quickly and easily
+- Add new recipes quickly and conveniently
 
 - Edit or delete recipes I have already shared
 
@@ -117,27 +117,34 @@ The website focuses on the following three types of recipes but it is not limite
 ### Design
 
 #A62632 - Crimson
+
 #FFFFFF - White
+
 #26A69A - Persian Green
 
 ![enter image description here](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/color-scheme.png?raw=true)
 
-The colour scheme chosen for this project was inspired by vibrant colours to give the website an attractive, vibrant look. Crimson and Persian Green complement each other nicely. The white background gives a sleek, neutral look to the application.
+The colour scheme chosen for this project was inspired by bright colours to give the website an attractive, vibrant look. While Crimson and Persian Green complement each other nicely, the white background gives a sleek, neutral look to the application.
 
 - **Crimson** is used for all headings, giving a consistent feel throughout the website.
-- **White** is the backdrop of all headings and text on the website. The bright colour emphasises clarity and removes visual clutter.
--
-- **Persian Green** is used for all buttons with intuitive labels. This provides a congruent look on each page, allowing users to easily find their desired button.
+
+- **White** is the backdrop of all headings and text on the website. The bright colour emphasises clarity and removes visual clutter. The black text is easily readable on the white background.
+
+- **Persian Green** is used for all buttons which contain intuitive labels. This provides a congruent look on each page, allowing users to easily find their desired button.
 
 #### Typography
 
 [Merienda One](https://fonts.google.com/specimen/Merienda+One) was used for the main headings and navigation links on the website to grab the users attention. 'Merienda' is a Spanish term for "afternoon snack", which seems fitting for the purpose of this application. Merienda has soft shapes, is slightly condensed, and has a rhythm which is an invitation to read short pieces of text.
 
+![Merienda One](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/Merienda%20One.png?raw=true)
+
 [Oswald](https://fonts.google.com/specimen/Oswald) was used for the primary text because it is easy to read. Oswald is designed to be used freely across the internet by web browsers on desktop computers, laptops and mobile devices.
+
+![Oswald](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/Oswald.png?raw=true)
 
 - #### Imagery
 
-Images used on this website were selected from [Pexels](https://www.pexels.com/).
+Images used in the development of this website were selected from [Pexels](https://www.pexels.com/). Users are encouraged to add the full image URL if they would like to include a picture with their recipe.
 
 <span id="scope"></span>
 
@@ -145,25 +152,25 @@ Images used on this website were selected from [Pexels](https://www.pexels.com/)
 
 The minimum features to be included in this project are as follows:
 
-- **Home Page** attracts first-time visitors and presents the purpose of the website. The two call-to-action buttons invite users to either log in or register. All recipes in our database are displayed below.
+- **Home Page** attracts first-time visitors and clearly presents the purpose of the website. The two call-to-action buttons invite users to either log in or register if they do not have an account yet. The search bar is also a prominent feature on the home page with all recipes in our collection are displayed below.
 
-- **Recipe Types** allows the website admin to manage the categories of recipe. The admin can add or delete categories. Users can select from any recipe type in the database when creating a new recipe.
+- **Recipe Types** allows the website admin to manage the categories of recipe available for selection. The admin can add or delete categories. Users can select from any recipe type in the database when creating a new recipe.
 
-- **Register** invites visitors to create an account in order to share new recipes as well as edit or delete recipes they have already shared.
+- **Register** invites visitors to create an account if they have not set one up yet. Users with an account have the ability to add new recipes as well as edit or delete recipes they have already shared.
 
-- **Login** invites users to log in to their account. This allows users to view, edit or delete recipes they have already shared as well as sharing new recipe ideas.
+- **Login** invites users to log in to their account. This allows users to view, edit or delete recipes they have already shared as well as adding new recipe ideas.
 
-- **Logout** allows users to log out of their account with one click of a button.
+- **Logout** allows users to log out of their account with one click of a button. This button is available in the navigation bar and footer of all pages when a user is logged in.
 
-- **Profile** can be accessed by users when they have successfully logged in. Users can view all recipes they have shared. Users can also edit or delete their recipes.
+- **Profile** can be accessed by users when they have successfully logged in. Users can view all recipes they have shared. Users can also edit or delete their existing recipes.
 
-- **Create Recipe** encourages users to share their new recipes with the community.
+- **Create Recipe** encourages users to share new recipes with the community. Users must be logged in to their account in order to share recipes.
 
-- **Edit Recipe** allows users to edit their own recipes.
+- **Edit Recipe** allows users to edit their own recipes. Users can edit their existing recipes by selecting the 'Edit' button.
 
-- **Delete Recipe** function that users can delete their recipes. A modal pop up will ask the user to confirm action before deleting. This provides an extra layer of protection against accidental deletion.
+- **Delete Recipe** function that users can delete their recipes. A modal pop up will ask the user to confirm their action before deleting. This provides an extra layer of protection against accidental deletion of records.
 
-- **Search Function** allows users to search for specific recipes using keywords. The search function targets the `“recipe_name”` and `“recipe_ingredients”` fields.
+- **Search Function** allows users to search for specific recipes using keywords. The search function targets the `“recipe_name”` and `“recipe_ingredients”` fields in each recipe.
 
 <span id="structure"></span>
 
@@ -175,19 +182,20 @@ The minimum features to be included in this project are as follows:
 
 - **Home** (`recipes.html`)
 
-The welcome page outlines the main purpose of the website. In the top navigation bar, there is a logo and tabs for the _Home_, _Login_ and _Register_ pages. There are two call-to-action buttons encouraging users to either log in or register. By scrolling down, users can browse all recipes in our database and search using keywords.
+The welcome page clearly outlines the main purpose of the website. In the top navigation bar, there is a logo and tabs for the _Home_, _Login_ and _Register_ pages. There are two call-to-action buttons encouraging users to either log in or register. By scrolling down, users can browse all recipes in our database and search using keywords.
 
 - **Log In** (`login.html`)
 
-The log in page allows users who already have an account to log in to their profile. When users log in successfully, they are redirected to their unique _Profile_ page. Additional tabs are visible to the user after logging in.
+The log in page allows users who already have an account to log in to their profile.
+Both the username and password must be 4-20 characters long, containing only numbers and letters. When users log in successfully, they are redirected to their unique _Profile_ page where they can view, edit and delete their existing recipes. Additional tabs are visible to the user after logging in.
 
 - **Register** (`register.html`)
 
-The registration page allows users to create an account by entering a distinct username and password. When users register successfully, they are redirected to their unique _Profile_ page. Additional tabs are visible to the user after logging in.
+The registration page allows users to create an account by entering a distinct username and password. Both the username and password must be 4-20 characters long, containing only numbers and letters. When users register successfully, they are redirected to their unique _Profile_ page. Additional tabs are visible to the user after logging in.
 
 - **Profile** (`profile/<username>.html`)
 
-The profile page is unique to each user of the application. When users register successfully, they are redirected to their unique _Profile_ page. All recipes shared by the user are displayed on their profile page.
+The profile page is unique to each user of the application. When users register successfully, they are redirected to their unique _Profile_ page where they can view, edit and delete their existing recipes.
 
 - **New Recipe** (`add_recipe.html`)
 
@@ -195,15 +203,15 @@ The recipe page allows users to add a new recipe by submitting a form. The user 
 
 - **Recipe Types** (`get_categories.html`)
 
-The recipe types page can be used by the website admin to view existing types of recipe. There is also the option to edit or delete recipe types. New categories can also be created by the admin.
+The recipe types page can be accessed by the website admin to view existing types of recipe. There is also the option to edit or delete recipe types. The primary recipe types on this website are cocktails, smoothies and healthy snacks. New categories can also be created by the admin.
 
 - **Edit Recipe** (`edit_recipe.html`)
 
-The edit recipe page allows users to edit a new recipe by editing a form. The user will update the fields for`“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Existing recipes can also be deleted by the user who created them.
+The edit recipe page allows users to edit a new recipe by editing a form. The user will update the fields for`“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Existing recipes can also be deleted by the user who created them. The updated recipe will be contained in the collection.
 
 - **Add Recipe Types** (`add_category.html`)
 
-The add recipe types page allows the website admin to add a new recipe type. All categories can be selected from the drop-down in the recipe form.
+The add recipe types page allows the website admin to add a new recipe type. All categories can be selected from the drop-down in the recipe form. The primary recipe types on this website are cocktails, smoothies and healthy snacks. New categories can be created by the admin.
 
 - **Edit Recipe Types** (`edit_category.html`)
 
@@ -271,7 +279,9 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
 ## Database
 
-MongoDB was chosen as the database program for this application. It is a source-available cross-platform document-oriented database program. MongoDB's non-relational database structure was suitable because the number of collections is small as well as the relationships between them.
+MongoDB was chosen as the database program for this application. It is a source-available cross-platform document-oriented database program. MongoDB's non-relational database structure was suitable because the number of collections is small as well as the relationships between them
+
+![Mongo DB Record](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mongodb-recipe.png?raw=true)
 
 | Categories | | |
 
@@ -333,7 +343,7 @@ Users with an account have the ability to:
 
 - Edit their own recipes.
 
-- Delete their own activities.
+- Delete their own recipes.
 
 The admin has the ability to:
 
@@ -343,13 +353,13 @@ The admin has the ability to:
 
 - Edit their own recipes.
 
-- Delete their own activities.
+- Delete their own recipes.
 
 - Add a new recipe type.
 
-- Edit an existing recipes type.
+- Edit an existing recipe type.
 
-- Delete an existing recipes type.
+- Delete an existing recipe type.
 
 **Materialize CSS**:
 
@@ -365,35 +375,35 @@ The admin has the ability to:
 
 **Secure Registration**
 
-In order to register an account, the user must enter a unique username and a password. The password is hashed so it is not visible to the owner of the database. Werkzeug was used to hash the password entry when registering to the site and encrypting on MongoDB. Both the username and password must be between 4 and 20 characters using`a-zA-Z0-9`.
-
----
+In order to register an account, the user must enter a unique username and a password. The password is hashed so it is not visible to the owner of the database. Werkzeug was used to hash the password entry when registering to the site and encrypting on MongoDB. Both the username and password must be between 4 and 20 characters, containing only numbers and letters using`a-zA-Z0-9`.
 
 - **Discover new recipes**
 
 The homepage displays all recipes that have been shared on the application. Each selection shows the recipe type, the recipe name and an image. Users can reveal more information about the recipe by clicking on each selection. Users can view the suggested ingredients, instructions and the username of the person who shared the idea.
 
-- **Share your favourite recipes**
+**Share your favourite recipes**
 
-The application encourages all users to share their own favourite recipes with the rest of the community. The user can input the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Additionally, a similar process can be followed if a user wishes to add a new recipe type to the database.
+The application encourages all users to share their own favourite recipes with the rest of the community. The user can input the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Users must create an account before they can share recipes.
 
-- **Edit your recipes**
+**Edit your recipes**
 
-In addition to adding new recipes, users can also edit recipes they have already submitted. The user can update the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Similar steps can be followed if a user wishes to add a new recipe type to the database.
+In addition to adding new recipes, users can also edit recipes they have already shared with the community. The user can update the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The updated record will be contained within the collection.
 
 - **Delete your recipes**
 
-Users have the option to delete recipes they have submitted. Users must confirm if they would like to delete a selection before it is removed from the database. This adds an extra layer of protection to prevent records being deleted accidentally.
+Users have the option to delete recipes they have shared with the community. Users must confirm if they would like to delete a selection before it is removed from the database. This adds an extra layer of protection to prevent records being deleted accidentally.
 
 - **Register an account**
 
-The application encourages users to register an account for a better experience. Users are required to enter a unique `"username"` and `"password"` when registering. There is a large call-to-action button on the homepage attracting users to either log in or register. Users can view all recipes without logging in. However, users are required to log in in order to share a new recipe and edit or delete an existing recipe.
+The application encourages users to register an account for a better experience. Users are required to enter a unique `"username"` and `"password"` when registering. Username must be 4-20 characters long, containing only numbers and letters. There is a large call-to-action button on the homepage attracting users to either log in or register. Users can view all recipes without logging in. However, users are required to log in in order to share a new recipe and edit or delete an existing recipe.
 
 - **Search all recipes**
-  The application has a search feature allowing users to search using keywords within the recipe name or ingredients. A message will display if no results are found.
+
+The application has a search feature allowing users to search using keywords within the `“recipe_name”`and `“recipe_ingredients”` fields. A message will display if no results are found. There is a button for clearing search results also.
 
 - **Error handling**
-  Additional pages were created to handle 404 and 500 errors on the website. Both pages will redirect users back to the homepage.
+
+Additional pages were created to handle 404 and 500 errors on the website. Both pages will redirect users back to the homepage.
 
 ### Features to Implement in the Future
 
@@ -402,6 +412,10 @@ The application encourages users to register an account for a better experience.
 - **Up Vote/Down Vote** Users could have the option of voting in favour of or against certain recipes. This feature could be considered instead of a 'like' feature.
 
 - **Share your recipes** Users could have the option of sharing their favourite recipes via email or on social media.
+
+- **View other profiles** Users could have the option to view the profile page of other users. This would be a beneficial feature, adding to the communal feel of the application.
+- **Forgot Password:** The primary design goals were to make the website easy-to-use and intuitive for users. An e-mail address will be required when creating an account for this feature to be implemented. It could be considered in future development.
+- **Uploading Images:** The application is currently using full image URL's to display pictures of recipes. This is because databases store image locations as a URL and the file itself is located elsewhere. Uploading images directly could be considered in future development.
 
 <span id="testing"></span>
 
@@ -441,17 +455,15 @@ Commits were made frequently and consistently throughout the course of this proj
 
 The application was deployed using [Heroku](https://www.heroku.com/). Heroku is a cloud platform with a service supporting several programming languages including Python. GitHub can host static websites but this particular project requires back-end technology such as a server and a database. I connected the GitHub repository with Heroku.
 
-Before deploying the website to Heroku, please follow the necessary steps outlined below:
+Before deploying the application to Heroku, please follow the necessary steps outlined below:
 
 1. Create a `requirements.txt` file containing the name of packages being used in Python. The file is updated whenever new packages or modules are installed during the project.
 
-2. Create a `Procfile` containing the name of the application file. Procfile may have a blank line when it is created so remove it as it may cause problems
+2. Create a `Procfile` containing the name of the application file. Procfile may have a blank line when it is created so remove it as it may cause problems. The Procfile tells Heroku what to run.
 
 3. Push the two files above to GitHub to save.
 
-pip install -r requirements.txt
-
-Once those steps are done, the website can be deployed and below are the steps of the deployment in Heroku.
+Once those steps have been completed, the application can be deployed. Please follow the necessary steps in Heroku outlined below:
 
 1. Create an account in Heroku.
 
@@ -464,6 +476,8 @@ Once those steps are done, the website can be deployed and below are the steps o
 5. Search for the name of the repository and click 'Connect'.
 
 6. Navigate to the 'Settings' tab, click 'Reveal Config Vars' and enter the necessary keys and values.
+
+![Heroku Config Vars](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/heroku-config-vars.png?raw=true)
 
 7. Navigate back to the 'Deploy' tab and click 'Enable Automatic Deploys'
 
@@ -515,7 +529,7 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 ### General Resources
 
-- Code Institute Course Material
+- [Code Institute](https://codeinstitute.net/full-stack-software-development-diploma/) Course Material
 
 - [Stack Overflow](https://stackoverflow.com/)
 
