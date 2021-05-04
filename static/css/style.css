@@ -51,8 +51,7 @@ p {
 }
 
 .heading-info {
-  padding-top: 2rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   text-align: center;
   background-color: #ffffff;
 }
@@ -67,7 +66,6 @@ p {
 
 .cover-card {
   height: auto;
-  vertical-align: bottom;
   letter-spacing: 1px;
 }
 
