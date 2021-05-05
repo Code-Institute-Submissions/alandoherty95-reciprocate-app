@@ -1,49 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
-
-<!-- log in -->
-<div class="heading-info">
-    <h2 class="center-align">Register</h2>
-    <p class="info">Enter username and password to register</p>
-</div>
-<div class="row">
-    <form class="col s12 m8 offset-m2 l4 offset-l4" method="POST" action="{{ url_for('register') }}">
-        <div class="card-panel">
-            <!-- input username -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-user-plus prefix"></i>
-                    <input id="username" name="username" type="text"  autocomplete="username" minlength="4" maxlength="18"
-                        pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
-                    <label for="username">Username</label>
-                    <span class="helper-text" data-error="Username must be 4-20 characters long, containing only numbers and letters."
-                    data-success="Validated">
-                        Username must be 4-20 characters long, containing only letters and numbers.
-                    </span>
-                </div>
-            </div>
-            <!-- input password -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-user-lock prefix"></i>
-                    <input id="password" name="password" type="password"  autocomplete="new-password" minlength="4" maxlength="18"
-                        pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
-                    <label for="password">Password</label>
-                    <span class="helper-text" data-error="Password must be 4-20 characters long, containing only numbers and letters."
-                    data-success="Validated">
-                        Password must be 4-20 characters long, containing only letters and numbers.
-                    </span>
-                </div>
-            </div>
-            <!-- register button -->
-            <div class="row">
-                <button type="submit" class="col s6 offset-s3 btn-large">
-                    Register <i class="fas fa-sign-in-alt"></i>
-                </button>
-            </div>
+<div class="card-panel cover-card">
+    <div class="row">
+        <!-- register -->
+        <div class="col s12 m4 l4 heading-info">
+            <h2 class="center-align">Register</h2>
+            <p class="info">Enter username and password to create an account</p>
         </div>
-    </form>
-</div>
+        <!-- registration form -->
+        <div class="col s12 m8 l6 offset-l2">
+            <form method="POST" action="{{ url_for('register') }}">
+                <div class="card-panel">
+                    <!-- input username -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-user-plus prefix"></i>
+                            <input id="username" name="username" type="text"  autocomplete="username" minlength="4" maxlength="18"
+                                pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
+                            <label for="username">Username</label>
+                            <span class="helper-text" data-error="Username must be 4-20 characters long, containing only numbers and letters."
+                            data-success="Validated">
+                                Username must be 4-20 characters long, containing only letters and numbers.
+                            </span>
+                        </div>
+                    </div>
+                    <!-- input password -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-user-lock prefix"></i>
+                            <input id="password" name="password" type="password"  autocomplete="new-password" minlength="4" maxlength="18"
+                                pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
+                            <label for="password">Password</label>
+                            <span class="helper-text" data-error="Password must be 4-20 characters long, containing only numbers and letters."
+                            data-success="Validated">
+                                Password must be 4-20 characters long, containing only letters and numbers.
+                            </span>
+                        </div>
+                    </div>
+                    <!-- register button -->
+                    <div class="row">
+                        <button type="submit" class="col s6 offset-s3 btn-large">
+                            Register <i class="fas fa-sign-in-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
 <!-- link to log in page -->
 <div class="row">
     <div class="col s12">
