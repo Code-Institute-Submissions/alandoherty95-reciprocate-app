@@ -36,7 +36,15 @@
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo">Reciprocate</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                    <li>
+                        <form action="{{ url_for('search') }}" method="post">
+                                <div class="input-field">
+                                    <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                                    <label for="query">Search Recipes</label><button type="submit" class="waves-effect waves-light btn-small inline"><i class="fas fa-search"></i></button>
+                                </div>
+                        </form>
+                    </li>
+                    <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-home"></i></a></li>
                     <!-- only visible in user session -->
                     {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
@@ -47,8 +55,8 @@
                         {% endif %}
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
                         <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -66,8 +74,8 @@
                 {% endif %}
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
             {% endif %}
         </ul>
     </header>
@@ -102,8 +110,8 @@
                         <li><a href="{{ url_for('get_categories') }}">Recipe Types</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
                         <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -114,6 +122,12 @@
                     <i class="fab fa-github-square"></i></a>
             </div>
             <div class="col l4 m4 s12">
+                <h4>Reciprocate</h4>
+                <ul>
+                    <li>verb</li>
+                    <li>re·​cip·​ro·​cate</li>
+                    <li>To respond to a gesture or action by making a corresponding one.</li>
+                </ul>
                 <!-- copyright -->
                 <p>© Doherty 2021</p>
             </div>

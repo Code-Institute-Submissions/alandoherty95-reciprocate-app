@@ -11,44 +11,14 @@
                     </ul>
                     <!-- add new recipe button -->
                     <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>                   
-                    <br>
-                    <h4>Reciprocate</h4>
-                    <ul>
-                        <li>verb</li>
-                        <li>re·​cip·​ro·​cate</li>
-                        <li>To respond to a gesture or action by making a corresponding one.</li>
-                    </ul>
                 {% else %}
                     <p class="intro">Browse & share your favourite recipe ideas with other people in our community. Create your own profile now to enjoy the full experience.</p>
                     <!-- log in and register buttons -->
-                    <a class="waves-effect waves-light btn-large" href="{{ url_for('login') }}">
-                    <i class="fas fa-sign-in-alt"></i> Log In</a>
-                    <a class="waves-effect waves-light btn-large" href="{{ url_for('register') }}">
+                    <a class="waves-effect waves-light btn-large btn-reg" href="{{ url_for('register') }}">
                     <i class="fas fa-sign-in-alt"></i> Register</a>
-                    <h4>Reciprocate</h4>
-                    <ul>
-                        <li>verb</li>
-                        <li>re·​cip·​ro·​cate</li>
-                        <li>To respond to a gesture or action by making a corresponding one.</li>
-                    </ul>
+                    <a class="waves-effect waves-light btn-large btn-log" href="{{ url_for('login') }}">
+                    <i class="fas fa-sign-in-alt"></i> Log In</a>
                 {% endif %}
-            </div>
-            <!-- search bar -->
-            <div class="col s12 m12 l4 offset-l1">
-                <form action="{{ url_for('search') }}" method="post" class="col s12 search-bar">
-                    <p class="info">Search or scroll down to view all recipes shared by our community</p>
-                    <div class="row">
-                        <div class="input-field center-align">
-                            <i class="fas fa-search-prefix"></i>
-                            <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                            <label for="query">Search Recipes</label>
-                            <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large">
-                            <i class="fas fa-redo-alt"></i></a>
-                            <button type="submit" class="waves-effect waves-light btn-large">
-                            <i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
