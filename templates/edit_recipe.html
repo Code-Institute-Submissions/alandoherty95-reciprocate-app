@@ -6,24 +6,24 @@
 </div>
 <div class="row card-panel">
     <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
-        <!-- recipe type selector -->
+        <!-- select recipe type -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled>Choose recipe type</option>
                     {% for category in categories %}
-                    {% if category.category_name == recipe.category_name %}
-                    <option value="{{ category.category_name }}" disabled>{{ category.category_name }}</option>
-                    {% else %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                    {% endif %}
+                        {% if category.category_name == recipe.category_name %}
+                            <option value="{{ category.category_name }}" disabled>{{ category.category_name }}</option>
+                        {% else %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="category_name">Type of Recipe</label>
             </div>
         </div>
-        <!-- recipe name input -->
+        <!-- input recipe name -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix"></i>
@@ -32,7 +32,7 @@
                 <label for="recipe_name">Name of Recipe</label>
             </div>
         </div>
-        <!-- recipe ingredients input -->
+        <!-- input recipe ingredients -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix"></i>
@@ -41,7 +41,7 @@
                 <label for="recipe_ingredients">Ingredients</label>
             </div>
         </div>
-        <!-- recipe instructions input -->
+        <!-- input recipe instructions -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix"></i>
@@ -51,7 +51,7 @@
                 <label for="recipe_instructions">Instructions</label>
             </div>
         </div>
-        <!-- recipe image url input -->
+        <!-- input recipe image url -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix"></i>

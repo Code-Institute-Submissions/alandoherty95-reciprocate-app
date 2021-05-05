@@ -1,124 +1,124 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="card-panel cover-card">
+    <div class="card-panel cover-card">
+        <div class="row">
+            <div class="col s12 m12 l6">
+                    <h3 class="profile"><strong>{{ username }}</strong> is logged in.</h3>
+                    <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+            </div>
+            <!-- search bar -->
+            <div class="col s12 m12 l4 offset-l2">
+                <form action="{{ url_for('search') }}" method="post" class="col s12">
+                    <p class="info">Search or scroll down to view all recipes shared by our community.</p>
+                    <div class="row">
+                        <div class="input-field center-align">
+                            <i class="fas fa-search-prefix"></i>
+                            <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                            <label for="query">Search Recipes</label>
+                            <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large">
+                            <i class="fas fa-redo-alt"></i></a>
+                            <button type="submit" class="waves-effect waves-light btn-large">
+                            <i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+    </div>
+    <!-- all recipes -->
+    <div class="heading-info">
+        <h4 class="center-align">Recipes shared by {{ username }}</h4>
+        <p class="info">Hover over recipes to reveal more info, edit or delete</p>
+    </div>
+    {% if recipes|length > 0 %}
     <div class="row">
-        <div class="col s12 m12 l6">
-                <h3 class="profile"><strong>{{ username }}</strong> is logged in.</h3>
-                <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
-        </div>
-        <!-- search bar -->
-        <div class="col s12 m12 l4 offset-l2">
-            <form action="{{ url_for('search') }}" method="post" class="col s12">
-                <p class="info">Search or scroll down to view all recipes shared by our community.</p>
-                <div class="row">
-                    <div class="input-field center-align">
-                        <i class="fas fa-search-prefix"></i>
-                        <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                        <label for="query">Search Recipes</label>
-                        <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large">
-                        <i class="fas fa-redo-alt"></i></a>
-                        <button type="submit" class="waves-effect waves-light btn-large">
-                        <i class="fas fa-search"></i></button>
+        {% for recipe in recipes %}
+        <div class="col s12 m6 l4">
+            <div class="card card-recipe">
+                <div class="card-image">
+                    <img class="activator" src="{{ recipe.image_url }}" alt="Recipe Image">
+                </div>
+                <div class="card-content center-align">
+                    <div class="card-title activator">
+                        <h4>{{ recipe.recipe_name }}</h4>
+                        <h5 class="black-text">{{ recipe.category_name }}</h5>
                     </div>
                 </div>
-            </form>
-        </div>
-   </div>
-</div>
-<!-- all recipes -->
-<div class="heading-info">
-    <h4 class="center-align">Recipes shared by {{ username }}</h4>
-    <p class="info">Hover over recipes to reveal more info, edit or delete</p>
-</div>
-{% if recipes|length > 0 %}
-<div class="row">
-    {% for recipe in recipes %}
-    <div class="col s12 m6 l4">
-        <div class="card card-recipe">
-            <div class="card-image">
-                <img class="activator" src="{{ recipe.image_url }}" alt="Recipe Image">
-            </div>
-            <div class="card-content center-align">
-                <div class="card-title activator">
-                    <h4>{{ recipe.recipe_name }}</h4>
-                    <h5 class="black-text">{{ recipe.category_name }}</h5>
+                <div class="card-reveal">
+                    <div class="card-title">
+                        <h4>{{ recipe.recipe_name }}</h4>
+                        <h5 class="black-text">{{ recipe.category_name }}</h5>
+                        <i class="far fa-times-circle right"></i>
+                    </div>
+                    <h6>What do I need?</h6>
+                    <p>{{ recipe.recipe_ingredients }}</p>
+                    <h6>What do I do?</h6>
+                    <p>{{ recipe.recipe_instructions }}</p>
+                    <h6>Shared by:</h6>
+                    <p>{{ recipe.created_by }}</p>
+                    <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger">Delete</a>
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-large">Edit</a>
                 </div>
             </div>
-            <div class="card-reveal">
-                <div class="card-title">
-                    <h4>{{ recipe.recipe_name }}</h4>
-                    <h5 class="black-text">{{ recipe.category_name }}</h5>
-                    <i class="far fa-times-circle right"></i>
+            <!-- modal to confirm action before deleting a recipe -->
+            <div id="modal-{{recipe._id}}" class="modal">
+                <div class="modal-content">
+                    <h4 class="text center-align">Delete this tasty recipe?</h4>
+                    <p class="center-align">This recipe will be permanently deleted</p>
                 </div>
-                <h6>What do I need?</h6>
-                <p>{{ recipe.recipe_ingredients }}</p>
-                <h6>What do I do?</h6>
-                <p>{{ recipe.recipe_instructions }}</p>
-                <h6>Shared by:</h6>
-                <p>{{ recipe.created_by }}</p>
-                <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger">Delete</a>
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-large">Edit</a>
+                <!-- cancel and delete buttons -->
+                <div class="modal-footer">
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="fas fa-ban"></i> Cancel</a>
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="far fa-trash-alt"></i> Delete</a>
+                </div>
             </div>
         </div>
-        <!-- modal to confirm action before deleting a recipe -->
-        <div id="modal-{{recipe._id}}" class="modal">
-            <div class="modal-content">
-                <h4 class="text center-align">Delete this tasty recipe?</h4>
-                <p class="center-align">This recipe will be permanently deleted</p>
-            </div>
-            <!-- cancel and delete buttons -->
-            <div class="modal-footer">
-                <a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="fas fa-ban"></i> Cancel</a>
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="far fa-trash-alt"></i> Delete</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
-<!-- no search results found -->
-{% else %}
-<h6 class="center-align no-result">No Results Found. Please clear or try a different word.</h6>
-{% endif %}
+    <!-- no search results found -->
+    {% else %}            
+        <h6 class="center-align no-result">No Results Found. Please clear or try a different word.</h6>
+    {% endif %}
 
-<!-- local catering company -->
-<div class="card">
-    <div class="shs-image">
-        <img class="activator" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png" alt="SHS Logo">
-    </div>
-    <div class="card-content center-align">
-        <div class="card-title activator">
-            <h4>Shannon Hotel Supplies</h4>
-            <p class="black-text">Click image to reveal more info</p>
+    <!-- local catering company -->
+    <div class="card">
+        <div class="shs-image">
+            <img class="activator" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png" alt="SHS Logo">
         </div>
-        <p><a href="https://www.shsonline.ie/" target="_blank" alt="SHS Logo" class="waves-effect waves-light btn-large">Visit SHS Website</a>
-        </p>
-    </div>
-    <div class="card-reveal">
-        <div class="row">
-            <div class="col s12 m6 l6">
-                <div class="card-title">
-                    <i class="far fa-times-circle left"></i>
-                    <h4>Shannon Hotel Supplies</h4>
+        <div class="card-content center-align">
+            <div class="card-title activator">
+                <h4>Shannon Hotel Supplies</h4>
+                <p class="black-text">Click image to reveal more info</p>
+            </div>
+            <p><a href="https://www.shsonline.ie/" target="_blank" alt="SHS Logo" class="waves-effect waves-light btn-large">Visit SHS Website</a>
+            </p>
+        </div>
+        <div class="card-reveal">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="card-title">
+                        <i class="far fa-times-circle left"></i>
+                        <h4>Shannon Hotel Supplies</h4>
+                    </div>
+                    <p>The family business originated from our dedicated service base in Limerick which traditionally covered the mid-west region of the country. Browse through the range of smoothie makers and cocktail shakers!</p>
+                </div>  
+                <div class="col s12 m6 l6">
+                    <h6>Phone:</h6>
+                    <p>1850 20 04 05</p>
+                    <h6>Email:</h6>
+                    <p>info@shsonline.ie</p>
+                    <h6>Address:</h6>
+                    <ul>
+                        <li>Shannon Hotel Supplies,</li>
+                        <li>Unit 6D,</li>
+                        <li>Docklands Business Park,</li>
+                        <li>Dock Rd,</li>
+                        <li>Limerick.</li>
+                    </ul>
+                    <a href="https://www.shsonline.ie/" target="_blank" class="waves-effect waves-light btn-small">Visit SHS Website</a>
                 </div>
-                <p>The family business originated from our dedicated service base in Limerick which traditionally covered the mid-west region of the country. Browse through the range of smoothie makers and cocktail shakers!</p>
-            </div>  
-            <div class="col s12 m6 l6">
-                <h6>Phone:</h6>
-                <p>1850 20 04 05</p>
-                <h6>Email:</h6>
-                <p>info@shsonline.ie</p>
-                <h6>Address:</h6>
-                <ul>
-                    <li>Shannon Hotel Supplies,</li>
-                    <li>Unit 6D,</li>
-                    <li>Docklands Business Park,</li>
-                    <li>Dock Rd,</li>
-                    <li>Limerick.</li>
-                </ul>
-                <a href="https://www.shsonline.ie/" target="_blank" class="waves-effect waves-light btn-small">Visit SHS Website</a>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}

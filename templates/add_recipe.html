@@ -4,24 +4,24 @@
 <!-- add new recipe -->
 <div class="heading-info">
     <h2 class="center-align">Add New Recipe</h2>
-    <p class="info">Share new recipe by filling out the form below</p>
+    <p class="info">Share new recipe by filling out form</p>
 </div>
 <div class="row forms">
     <form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('add_recipe') }}">
-        <!-- recipe type selector -->
+        <!-- select recipe type -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="far fa-hand-pointer prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Choose recipe type</option>
                     {% for category in categories %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
                 <label for="category_name">Type of Recipe</label>
             </div>
         </div>
-        <!-- recipe name input -->
+        <!-- input recipe name -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix"></i>
@@ -30,7 +30,7 @@
                 <label for="recipe_name">Name of Recipe</label>
             </div>
         </div>
-        <!-- recipe ingredients input -->
+        <!-- input recipe ingredients -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix"></i>
@@ -39,7 +39,7 @@
                 <label for="recipe_ingredients">Ingredients</label>
             </div>
         </div>
-        <!-- recipe instructions input -->
+        <!-- input recipe instructions -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-right prefix"></i>
@@ -48,7 +48,7 @@
                 <label for="recipe_instructions">Instructions</label>
             </div>
         </div>
-        <!-- recipe image url input -->
+        <!-- input recipe image url -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="far fa-image prefix"></i>
@@ -64,7 +64,7 @@
         <div class="row">
             <div class="col s12 center-align">
                 <button type="submit" class="waves-effect waves-light btn-large">
-                    Add New Recipe <i class="fas fa-plus-square right"></i>
+                    Create New Recipe <i class="fas fa-plus-square right"></i>
                 </button>
             </div>
         </div>
