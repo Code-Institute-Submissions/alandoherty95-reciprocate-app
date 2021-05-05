@@ -147,7 +147,14 @@ def profile(username):
             username=username,
             recipes=recipes)
     else:
-        return redirect(url_for("login"))
+        recipes = list(mongo.db.recipes.find().sort("_id", 1))
+        paginated_recipes = paginate(recipes)
+        pagination = pagination_args(recipes)
+        return render_template(
+            "profile.html",
+            recipes=paginated_recipes,
+            pagination=pagination,
+            page_heading="Browse All Recipes")
 
 
 # log out

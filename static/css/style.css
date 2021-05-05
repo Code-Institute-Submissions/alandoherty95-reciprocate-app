@@ -73,6 +73,10 @@ p {
   font-size: 1.6rem;
 }
 
+.card {
+  padding: 1rem;
+}
+
 .card-panel {
   margin: 0;
 }
@@ -202,6 +206,7 @@ h1 > span {
 .no-result {
   line-height: 3;
   padding: 6rem;
+  font-size: 2rem;
 }
 
 /* media queries */

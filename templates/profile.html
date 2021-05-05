@@ -25,12 +25,11 @@
             </div>
         </div>
     </div>
-    <!-- all recipes -->
+    {% if recipes|length > 0 %}
     <div class="heading-info">
         <h4 class="center-align">Recipes shared by {{ username }}</h4>
         <p class="info">Hover over recipes to reveal more info, edit or delete</p>
     </div>
-    {% if recipes|length > 0 %}
     <div class="row">
         {% for recipe in recipes %}
         <div class="col s12 m6 l4">
@@ -76,18 +75,24 @@
         {% endfor %}
     </div>
     <!-- no search results found -->
-    {% else %}            
-        <h6 class="center-align no-result">No Results Found. Please clear or try a different word.</h6>
+    {% else %}    
+        <div class="card-panel cover-card center-align">        
+            <h6 class="no-result">All recipes shared by you will be displayed here. Start contributing now.</h6>
+                <!-- add new recipe button -->
+                <a class="waves-effect waves-light btn-large" href="{{ url_for('get_recipes') }}">Browse All Recipes</a>
+                <!-- add new recipe button -->
+                <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+        </div>  
     {% endif %}
 
     <!-- local catering company -->
     <div class="card">
         <div class="shs-image">
+            <h4>Shannon Hotel Supplies</h4>
             <img class="activator" src="https://www.shsonline.ie/wp-content/uploads/2019/06/SHS_Logox2.png" alt="SHS Logo">
         </div>
         <div class="card-content center-align">
             <div class="card-title activator">
-                <h4>Shannon Hotel Supplies</h4>
                 <p class="black-text">Click image to reveal more info</p>
             </div>
             <p><a href="https://www.shsonline.ie/" target="_blank" alt="SHS Logo" class="waves-effect waves-light btn-large">Visit SHS Website</a>
