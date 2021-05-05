@@ -83,6 +83,14 @@ p {
   right: 0;
 }
 
+.search-bar {
+  border: 2px solid #000000;
+}
+
+.input-field {
+  margin: 1rem;
+}
+
 .intro {
   font-size: 2rem;
 }

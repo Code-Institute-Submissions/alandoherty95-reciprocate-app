@@ -47,7 +47,7 @@ def pagination_args(recipes):
 # recipes page
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find().sort("_id", -1))
+    recipes = list(mongo.db.recipes.find().sort("_id", 1))
     paginated_recipes = paginate(recipes)
     pagination = pagination_args(recipes)
     return render_template(
