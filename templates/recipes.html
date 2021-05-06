@@ -21,14 +21,14 @@
         </div>
     </div>
     <!-- all recipes displayed -->
-    <div class="heading-info">
-        <h4 class="center-align">{{ page_heading }}</h4>
+    <div class="heading-info center-align col l4 offset-l2">
+        <h4>{{ page_heading }}</h4>
         <p class="info">Hover over recipes to reveal more info</p>
         <!-- search bar -->
-        <form action="{{ url_for('search') }}" method="post">
-            <div class="input-field">
+        <form class="search-bar" action="{{ url_for('search') }}" method="post">
+            <div class="input-field center-align">
                 <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                <label for="query">Search Recipes</label><button type="submit" class="waves-effect waves-light btn-small inline"><i class="fas fa-search"></i></button>
+                <label for="query">Search Recipes..</label><button type="submit" class="waves-effect waves-light btn-small inline"><i class="fas fa-search"></i></button>
             </div>
         </form>
     </div>
