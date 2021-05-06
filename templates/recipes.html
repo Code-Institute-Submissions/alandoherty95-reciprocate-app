@@ -14,10 +14,8 @@
                 {% else %}
                     <p class="intro">Browse & share your favourite recipe ideas with other people in our community. Create your own profile now to enjoy the full experience.</p>
                     <!-- log in and register buttons -->
-                    <a class="waves-effect waves-light btn-large btn-reg" href="{{ url_for('register') }}">
-                    <i class="fas fa-sign-in-alt"></i> Register</a>
-                    <a class="waves-effect waves-light btn-large btn-log" href="{{ url_for('login') }}">
-                    <i class="fas fa-sign-in-alt"></i> Log In</a>
+                    <a class="waves-effect waves-light btn-large btn-reg" href="{{ url_for('register') }}">Register <i class="fas fa-user-plus"></i></a>
+                    <a class="waves-effect waves-light btn-large btn-log" href="{{ url_for('login') }}">Log In <i class="fas fa-sign-in-alt"></i></a>
                 {% endif %}
             </div>
         </div>

@@ -11,6 +11,7 @@ $(document).ready(function () {
             $(this).find('> .card-reveal > .card-title').click();
         }
     );
+    $('.fixed-action-btn').floatingActionButton();
 
     // validate Materialize select fields, self invoking function
     (function validateMaterializeSelect() {

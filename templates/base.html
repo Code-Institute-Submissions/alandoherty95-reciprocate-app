@@ -85,8 +85,8 @@
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="center-align">{{ message }}</h4>
+                    <div id="alert" role="alert" class="flash-message">
+                        <h4 class="flash-message">{{ message }}</h4>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -98,12 +98,22 @@
         {% endblock %}
     </main>
 
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large teal">
+          <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating red" href="{{ url_for('add_recipe') }}"><i class="fas fa-plus-square right"></i></a></li>
+          <li><a class="btn-floating red" href="{{ url_for('get_recipes') }}"><i class="far fa-eye"></i></a></li>
+        </ul>
+    </div>
+
     <!-- footer -->
     <footer class="base-footer">
         <div class="row footer-style">
             <div class="col l4 m4 s12">
-                <a href="{{ url_for('get_recipes') }}">Reciprocate</a>
                 <ul class="footer-links">
+                        <li><a href="{{ url_for('get_recipes') }}">Reciprocate</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
@@ -122,14 +132,14 @@
                     <i class="fab fa-github-square"></i></a>
             </div>
             <div class="col l4 m4 s12">
-                <h4>Reciprocate</h4>
                 <ul>
+                    <li>Reciprocate</li>
                     <li>verb</li>
                     <li>re·​cip·​ro·​cate</li>
-                    <li>To respond to a gesture or action by making a corresponding one.</li>
+                    <li>To respond to a gesture or action by making a corresponding one.</li><br>
+                    <!-- copyright -->
+                    <li>© Doherty 2021</li>
                 </ul>
-                <!-- copyright -->
-                <p>© Doherty 2021</p>
             </div>
         </div>
     </footer>
@@ -141,6 +151,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- custom js -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/flash.js') }}"></script>
 
     {% block scripts %}
     {% endblock %}
