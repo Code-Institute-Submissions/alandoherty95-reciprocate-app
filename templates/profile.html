@@ -6,29 +6,19 @@
                     <h3 class="profile"><strong>{{ username }}</strong> is logged in.</h3>
                     <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
             </div>
-            <!-- search bar -->
-            <div class="col s12 m12 l4 offset-l2">
-                <form action="{{ url_for('search') }}" method="post" class="col s12 search-bar">
-                    <p class="info">Search or scroll down to view all recipes shared by our community</p>
-                    <div class="row">
-                        <div class="input-field center-align">
-                            <i class="fas fa-search-prefix"></i>
-                            <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                            <label for="query">Search Recipes</label>
-                            <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn-large">
-                            <i class="fas fa-redo-alt"></i></a>
-                            <button type="submit" class="waves-effect waves-light btn-large">
-                            <i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
     {% if recipes|length > 0 %}
     <div class="heading-info">
         <h4 class="center-align">Recipes shared by {{ username }}</h4>
         <p class="info">Hover over recipes to reveal more info, edit or delete</p>
+        <!-- search bar -->
+        <form action="{{ url_for('search') }}" method="post">
+            <div class="input-field">
+                <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                <label for="query">Search Recipes</label><button type="submit" class="waves-effect waves-light btn-small inline"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
     </div>
     <div class="row">
         {% for recipe in recipes %}
@@ -55,8 +45,8 @@
                     <p>{{ recipe.recipe_instructions }}</p>
                     <h6>Shared by:</h6>
                     <p>{{ recipe.created_by }}</p>
-                    <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger">Delete</a>
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-large">Edit</a>
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-large btn-reg">Edit</a>
+                    <a href="#modal-{{recipe._id}}" class="waves-effect waves-light btn-large modal-trigger btn-log">Delete</a>
                 </div>
             </div>
             <!-- modal to confirm action before deleting a recipe -->
@@ -67,8 +57,8 @@
                 </div>
                 <!-- cancel and delete buttons -->
                 <div class="modal-footer">
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="fas fa-ban"></i> Cancel</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small modal-trigger"><i class="far fa-trash-alt"></i> Delete</a>
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn-small modal-trigger btn-reg"><i class="fas fa-ban"></i> Cancel</a>
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small modal-trigger btn-log"><i class="far fa-trash-alt"></i> Delete</a>
                 </div>
             </div>
         </div>
@@ -79,9 +69,9 @@
         <div class="card-panel cover-card center-align">        
             <h6 class="no-result">All recipes shared by you will be displayed here. Start contributing now.</h6>
                 <!-- add new recipe button -->
-                <a class="waves-effect waves-light btn-large" href="{{ url_for('get_recipes') }}">Browse All Recipes</a>
+                <a class="waves-effect waves-light btn-large btn-log" href="{{ url_for('get_recipes') }}">Browse All Recipes</a>
                 <!-- add new recipe button -->
-                <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+                <a class="waves-effect waves-light btn-large btn-reg" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
         </div>  
     {% endif %}
 
