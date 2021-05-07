@@ -3,7 +3,7 @@
     <!-- home -->
     <div class="card-panel cover-card">
         <div class="row">
-            <div class="col s12 m12 l7">
+            <div class="col s12 m6 l4">
                 {% if session.user %}
                     <ul>
                         <li>View recipes shared by other members.</li>
@@ -12,7 +12,8 @@
                     <!-- add new recipe button -->
                     <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>                   
                 {% else %}
-                    <p class="intro">Browse & share your favourite recipe ideas with other people in our community. Create your own profile now to enjoy the full experience.</p>
+                    <p class="intro-big">Browse & share your favourite recipe ideas with other people in our community.</p>
+                    <p class="intro-small">Create your own profile now to enjoy the full experience.</p>
                     <!-- log in and register buttons -->
                     <a class="waves-effect waves-light btn-large btn-reg" href="{{ url_for('register') }}">Register <i class="fas fa-user-plus"></i></a>
                     <a class="waves-effect waves-light btn-large btn-log" href="{{ url_for('login') }}">Log In <i class="fas fa-sign-in-alt"></i></a>
@@ -21,14 +22,14 @@
         </div>
     </div>
     <!-- all recipes displayed -->
-    <div class="heading-info center-align col l4 offset-l2">
+    <div class="heading-info col l4 offset-l2">
         <h4>{{ page_heading }}</h4>
         <p class="info">Hover over recipes to reveal more info</p>
         <!-- search bar -->
         <form class="search-bar" action="{{ url_for('search') }}" method="post">
-            <div class="input-field center-align">
+            <div class="input-field">
                 <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                <label for="query">Search Recipes..</label><button type="submit" class="waves-effect waves-light btn-small inline"><i class="fas fa-search"></i></button>
+                <label for="query">Search Recipes..</label><button type="submit" class="waves-effect waves-light btn-small"><i class="fas fa-search"></i></button>
             </div>
         </form>
     </div>

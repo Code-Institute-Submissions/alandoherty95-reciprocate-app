@@ -3,8 +3,7 @@
     <div class="card-panel cover-card">
         <div class="row">
             <div class="col s12 m12 l6">
-                    <h3 class="profile"><strong>{{ username }}</strong> is logged in.</h3>
-                    <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+                    <h3 class="intro-big">All recipes shared by you will be displayed here.<br>Start contributing now.</h3>
             </div>
         </div>
     </div>
@@ -65,14 +64,76 @@
         {% endfor %}
     </div>
     <!-- no search results found -->
-    {% else %}    
-        <div class="card-panel cover-card center-align">        
-            <h6 class="no-result">All recipes shared by you will be displayed here. Start contributing now.</h6>
-                <!-- add new recipe button -->
-                <a class="waves-effect waves-light btn-large btn-log" href="{{ url_for('get_recipes') }}">Browse All Recipes</a>
-                <!-- add new recipe button -->
-                <a class="waves-effect waves-light btn-large btn-reg" href="{{ url_for('add_recipe') }}">Add New Recipe</a>
-        </div>  
+    {% else %}   
+        <!-- add new recipe -->
+        <div class="heading-info">
+            <h2 class="center-align">Add New Recipe</h2>
+            <p class="info">Share new recipe by filling out form</p>
+        </div>
+        <div class="row forms">
+            <form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('add_recipe') }}">
+                <!-- select recipe type -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="far fa-hand-pointer prefix"></i>
+                        <select id="category_name" name="category_name" class="validate" required>
+                            <option value="" disabled selected>Choose recipe type</option>
+                            {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endfor %}
+                        </select>
+                        <label for="category_name">Type of Recipe</label>
+                    </div>
+                </div>
+                <!-- input recipe name -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-pencil-alt prefix"></i>
+                        <input id="recipe_name" name="recipe_name" minlenght="4" maxlenght="28" type="text" class="validate"
+                            required>
+                        <label for="recipe_name">Name of Recipe</label>
+                    </div>
+                </div>
+                <!-- input recipe ingredients -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-align-left prefix"></i>
+                        <textarea id="recipe_ingredients" name="recipe_ingredients" minlenght="4" maxlenght="200"
+                            class="materialize-textarea validate" required></textarea>
+                        <label for="recipe_ingredients">Ingredients</label>
+                    </div>
+                </div>
+                <!-- input recipe instructions -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-align-right prefix"></i>
+                        <textarea id="recipe_instructions" name="recipe_instructions" minlenght="4" maxlenght="200"
+                            class="materialize-textarea validate" required></textarea>
+                        <label for="recipe_instructions">Instructions</label>
+                    </div>
+                </div>
+                <!-- input recipe image url -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="far fa-image prefix"></i>
+                        <input id="image_url" name="image_url" minlenght="4" maxlenght="200" type="url" class="validate"
+                            required>
+                        <label for="image_url">Image URL</label>
+                        <span class="helper-text">
+                            Full image URL must be provided for desired image to be displayed.
+                        </span>
+                    </div>
+                </div>
+                <!-- submit button -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button type="submit" class="waves-effect waves-light btn-large btn-reg">
+                            Create New Recipe <i class="fas fa-plus-square right"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     {% endif %}
 
     <!-- local catering company -->

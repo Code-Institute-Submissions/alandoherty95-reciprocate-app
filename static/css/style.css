@@ -56,6 +56,10 @@ p {
   background-color: #ffffff;
 }
 
+.search-bar {
+  width: 50%;
+}
+
 .card-reveal {
   -webkit-transition: all 700ms ease;
   -moz-transition: all 700ms ease;
@@ -66,7 +70,6 @@ p {
 
 .cover-card {
   height: auto;
-  letter-spacing: 1px;
 }
 
 .cover-card li {
@@ -95,8 +98,12 @@ p {
   background-color: #2632a6;
 } 
 
-.intro {
+.intro-big {
   font-size: 2rem;
+}
+
+.intro-small {
+  font-size: 1.2rem;
 }
 
 .info {
@@ -108,30 +115,15 @@ p {
   margin: 0.2rem;
   border-radius: 12px;
 }
-
 .extended {
   background-color: #ffffff;
   font-family: 'Merienda One', cursive;
+  overflow: hidden;
 }
 
 .extended a {
   color:#a62632;
   font-size: 1.6rem;
-}
-
-ul li ul.dropdown{
-  min-width: 125px;
-  background: #f2f2f2;
-  display: none;
-  position: absolute;
-  z-index: 999;
-  left: 0;
-}
-ul li:hover ul.dropdown{
-  display: block;
-}
-ul li ul.dropdown li{
-  display: block;
 }
 
 .sidenav-trigger {
