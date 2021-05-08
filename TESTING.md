@@ -1028,7 +1028,7 @@ Mobile Device:
 
   
 
-![Invalid Registration Form]()
+![Invalid Registration Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/invalid-register-form.png?raw=true)
 
   
 
@@ -1120,7 +1120,7 @@ Mobile Device:
 
   
 
-![Valid Log In Form]()
+![Valid Log In Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/valid-login-form.png?raw=true)
 
   
 
@@ -1284,7 +1284,7 @@ Recipe Cards:
 
   
 
-![Add New Recipe Form]()
+![Share New Recipe Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/share-new-recipe-form.png?raw=true)
 
   
 
