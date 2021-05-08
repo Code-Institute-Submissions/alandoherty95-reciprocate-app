@@ -126,6 +126,12 @@ p {
   color: #a62632;
 }
 
+.form-inline {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
 .flash-message h4 {
   color: #26a69a;
   background-color: #ffffff;
