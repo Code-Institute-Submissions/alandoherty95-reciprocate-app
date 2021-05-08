@@ -10,7 +10,7 @@
                         <li>Share your favourite recipe ideas.</li>
                     </ul>
                     <!-- add new recipe button -->
-                    <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Add New Recipe</a>                   
+                    <a class="waves-effect waves-light btn-large btn-reg" href="{{ url_for('add_recipe') }}">Add New Recipe</a>                   
                 {% else %}
                     <p class="intro-big">Browse & share your favourite recipe ideas with other people in our community.</p>
                     <p class="intro-small">Create your own profile now to enjoy the full experience.</p>
@@ -24,14 +24,7 @@
     <!-- all recipes displayed -->
     <div class="heading-info col l4 offset-l2">
         <h4>{{ page_heading }}</h4>
-        <p class="info">Hover over recipes to reveal more info</p>
-        <!-- search bar -->
-        <form class="search-bar" action="{{ url_for('search') }}" method="post">
-            <div class="input-field">
-                <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                <label for="query">Search Recipes..</label><button type="submit" class="waves-effect waves-light btn-small"><i class="fas fa-search"></i></button>
-            </div>
-        </form>
+        <p class="info">Search or scroll down to browse recipes</p>
     </div>
     {% if recipes|length > 0 %}
         <div class="row">

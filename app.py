@@ -13,6 +13,7 @@ if os.path.exists("env.py"):
 # pagination limit
 PER_PAGE = 6
 
+
 # flask app setup
 app = Flask(__name__)
 # config vars
@@ -70,7 +71,7 @@ def search():
         recipes=recipes,
         paginated_recipes=paginated_recipes,
         pagination=pagination,
-        page_heading="Showing Results for '{}'".format(query))
+        page_heading="Displaying results for '{}'".format(query))
 
 
 # registration page
@@ -93,7 +94,7 @@ def register():
 
         # put new user into a session
         session["user"] = request.form.get("username").lower()
-        flash("You have successfully registered!")
+        flash("Registration complete!")
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
@@ -113,16 +114,16 @@ def login():
                 existing_user["password"], request.form.get(
                     "password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome to your profile, {}!".format(
+                flash("Good to see you again, {}!".format(
                     request.form.get("username")))
                 return redirect(url_for("profile", username=session["user"]))
             else:
                 # hashed password does not match
-                flash("Incorrect Username and/or Password Entered")
+                flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
         else:
             # username does not exist in mongo db
-            flash("Incorrect Username and/or Password Entered")
+            flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
     return render_template("login.html")
@@ -154,7 +155,7 @@ def profile(username):
 @app.route("/logout")
 def logout():
     # removes user from current session
-    flash("You have successfully logged out!")
+    flash("Log out successful. See you again soon!")
     session.pop("user")
     return redirect(url_for("login"))
 
@@ -172,7 +173,7 @@ def add_recipe():
             "image_url": request.form.get("image_url")
             }
         mongo.db.recipes.insert_one(recipe)
-        flash("New recipe was successfully added!")
+        flash("Thank you for contributing!")
         return redirect(url_for("add_recipe"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -211,7 +212,7 @@ def add_category():
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.insert_one(category)
-        flash("New recipe type was successfully added")
+        flash("New category added")
         return redirect(url_for("get_categories"))
 
     return render_template("add_category.html")
@@ -225,7 +226,7 @@ def edit_category(category_id):
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
-        flash('Recipe type was successfully updated!')
+        flash('Category successfully updated')
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
@@ -236,7 +237,7 @@ def edit_category(category_id):
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash('Recipe type was successfully deleted!')
+    flash('Category was successfully deleted')
     return redirect(url_for("get_categories"))
 
 

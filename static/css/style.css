@@ -56,10 +56,6 @@ p {
   background-color: #ffffff;
 }
 
-.search-bar {
-  width: 50%;
-}
-
 .card-reveal {
   -webkit-transition: all 700ms ease;
   -moz-transition: all 700ms ease;
@@ -107,7 +103,7 @@ p {
 }
 
 .info {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -131,9 +127,10 @@ p {
 }
 
 .flash-message h4 {
-  background-color: yellow;
-  color: #000000;
-  line-height: 1.5;
+  color: #26a69a;
+  background-color: #ffffff;
+  line-height: 2.5;
+  margin: 0;
 }
 
 .collapsible-header {

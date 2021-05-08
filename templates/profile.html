@@ -11,13 +11,6 @@
     <div class="heading-info">
         <h4 class="center-align">Recipes shared by {{ username }}</h4>
         <p class="info">Hover over recipes to reveal more info, edit or delete</p>
-        <!-- search bar -->
-        <form action="{{ url_for('search') }}" method="post">
-            <div class="input-field">
-                <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                <label for="query">Search Recipes</label><button type="submit" class="waves-effect waves-light btn-small inline"><i class="fas fa-search"></i></button>
-            </div>
-        </form>
     </div>
     <div class="row">
         {% for recipe in recipes %}
@@ -79,7 +72,7 @@
                         <select id="category_name" name="category_name" class="validate" required>
                             <option value="" disabled selected>Choose recipe type</option>
                             {% for category in categories %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}
                         </select>
                         <label for="category_name">Type of Recipe</label>
@@ -116,12 +109,9 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="far fa-image prefix"></i>
-                        <input id="image_url" name="image_url" minlenght="4" maxlenght="200" type="url" class="validate"
-                            required>
-                        <label for="image_url">Image URL</label>
-                        <span class="helper-text">
-                            Full image URL must be provided for desired image to be displayed.
-                        </span>
+                        <input id="image_url" name="image_url" type="url" class="validate">
+                        <span class="helper-text">Full image URL must be provided for desired image to be displayed. Browse images on <a href="https://www.pexels.com/search/smoothie/?orientation=portrait">Pexels</a>.</span>
+                        <label for="image_url">Valid Image URL</label>
                     </div>
                 </div>
                 <!-- submit button -->

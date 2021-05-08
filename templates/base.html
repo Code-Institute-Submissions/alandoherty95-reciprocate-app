@@ -36,6 +36,17 @@
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo">Reciprocate</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
+                    <!-- search bar -->
+                    <li>
+                        <div class="search-container">
+                            <form action="{{ url_for('search') }}" method="post">
+                                <div class="input-field">
+                                    <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                                    <label for="query">Search Recipes. . .</label><button type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
                     <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-home"></i></a></li>
                     <!-- only visible in user session -->
                     {% if session.user %}
@@ -55,6 +66,17 @@
         </nav>
         <!-- side navigation bar -->
         <ul class="sidenav" id="mobile-demo">
+                <!-- search bar -->
+                <li>
+                    <div class="search-container">
+                        <form action="{{ url_for('search') }}" method="post">
+                            <div class="input-field">
+                                <input type="text" name="query" id="query" minlenght="3" class="validate" required>
+                                <label for="query">Search Recipes. . .</label><button type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </li>
                 <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-home"></i></a></li>
                 <!-- only visible in user session -->
                 {% if session.user %}
