@@ -2,9 +2,15 @@
 
   
 
+  
+
 Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
-![Website Mockup](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mockups/mockup1.png?raw=true)
+  
+
+![Website Mockup]()
+
+  
 
   
 
@@ -12,7 +18,11 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
-**[Reciprocate](https://reciprocate-application.herokuapp.com/)** is a community-based application created for anyone who enjoys trying new recipes or sharing their favourites recipes with others. It was designed to allow users to freely share recipes with each other. Users can share their own food and drink recipes with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind so people of all ages can get involved. Users will have the option of setting up an account to create, locate, display, edit and delete records from the collection of recipes.
+  
+
+**[Reciprocate](https://reciprocate-application.herokuapp.com/)** is a community-based application created for anyone who enjoys trying new recipes or sharing their favourites recipes with others. It was designed to allow users to freely share recipes with each other. Users can share their own food and drink recipes with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind, encouraging users to recreate recipes at home with family and friends. Users will have the option of setting up an account to create, locate, display, edit and delete records from the collection of recipes.
+
+  
 
   
 
@@ -20,7 +30,11 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
+  
+
 1. <a href="#context">**Context**</a>
+
+  
 
   
 
@@ -28,7 +42,11 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
+  
+
 3. <a href="#scope">**Scope**</a>
+
+  
 
   
 
@@ -36,7 +54,11 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
+  
+
 5. <a href="#wireframes">**Wireframes**</a>
+
+  
 
   
 
@@ -44,7 +66,11 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
+  
+
 7. <a href="#database">**Database**</a>
+
+  
 
   
 
@@ -52,7 +78,11 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
+  
+
 9. <a href="#testing">**Testing**</a>
+
+  
 
   
 
@@ -60,7 +90,11 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
+  
+
 11. <a href="#credits">**Credits**</a>
+
+  
 
   
 
@@ -68,7 +102,11 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
+  
+
 <span id="context"></span>
+
+  
 
   
 
@@ -76,7 +114,11 @@ Welcome to **Reciprocate** - a community for sharing your favourite recipes!
 
   
 
-In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand at this time. The website focuses on three main recipes types: smoothies, cocktails and healthy snacks. The website admin has the capability to add additional recipes types for selection by other users.
+  
+
+In preparation for this project, I conducted research on friends, colleagues and family members to identify the kind of recipes in demand at this time. The website currently focuses on three main categories of recipe: smoothies, cocktails and snacks. The website admin has the capability to add additional recipes types for selection by other users in future development.
+
+  
 
   
 
@@ -84,19 +126,29 @@ The application was designed using CRUD functionality. Create, Read, Update, and
 
   
 
+  
+
 Create — A function we can call when a new recipe is being added to the database. The user can supply the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The new entry is assigned a unique `id`, which can be used to access the resource later. The website admin has the capability to create new recipes types for selection.
 
   
 
-Read — A function we can call to see all of the recipes currently in our database. This function does not alter the recipes in the catalog - it simply retrieves the information and displays the results. Again, a similar process can be followed if the website admin wishes to view the recipe types contained in the database. All visitors the website can browse all recipes without having to create an account.
+  
+
+Read — A function we can call to see all of the recipes currently in our database. This function does not alter the recipes in the catalog - it simply retrieves the information and displays the results. Again, a similar process can be followed if the website admin wishes to view the categories contained in the database. All visitors to the website can browse all recipes without having to create an account.
 
   
 
-Update — A function we can call when information about a particular recipe must be changed. The user can edit the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. After the function is called, the corresponding entry in the `recipes` database will contain the new fields provided. This option is only available to the creator of each recipe. These steps can be followed if the website admin wishes to edit an existing recipe type in the database.
+  
+
+Update — A function we can call when information about a particular recipe must be changed. The user can edit the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. After the function is called, the corresponding entry in the `recipes` database will contain the new fields provided. This option is only available to the creator of each recipe. These steps can be followed if the website admin wishes to edit an existing category in the database.
 
   
 
-Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the `recipe` resource should contain all of the recipes it had before, except for the one recipe we just deleted. This option is only available to the creator of the recipe. A similar process can be followed if the website admin wishes to remove a recipe type from the database.
+  
+
+Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the `recipe` resource should contain all of the recipes it had before, except for the one recipe we just deleted. This option is only available to the creator of the recipe. A similar process can be followed if the website admin wishes to remove a category from the database.
+
+  
 
   
 
@@ -104,7 +156,11 @@ Delete — A function we can call to remove a particular recipe from the catalog
 
   
 
+  
+
 ## 2. User Experience (UX)
+
+  
 
   
 
@@ -112,7 +168,11 @@ Delete — A function we can call to remove a particular recipe from the catalog
 
   
 
+  
+
 The website was designed with a community-based approach in mind. It was created with three main objectives:
+
+  
 
   
 
@@ -120,7 +180,11 @@ The website was designed with a community-based approach in mind. It was created
 
   
 
+  
+
 - To allow convenient access to the recipes provided by all other members
+
+  
 
   
 
@@ -128,7 +192,11 @@ The website was designed with a community-based approach in mind. It was created
 
   
 
-The website focuses on the following three types of recipes but it is not limited. The admin has the capability to add a new category for different recipe types.
+  
+
+The website focuses on the following three types of recipes but it is not limited. The admin has the capability to add a new category for different categories.
+
+  
 
   
 
@@ -136,11 +204,17 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
+  
+
 **Cocktails:** are also becoming increasingly popular among adults. People have grown to appreciate the variety of taste and beauty of these artisan drinks. Our cocktail recipes allow users to create popular drinks themselves without having to rely solely on bartenders.
 
   
 
-**Healthy Snacks:** have always been a significant part of our diet. People have become more creative and adventurous with their snacking habits in recent years. Our snack recipes offer variety for people constantly on-the-go who need a quick source of energy.
+  
+
+**Snacks:** have always been a significant part of our diet. People have become more creative and adventurous with their snacking habits in recent years. Our snack recipes offer variety for people constantly on-the-go who need a quick source of energy.
+
+  
 
   
 
@@ -148,7 +222,11 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
+  
+
 #### As a first-time visitor, I want to:
+
+  
 
   
 
@@ -156,7 +234,11 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
+  
+
 - Easily create an account
+
+  
 
   
 
@@ -164,7 +246,11 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
-- Be able to search for keywords
+  
+
+- Find specific recipes by searching for keywords
+
+  
 
   
 
@@ -172,7 +258,11 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
+  
+
 - Log in and out easily
+
+  
 
   
 
@@ -180,7 +270,11 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
+  
+
 - Edit or delete recipes I have already shared
+
+  
 
   
 
@@ -188,7 +282,11 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
+  
+
 ### Users:
+
+  
 
   
 
@@ -196,7 +294,11 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
-- As a food lover, I would like to share recipe ideas for healthy snacks and smoothies with other people with similar interests.
+  
+
+- As a food lover, I would like to share recipe ideas for snacks and smoothies with other people with similar interests.
+
+  
 
   
 
@@ -204,7 +306,11 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
+  
+
 ### Owner:
+
+  
 
   
 
@@ -212,11 +318,17 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
+  
+
 - As the owner, I want users to browse and find recipes that suit their tastes.
 
   
 
-- As the owner, I want to allow users to create additional recipe types if they would like.
+  
+
+- As the owner, I want to allow users to create additional categories if they would like.
+
+  
 
   
 
@@ -224,23 +336,26 @@ The website focuses on the following three types of recipes but it is not limite
 
   
 
+  
+
 ### Design
 
   
 
-#A62632 - Crimson
-
   
-
+#2632A6 - Blue
 #FFFFFF - White
+#A62632 - Crimson
+#32A626 - Green
+#000000 - Black
 
   
 
-#26A69A - Persian Green
-
   
 
-![enter image description here](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/color-scheme.png?raw=true)
+![enter image description here](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/my-color-scheme.png?raw=true)
+
+  
 
   
 
@@ -248,15 +363,23 @@ The colour scheme chosen for this project was inspired by bright colours to give
 
   
 
-- **Crimson** is used for all headings, giving a consistent feel throughout the website.
+  
+
+- **#A62632 Crimson** is used for all headings, giving a clean, consistent feel throughout the website. Crimson on a white background draws attention to the headings.
 
   
 
-- **White** is the backdrop of all headings and text on the website. The bright colour emphasises clarity and removes visual clutter. The black text is easily readable on the white background.
-
   
 
-- **Persian Green** is used for all buttons which contain intuitive labels. This provides a congruent look on each page, allowing users to easily find their desired button.
+- **#FFFFFF White** is the backdrop of all headings and text on the website. The bright colour emphasises clarity and removes visual clutter. The black text is easily readable on the white background.
+ 
+- **#2632A6 Blue** is used for some buttons such as the log in button.
+
+- **32A626 Green** is used for buttons such as the register button.
+
+- **#26A69A Persian Green** is used for neutral buttons. This allows users to easily identify buttons on the screen. It is also used as the button hover colour.
+
+  
 
   
 
@@ -264,11 +387,17 @@ The colour scheme chosen for this project was inspired by bright colours to give
 
   
 
+  
+
 [Merienda One](https://fonts.google.com/specimen/Merienda+One) was used for the main headings and navigation links on the website to grab the users attention. 'Merienda' is a Spanish term for "afternoon snack", which seems fitting for the purpose of this application. Merienda has soft shapes, is slightly condensed, and has a rhythm which is an invitation to read short pieces of text.
 
   
 
-![Merienda One](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/Merienda%20One.png?raw=true)
+  
+
+![Merienda One](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/merienda-one.png?raw=true)
+
+  
 
   
 
@@ -276,7 +405,11 @@ The colour scheme chosen for this project was inspired by bright colours to give
 
   
 
-![Oswald](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/Oswald.png?raw=true)
+  
+
+![Oswald](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/oswald.png?raw=true)
+
+  
 
   
 
@@ -284,7 +417,11 @@ The colour scheme chosen for this project was inspired by bright colours to give
 
   
 
+  
+
 Images used in the development of this website were selected from [Pexels](https://www.pexels.com/). Users are encouraged to add the full image URL if they would like to include a picture with their recipe.
+
+  
 
   
 
@@ -292,7 +429,11 @@ Images used in the development of this website were selected from [Pexels](https
 
   
 
+  
+
 ## Scope
+
+  
 
   
 
@@ -300,43 +441,65 @@ The minimum features to be included in this project are as follows:
 
   
 
-- **Home Page** attracts first-time visitors and clearly presents the purpose of the website. The two call-to-action buttons invite users to either log in or register if they do not have an account yet. The search bar is also a prominent feature on the home page with all recipes in our collection are displayed below.
+  
+
+- **Home Page** attracts first-time visitors and clearly presents the purpose of the website. The two prominent call-to-action buttons encourage users to either log in or register if they do not have an account yet. The log in and register buttons will redirect users to the respective form. The search bar is also a prominent feature on the homepage with all recipes in our collection displayed below. The search bar can be used to find specific recipes based on keywords.
 
   
 
-- **Recipe Types** allows the website admin to manage the categories of recipe available for selection. The admin can add or delete categories. Users can select from any recipe type in the database when creating a new recipe.
+  
+
+- **Categories** allows the website admin to manage the categories of recipe available for selection by other users. The admin can add, edit or delete categories. This function allows for expansion into different types of recipes in future development.
 
   
 
-- **Register** invites visitors to create an account if they have not set one up yet. Users with an account have the ability to add new recipes as well as edit or delete recipes they have already shared.
+  
+
+- **Register** invites visitors to create an account if they have not set one up yet. New users can simply enter a unique username and password to create an account. Users with an account have the ability to add new recipes as well as edit or delete recipes they have already shared. Users can access their own profile page which displays all recipes shared by them. 
 
   
 
-- **Login** invites users to log in to their account. This allows users to view, edit or delete recipes they have already shared as well as adding new recipe ideas.
+  
+
+- **Log In** invites users to log in to their account. Returning users can simply enter their username and password to sign in. This allows users to view, edit or delete recipes they have already shared as well as adding new recipe ideas. Users can access their own profile page which displays all recipes shared by them. 
 
   
 
-- **Logout** allows users to log out of their account with one click of a button. This button is available in the navigation bar and footer of all pages when a user is logged in.
+  
+
+- **Log Out** allows users to log out of their account with one click of a button. The log out function removes the user from the session. This button is available in the navigation bar and footer of all pages when a user is logged in. 
 
   
 
-- **Profile** can be accessed by users when they have successfully logged in. Users can view all recipes they have shared. Users can also edit or delete their existing recipes.
+  
+
+- **Profile** can be accessed by users when they have successfully logged in. Users can view all recipes they have shared. Users can also edit or delete recipes they have already shared with the community. The profile page also promotes a local catering company where users can shop for any supplies needed.
 
   
 
-- **Create Recipe** encourages users to share new recipes with the community. Users must be logged in to their account in order to share recipes.
+  
+
+- **Create Recipe** encourages users to share new recipes with the community. Users must be logged in to their account in order to share recipes. A new recipe can be submitted by filling out a simple form. The user will enter the fields for`“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The new recipe is displayed on the homepage and the user's profile page.
 
   
 
-- **Edit Recipe** allows users to edit their own recipes. Users can edit their existing recipes by selecting the 'Edit' button.
+  
+
+- **Edit Recipe** allows users to edit their own recipes. Users can edit their existing recipes by selecting the 'Edit' button. The user can update the fields for`“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The updated recipe is displayed on the homepage and the user's profile page.
 
   
 
-- **Delete Recipe** function that users can delete their recipes. A modal pop up will ask the user to confirm their action before deleting. This provides an extra layer of protection against accidental deletion of records.
+  
+
+- **Delete Recipe** function that users can delete their recipes. A modal pop up will ask the user to confirm their action before deleting. This provides an extra layer of protection against accidental deletion of records. Once deleted, the recipe will be permanently removed from the collection.
 
   
 
-- **Search Function** allows users to search for specific recipes using keywords. The search function targets the `“recipe_name”` and `“recipe_ingredients”` fields in each recipe.
+  
+
+- **Search Function** allows users to search for specific recipes using keywords. The search function targets the `“recipe_name”` and `“recipe_ingredients”` fields in each recipe. The search will return results based on the keyword inputted.
+
+  
 
   
 
@@ -344,7 +507,11 @@ The minimum features to be included in this project are as follows:
 
   
 
+  
+
 ## Structure
+
+  
 
   
 
@@ -352,7 +519,11 @@ The minimum features to be included in this project are as follows:
 
   
 
+  
+
 **Front-End**
+
+  
 
   
 
@@ -360,7 +531,11 @@ The minimum features to be included in this project are as follows:
 
   
 
-The welcome page clearly outlines the main purpose of the website. In the top navigation bar, there is a logo and tabs for the _Home_, _Login_ and _Register_ pages. There are two call-to-action buttons encouraging users to either log in or register. By scrolling down, users can browse all recipes in our database and search using keywords.
+  
+
+The welcome page clearly outlines the main purpose of the website. In the top navigation bar, there is a logo and tabs for the _Home_, _Register_ and _Login_ pages. There are two prominent call-to-action buttons encouraging users to either log in or register if they do not have an account yet. By scrolling down, users can browse all recipes in our database and search for specific recipes using keywords.
+
+  
 
   
 
@@ -368,9 +543,11 @@ The welcome page clearly outlines the main purpose of the website. In the top na
 
   
 
-The log in page allows users who already have an account to log in to their profile.
+  
 
-Both the username and password must be 4-20 characters long, containing only numbers and letters. When users log in successfully, they are redirected to their unique _Profile_ page where they can view, edit and delete their existing recipes. Additional tabs are visible to the user after logging in.
+The log in page allows users who already have an account to log in to their profile. Both the username and password must be 4-20 characters long, containing only numbers and letters. When users log in successfully, they are redirected to their unique _Profile_ page where they can view, edit and delete their existing recipes. Additional tabs are visible to the user after logging in.
+
+  
 
   
 
@@ -378,7 +555,11 @@ Both the username and password must be 4-20 characters long, containing only num
 
   
 
+  
+
 The registration page allows users to create an account by entering a distinct username and password. Both the username and password must be 4-20 characters long, containing only numbers and letters. When users register successfully, they are redirected to their unique _Profile_ page. Additional tabs are visible to the user after logging in.
+
+  
 
   
 
@@ -386,7 +567,11 @@ The registration page allows users to create an account by entering a distinct u
 
   
 
-The profile page is unique to each user of the application. When users register successfully, they are redirected to their unique _Profile_ page where they can view, edit and delete their existing recipes.
+  
+
+The profile page is unique to each user of the application. When users register successfully, they are redirected to their unique _Profile_ page where they can view, edit and delete their existing recipes. The profile page also promotes a local catering company where users can shop for any supplies needed.
+
+  
 
   
 
@@ -394,15 +579,23 @@ The profile page is unique to each user of the application. When users register 
 
   
 
+  
+
 The recipe page allows users to add a new recipe by submitting a form. The user will enter the fields for`“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The new recipe is displayed on the homepage and the profile page.
 
   
 
-- **Recipe Types** (`get_categories.html`)
+  
+
+- **Categories** (`get_categories.html`)
 
   
 
-The recipe types page can be accessed by the website admin to view existing types of recipe. There is also the option to edit or delete recipe types. The primary recipe types on this website are cocktails, smoothies and healthy snacks. New categories can also be created by the admin.
+  
+
+The categories page can be accessed by the website admin to view existing types of recipe. There is also the option to edit or delete categories. The categories currently available on this website are cocktails, smoothies and snacks. New categories can also be created by the admin and will be available for selection by other users. This function allows for expansion into different types of recipes in future development.
+
+  
 
   
 
@@ -410,23 +603,35 @@ The recipe types page can be accessed by the website admin to view existing type
 
   
 
+  
+
 The edit recipe page allows users to edit a new recipe by editing a form. The user will update the fields for`“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Existing recipes can also be deleted by the user who created them. The updated recipe will be contained in the collection.
 
   
 
-- **Add Recipe Types** (`add_category.html`)
+  
+
+- **Add Categories** (`add_category.html`)
 
   
 
-The add recipe types page allows the website admin to add a new recipe type. All categories can be selected from the drop-down in the recipe form. The primary recipe types on this website are cocktails, smoothies and healthy snacks. New categories can be created by the admin.
+  
+
+The add categories page allows the website admin to add a new category. All categories can be selected from the drop-down in the recipe form. The primary categories on this website are cocktails, smoothies and snacks. New categories can be created by the admin. This function allows for expansion into different types of recipes in future development.
 
   
 
-- **Edit Recipe Types** (`edit_category.html`)
+  
+
+- **Edit Categories** (`edit_category.html`)
 
   
 
-The add recipe types page allows the website admin to edit an existing category. All categories can be selected from the drop-down in the recipe form.
+  
+
+The add categories page allows the website admin to edit an existing category. All categories can be selected from the drop-down in the recipe form. The name of the category will be updated in the collection.
+
+  
 
   
 
@@ -434,7 +639,11 @@ The add recipe types page allows the website admin to edit an existing category.
 
   
 
+  
+
 ## Wireframes
+
+  
 
   
 
@@ -442,7 +651,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 ## Languages used
+
+  
 
   
 
@@ -450,7 +663,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [CSS](https://en.wikipedia.org/wiki/CSS)
+
+  
 
   
 
@@ -458,7 +675,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [Python](https://www.python.org/)
+
+  
 
   
 
@@ -466,7 +687,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 ## Technologies
+
+  
 
   
 
@@ -474,7 +699,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [Heroku](https://dashboard.heroku.com/apps) Heroku is a cloud platform as a service supporting several programming languages.
+
+  
 
   
 
@@ -482,7 +711,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [Flask](<https://en.wikipedia.org/wiki/Flask_(web_framework)>) is a web framework written in Python.
+
+  
 
   
 
@@ -490,7 +723,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [GitHub](https://github.com/) GitHub was used for hosting for software development and version control using Git.
+
+  
 
   
 
@@ -498,7 +735,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [Slack](https://slack.com/intl/en-ie/) Slack was used for motivation and to ask questions to peers.
+
+  
 
   
 
@@ -506,7 +747,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [W3 CSS Validator](https://jigsaw.w3.org/css-validator/) W3 CSS Validator was used to validate the CSS code.
+
+  
 
   
 
@@ -514,7 +759,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [Favicon.io](https://favicon.io/) Favicon was used to choose an emoji to use as my favicon.
+
+  
 
   
 
@@ -522,7 +771,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [Bootstrap:](https://getbootstrap.com/) Bootstrap was used to assist with the responsiveness and styling of the website.
+
+  
 
   
 
@@ -530,7 +783,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [StackEdit](https://fonts.google.com/) StackEdit is a free, open-source Markdown editor used to create my README file.
+
+  
 
   
 
@@ -538,7 +795,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 - [QuickTime Player](https://support.apple.com/downloads/quicktime) QuickTime Player is an extensible multimedia framework developed by Apple Inc., capable of handling various formats of digital video, picture, sound, panoramic images, and interactivity.
+
+  
 
   
 
@@ -546,7 +807,11 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 <span id="database"></span>
+
+  
 
   
 
@@ -554,11 +819,17 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
   
 
+  
+
 MongoDB was chosen as the database program for this application. It is a source-available cross-platform document-oriented database program. MongoDB's non-relational database structure was suitable because the number of collections is small as well as the relationships between them
 
   
 
-![Mongo DB Record](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mongodb-recipe.png?raw=true)
+  
+
+![MongoDB Record](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mongodb-collection.png?raw=true)
+
+  
 
   
 
@@ -566,7 +837,11 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 | ------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+
+  
 
   
 
@@ -574,15 +849,23 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 | \_id | ObjectId | |
 
   
 
-| category_name | string | Category name is also called recipe types. The admin can add, edit or delete recipe types from the Types page. |
+  
+
+| category_name | string | The admin can add, edit or delete categories from the Categories page. |
 
   
 
+| ------------- | -------- | -------------------------------------------------------------------------------------------------------------- |  
+
 | Recipes | | |
+
+  
 
   
 
@@ -590,11 +873,17 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 | Key | Type | Notes |
 
   
 
+  
+
 | \_id | ObjectId | |
+
+  
 
   
 
@@ -602,7 +891,11 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 | created_by | string | The username of the person who shared the recipe. |
+
+  
 
   
 
@@ -610,7 +903,11 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 | recipe_ingredients | string | Ingredients needed for the recipe are entered in the form. |
+
+  
 
   
 
@@ -618,11 +915,17 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 | recipe_name | string | Name of the recipe is entered in the form. |
 
   
+| ------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+  
 
 | Users | | |
+
+  
 
   
 
@@ -630,7 +933,11 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 | Key | Type | Notes |
+
+  
 
   
 
@@ -638,7 +945,11 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 | password | string | A password is chosen when registering and it is hashed using Werkzeug. |
+
+  
 
   
 
@@ -646,7 +957,11 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 <span id="features"></span>
+
+  
 
   
 
@@ -654,11 +969,17 @@ MongoDB was chosen as the database program for this application. It is a source-
 
   
 
+  
+
 **CRUD Functionality**
 
   
 
-New visitors have the ability to:
+  
+
+**New visitors** have the ability to:
+
+  
 
   
 
@@ -666,7 +987,11 @@ New visitors have the ability to:
 
   
 
-Users with an account have the ability to:
+  
+
+**Users with an account** have the ability to:
+
+  
 
   
 
@@ -674,7 +999,11 @@ Users with an account have the ability to:
 
   
 
+  
+
 - View all recipes shared by other members.
+
+  
 
   
 
@@ -682,11 +1011,17 @@ Users with an account have the ability to:
 
   
 
+  
+
 - Delete their own recipes.
 
   
 
-The admin has the ability to:
+  
+
+**The admin** has the ability to:
+
+  
 
   
 
@@ -694,7 +1029,11 @@ The admin has the ability to:
 
   
 
+  
+
 - View all recipes shared by other members.
+
+  
 
   
 
@@ -702,19 +1041,29 @@ The admin has the ability to:
 
   
 
+  
+
 - Delete their own recipes.
 
   
 
-- Add a new recipe type.
+  
+
+- Add a new category.
 
   
 
-- Edit an existing recipe type.
+  
+
+- Edit an existing category.
 
   
 
-- Delete an existing recipe type.
+  
+
+- Delete an existing category.
+
+  
 
   
 
@@ -722,7 +1071,11 @@ The admin has the ability to:
 
   
 
+  
+
 - [Cards](https://materializecss.com/cards.html)
+
+  
 
   
 
@@ -730,7 +1083,11 @@ The admin has the ability to:
 
   
 
+  
+
 - [Menu dropdown](https://materializecss.com/dropdown.html)
+
+  
 
   
 
@@ -738,7 +1095,11 @@ The admin has the ability to:
 
   
 
+  
+
 - [Sidenav](https://materializecss.com/sidenav.html)
+
+  
 
   
 
@@ -746,15 +1107,23 @@ The admin has the ability to:
 
   
 
+  
+
 In order to register an account, the user must enter a unique username and a password. The password is hashed so it is not visible to the owner of the database. Werkzeug was used to hash the password entry when registering to the site and encrypting on MongoDB. Both the username and password must be between 4 and 20 characters, containing only numbers and letters using`a-zA-Z0-9`.
 
   
 
-- **Discover new recipes**
+  
+
+**Discover new recipes**
 
   
 
-The homepage displays all recipes that have been shared on the application. Each selection shows the recipe type, the recipe name and an image. Users can reveal more information about the recipe by clicking on each selection. Users can view the suggested ingredients, instructions and the username of the person who shared the idea.
+  
+
+The homepage displays all recipes that have been shared on the application. Each selection shows the category, the recipe name and an image. Users can reveal more information about the recipe by hovering over or clicking on each selection. Users can view the suggested ingredients, instructions and the username of the person who shared the idea. Users can attempt to recreate recipes with their friends and family at home. 
+
+  
 
   
 
@@ -762,7 +1131,11 @@ The homepage displays all recipes that have been shared on the application. Each
 
   
 
+  
+
 The application encourages all users to share their own favourite recipes with the rest of the community. The user can input the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Users must create an account before they can share recipes.
+
+  
 
   
 
@@ -770,7 +1143,11 @@ The application encourages all users to share their own favourite recipes with t
 
   
 
+  
+
 In addition to adding new recipes, users can also edit recipes they have already shared with the community. The user can update the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The updated record will be contained within the collection.
+
+  
 
   
 
@@ -778,7 +1155,11 @@ In addition to adding new recipes, users can also edit recipes they have already
 
   
 
-Users have the option to delete recipes they have shared with the community. Users must confirm if they would like to delete a selection before it is removed from the database. This adds an extra layer of protection to prevent records being deleted accidentally.
+  
+
+Users have the option to delete recipes they have shared with the community. Users must confirm if they would like to delete a selection before it is removed permanently from the database. This adds an extra layer of protection to prevent records being deleted accidentally.
+
+  
 
   
 
@@ -786,7 +1167,11 @@ Users have the option to delete recipes they have shared with the community. Use
 
   
 
-The application encourages users to register an account for a better experience. Users are required to enter a unique `"username"` and `"password"` when registering. Username must be 4-20 characters long, containing only numbers and letters. There is a large call-to-action button on the homepage attracting users to either log in or register. Users can view all recipes without logging in. However, users are required to log in in order to share a new recipe and edit or delete an existing recipe.
+  
+
+The application encourages users to register an account for a better experience. Users are required to enter a unique `"username"` and `"password"` when registering. Username must be 4-20 characters long, containing only numbers and letters. There is a large call-to-action button on the homepage attracting users to either log in or register. Users can view all recipes without logging in. However, users are required to log in in order to share a new recipe and edit or delete an existing recipe. 
+
+  
 
   
 
@@ -794,7 +1179,11 @@ The application encourages users to register an account for a better experience.
 
   
 
-The application has a search feature allowing users to search using keywords within the `“recipe_name”`and `“recipe_ingredients”` fields. A message will display if no results are found. There is a button for clearing search results also.
+  
+
+The application has a search feature allowing users to search using keywords within the `“recipe_name”`and `“recipe_ingredients”` fields. A message will display if no results are found. The search function will display results based on the keywords inputted. All users have access to the search bar without having to register.
+
+  
 
   
 
@@ -802,7 +1191,11 @@ The application has a search feature allowing users to search using keywords wit
 
   
 
-Additional pages were created to handle 404 and 500 errors on the website. Both pages will redirect users back to the homepage.
+  
+
+Additional pages were created to handle 404 and 500 errors on the website. Both pages will redirect users back to the homepage. These pages allow the website to handle errors gracefully.
+
+  
 
   
 
@@ -810,7 +1203,11 @@ Additional pages were created to handle 404 and 500 errors on the website. Both 
 
   
 
+  
+
 - **Like your favourite recipes** Users will be able to like their favourite recipe ideas. Recipes with the most votes or likes will be promoted more favourably than the rest.
+
+  
 
   
 
@@ -818,15 +1215,25 @@ Additional pages were created to handle 404 and 500 errors on the website. Both 
 
   
 
+  
+
 - **Share your recipes** Users could have the option of sharing their favourite recipes via email or on social media.
+
+  
 
   
 
 - **View other profiles** Users could have the option to view the profile page of other users. This would be a beneficial feature, adding to the communal feel of the application.
 
+  
+
 - **Forgot Password:** The primary design goals were to make the website easy-to-use and intuitive for users. An e-mail address will be required when creating an account for this feature to be implemented. It could be considered in future development.
 
-- **Uploading Images:** The application is currently using full image URL's to display pictures of recipes. This is because databases store image locations as a URL and the file itself is located elsewhere. Uploading images directly could be considered in future development.
+  
+
+- **Uploading Images:** The application is currently using full image URLs to display pictures of recipes. This is because databases store image locations as a URL and the file itself is located elsewhere. Uploading images directly could be considered in future development.
+
+  
 
   
 
@@ -834,7 +1241,11 @@ Additional pages were created to handle 404 and 500 errors on the website. Both 
 
   
 
+  
+
 ## Testing
+
+  
 
   
 
@@ -842,7 +1253,11 @@ Please see [TESTING.md](https://github.com/alandoherty95/reciprocate-app/blob/ma
 
   
 
+  
+
 ### Version Control
+
+  
 
   
 
@@ -850,7 +1265,11 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
   
 
+  
+
 **Creating a Repository**
+
+  
 
   
 
@@ -858,7 +1277,11 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
   
 
+  
+
 2. Select the Code Institute Template from drop-down options, enter the repository name (and description).
+
+  
 
   
 
@@ -866,7 +1289,11 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
   
 
+  
+
 4. Open the repository on Git Pod.
+
+  
 
   
 
@@ -874,7 +1301,11 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
   
 
+  
+
 Commits were made frequently and consistently throughout the course of this project. It is important to commit often to ensure no work is lost during production. The work is saved securely in GitHub.
+
+  
 
   
 
@@ -882,7 +1313,11 @@ Commits were made frequently and consistently throughout the course of this proj
 
   
 
+  
+
 - **git add - A** adds files to the staging area before committing.
+
+  
 
   
 
@@ -890,7 +1325,11 @@ Commits were made frequently and consistently throughout the course of this proj
 
   
 
+  
+
 - **git push** updates the repository in GitHub to include new or modified files and folders.
+
+  
 
   
 
@@ -898,7 +1337,11 @@ Commits were made frequently and consistently throughout the course of this proj
 
   
 
+  
+
 ## Deployment
+
+  
 
   
 
@@ -906,7 +1349,11 @@ The application was deployed using [Heroku](https://www.heroku.com/). Heroku is 
 
   
 
+  
+
 Before deploying the application to Heroku, please follow the necessary steps outlined below:
+
+  
 
   
 
@@ -914,7 +1361,11 @@ Before deploying the application to Heroku, please follow the necessary steps ou
 
   
 
+  
+
 2. Create a `Procfile` containing the name of the application file. Procfile may have a blank line when it is created so remove it as it may cause problems. The Procfile tells Heroku what to run.
+
+  
 
   
 
@@ -922,7 +1373,11 @@ Before deploying the application to Heroku, please follow the necessary steps ou
 
   
 
+  
+
 Once those steps have been completed, the application can be deployed. Please follow the necessary steps in Heroku outlined below:
+
+  
 
   
 
@@ -930,7 +1385,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 2. Click 'New' and then 'Create new app' to get started.
+
+  
 
   
 
@@ -938,7 +1397,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 4. Navigate to the 'Deploy' tab and click 'Connect to Github'.
+
+  
 
   
 
@@ -946,7 +1409,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 6. Navigate to the 'Settings' tab, click 'Reveal Config Vars' and enter the necessary keys and values.
+
+  
 
   
 
@@ -954,7 +1421,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 7. Navigate back to the 'Deploy' tab and click 'Enable Automatic Deploys'
+
+  
 
   
 
@@ -962,7 +1433,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 9. A message will appear saying 'Your app was successfully deployed.'
+
+  
 
   
 
@@ -970,7 +1445,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 ## Code
+
+  
 
   
 
@@ -978,7 +1457,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 **CSS3**
+
+  
 
   
 
@@ -986,7 +1469,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 **Python**
+
+  
 
   
 
@@ -994,7 +1481,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 ## Credits
+
+  
 
   
 
@@ -1002,7 +1493,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - [Heroku](https://dashboard.heroku.com/apps) for supplying a platform for deploying my website.
+
+  
 
   
 
@@ -1010,7 +1505,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - [Flask](<https://en.wikipedia.org/wiki/Flask_(web_framework)>) for providing a framework including components like Jinja and Werkzeug. It was used for rendering templates, URI's, redirects, requests and flash messages.
+
+  
 
   
 
@@ -1018,7 +1517,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) was used to hash password entry when registering to the site and encrypting on MongoDB.
+
+  
 
   
 
@@ -1026,7 +1529,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - [GitHub](https://github.com/) for hosting for software development and version control.
+
+  
 
   
 
@@ -1034,7 +1541,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - [Slack](https://app.slack.com/client/T0L30B202/C016NG69WG3) community is always helpful and motivating. It is great for asking questions and discussing challenges.
+
+  
 
   
 
@@ -1042,7 +1553,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - [Pexels](https://www.pexels.com/) for providing striking, high resolution images.
+
+  
 
   
 
@@ -1050,7 +1565,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 ### General Resources
+
+  
 
   
 
@@ -1058,7 +1577,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - [Stack Overflow](https://stackoverflow.com/)
+
+  
 
   
 
@@ -1066,7 +1589,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - [W3schools](https://www.w3schools.com/)
+
+  
 
   
 
@@ -1074,7 +1601,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 <span id="acknowledgements"></span>
+
+  
 
   
 
@@ -1082,7 +1613,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - My Code Institute Mentor [Nishant Kumar](https://github.com/nishant8BITS/) for his continuous help and guidance.
+
+  
 
   
 
@@ -1090,7 +1625,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 - My friends lent me their time to demonstrate the website while offering proposals and constructive feedback.
+
+  
 
   
 
@@ -1098,7 +1637,11 @@ Once those steps have been completed, the application can be deployed. Please fo
 
   
 
+  
+
 ### Disclaimer
+
+  
 
   
 
@@ -1106,4 +1649,7 @@ This website was developed for educational purposes.
 
   
 
+  
+
 <a href="#top">Return to Top</a>
+
