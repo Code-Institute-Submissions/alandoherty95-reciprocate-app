@@ -66,7 +66,8 @@ p {
 }
 
 .cover-card {
-  height: auto;
+  height: 38rem;
+  border-bottom: 2px solid #a62632;
 }
 
 .cover-card li {
@@ -93,7 +94,11 @@ p {
 
 .btn-negative {
   background-color: #2632a6;
-} 
+}
+
+.btn-neutral {
+  background-color: #a62632;
+}
 
 .intro-big {
   font-size: 2rem;
@@ -157,6 +162,11 @@ h1 > span {
   min-height: 50rem;
   border-radius: 2px;
   overflow: hidden;
+}
+
+.return-card {
+  padding: 4rem;
+  margin-top: 4rem;
 }
 
 /* pagination */
