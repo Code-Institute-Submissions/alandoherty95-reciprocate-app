@@ -88,6 +88,10 @@ p {
   right: 0;
 }
 
+.fill-card {
+  height: 38rem;
+}
+
 .btn-positive {
   background-color: #32a626;
 } 

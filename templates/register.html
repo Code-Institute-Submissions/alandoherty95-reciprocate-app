@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="card-panel cover-card">
+<div class="card-panel fill-card">
     <div class="row">
         <!-- register -->
         <div class="col s12 m4 l4 heading-info">
@@ -47,14 +47,15 @@
             </form>
         </div>
     </div>
-</div> 
-<!-- link to log in page -->
-<div class="row">
-    <div class="col s12">
-        <p class="center-align info">
-            Already registered? <a class="waves-effect waves-light btn-large btn-positive" href="{{ url_for('login') }}">Log in now <i class="fas fa-sign-in-alt"></i></a>
-        </p>
+    <!-- link to log in page -->
+    <div class="row">
+        <div class="col s12">
+            <p class="center-align info">
+                Already registered? <a class="waves-effect waves-light btn-large btn-positive"
+                    href="{{ url_for('login') }}">Log in now <i class="fas fa-sign-in-alt"></i></a>
+            </p>
+        </div>
     </div>
-</div>
+</div> 
 
 {% endblock %}
