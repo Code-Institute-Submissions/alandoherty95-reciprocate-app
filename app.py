@@ -157,7 +157,7 @@ def logout():
     # removes user from current session
     flash("Log out successful. See you again soon!")
     session.pop("user")
-    return redirect(url_for("login"))
+    return redirect(url_for("get_recipes"))
 
 
 # add new recipe
