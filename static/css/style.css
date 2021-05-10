@@ -251,6 +251,7 @@ h1 > span {
   color: #26a69a;
   background-color: #ffffff;
   margin: 0;
+  padding: 2rem;
   border-bottom: 2px solid #000000;
 }
 
