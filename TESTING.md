@@ -204,6 +204,8 @@ Mobile Device:
 
 - A flash message notifies the user: 'Good to see you again, <username>!'
 
+  ![Flash Message](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/flash-message.png?raw=true)
+
 - Clicking on the link below the form reading 'Not registered yet? Register now' redirects the user to the 'Register' page.
 
 **Profile page**

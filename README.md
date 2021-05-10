@@ -226,7 +226,7 @@ The add categories page allows the website admin to edit an existing category. A
 
 ## 5. Wireframes
 
-Wireframe mockups can be found in this [folder](https://github.com/alandoherty95/reciprocate-app/tree/master/resources)
+Wireframe mockups for both desktop and mobile devices can be found in this [folder](https://github.com/alandoherty95/reciprocate-app/tree/master/resources/wireframes)
 
 ## Languages used
 
@@ -286,33 +286,35 @@ Wireframe mockups can be found in this [folder](https://github.com/alandoherty95
 
 MongoDB was chosen as the database program for this application. It is a source-available cross-platform document-oriented database program. MongoDB's non-relational database structure was suitable because the number of collections is small as well as the relationships between them
 
+![Overview of MongoDB Collections](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mongodb-collections-overview.png?raw=true)
+
 ![MongoDB Record](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mongodb-collection.png?raw=true)
 
 | Categories | | |
 
-| ------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| -------------------------------------------------------------------------------------------------------------------------- |
 
 | Key | Type | Notes |
 
-| \_id | ObjectId | |
+| \_id | ObjectId |
 
 | category_name | string | The admin can add, edit or delete categories from the Categories page. |
 
-| ------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| -------------------------------------------------------------------------------------------------------------------------- |
 
 | Recipes | | |
 
-| ------------------- | -------- | ------------------------------------------------------------------------ |
+| -------------------------------------------------------------------------------------------------------------------------- |
 
 | Key | Type | Notes |
 
-| \_id | ObjectId | |
+| \_id | ObjectId |
 
-| category_name | string | Category name is selected from a drop-down list when add a new recipe |
+| category_name | string | Category name is selected from a drop-down list when adding a new recipe |
 
-| created_by | string | The username of the person who shared the recipe. |
+| created_by | string | The username of the person who shared the recipe is automatically filled. |
 
-| image_url | string | The full image URL is entered to display a picture of the finished good. |
+| image_url | string | The full image URL is entered to display a picture of the finished recipe. |
 
 | recipe_ingredients | string | Ingredients needed for the recipe are entered in the form. |
 
@@ -320,15 +322,15 @@ MongoDB was chosen as the database program for this application. It is a source-
 
 | recipe_name | string | Name of the recipe is entered in the form. |
 
-| ------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| -------------------------------------------------------------------------------------------------------------------------- |
 
-| Users | | |
+| Users |
 
-| -------- | -------- | ---------------------------------------------------------------------- |
+| -------------------------------------------------------------------------------------------------------------------------- |
 
 | Key | Type | Notes |
 
-| \_id | ObjectId | |
+| \_id | ObjectId |
 
 | password | string | A password is chosen when registering and it is hashed using Werkzeug. |
 
