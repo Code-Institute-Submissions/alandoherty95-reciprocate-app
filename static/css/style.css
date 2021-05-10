@@ -104,23 +104,6 @@ p {
   background-color: #a62632;
 }
 
-.intro-big {
-  font-size: 2rem;
-}
-
-.intro-small {
-  font-size: 1.2rem;
-}
-
-.info {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.btn-small, .btn-large {
-  margin: 0.2rem;
-  border-radius: 12px;
-}
 .extended {
   background-color: #ffffff;
   font-family: 'Merienda One', cursive;
@@ -140,6 +123,39 @@ p {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+}
+
+nav .nav-wrapper i {
+  line-height: 0;
+}
+
+.input-field {
+  width: 60%;
+}
+
+.intro-big {
+  font-size: 2rem;
+}
+
+.intro-small {
+  font-size: 1.2rem;
+}
+
+.info {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.btn-small, .btn-large {
+  margin: 0.2rem;
+  border-radius: 12px;
+}
+
+.form-inline {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0 0.5rem 0 0.5rem;
 }
 
 .flash-message h4 {

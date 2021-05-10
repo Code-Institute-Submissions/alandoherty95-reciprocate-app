@@ -38,15 +38,8 @@
                 <ul class="right hide-on-med-and-down">
                     <!-- search bar -->
                     <li>
-                        <div class="search-container">
-                            <form class="form-inline" action="{{ url_for('search') }}" method="post">
-                                <div class="input-field">
-                                    <input type="text" name="query" id="query" minlenght="3" class="validate" required>
-                                    <label for="query">Search Recipes. . .</label><button type="submit"><i class="fas fa-search btn-small"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
+                        <form action="{{ url_for('search') }}" method="post" class="form-inline"><input class="form-control" type="text" name="query" id="query" placeholder="Search recipes"><button class="btn-small btn-search" aria-label="Search" type="submit"><i class="fas fa-search"></i></button></form>
+                    </li>              
                     <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-home"></i></a></li>
                     <!-- only visible in user session -->
                     {% if session.user %}
@@ -134,9 +127,9 @@
                 </ul>
             </div>
             <div class="col l4 m4 s12 dev-links">
-                <a target="_blank" href="https://www.linkedin.com/in/alan-doherty-201855131/ ">
+                <a target="_blank" aria-label="LinkedIn Profile" href="https://www.linkedin.com/in/alan-doherty-201855131/ ">
                     <i class="fab fa-linkedin"></i></a>
-                <a target="_blank" href="https://github.com/alandoherty95">
+                <a target="_blank" aria-label="GitHub Profile" href="https://github.com/alandoherty95">
                     <i class="fab fa-github-square"></i></a>
             </div>
             <div class="col l4 m4 s12">
