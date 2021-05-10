@@ -92,15 +92,15 @@ p {
   height: 38rem;
 }
 
-.btn-positive {
+.btn-green {
   background-color: #32a626;
 } 
 
-.btn-negative {
+.btn-blue {
   background-color: #2632a6;
 }
 
-.btn-neutral {
+.btn-red {
   background-color: #a62632;
 }
 
