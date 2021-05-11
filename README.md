@@ -1,10 +1,12 @@
 **[Reciprocate](https://reciprocate-application.herokuapp.com/)**
 
-Welcome to **Reciprocate** - a community for sharing your favourite recipes!
+Welcome to **[Reciprocate](https://reciprocate-application.herokuapp.com/)** - a community for sharing and discovering recipes!
 
 ![Website Mockup](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/main-mockup.png?raw=true)
 
 <span id="top"></span>
+
+![Reciprocate Logo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/reciprocate-logo.png?raw=true)
 
 **[Reciprocate](https://reciprocate-application.herokuapp.com/)** is a community-based application created for anyone who enjoys trying new recipes or sharing their favourites recipes with others. It was designed to allow users to freely share recipes with each other. Users can share their own food and drink recipes with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind, encouraging users to recreate recipes at home with family and friends. Users will have the option of setting up an account to create, locate, display, edit and delete records from the collection of recipes.
 

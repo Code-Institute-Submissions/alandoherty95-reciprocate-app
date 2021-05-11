@@ -1,6 +1,8 @@
-# Reciprocate TESTING.md
+# TESTING.md
 
-Welcome to **Reciprocate** - a community for sharing your favourite recipes!
+Welcome to **[Reciprocate](https://reciprocate-application.herokuapp.com/)** - a community for sharing and discovering recipes!
+
+![Reciprocate Logo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/reciprocate-logo.png?raw=true)
 
 View [README](README.md) file.
 
@@ -8,27 +10,27 @@ View [Reciprocate](https://reciprocate-application.herokuapp.com/) application.
 
 ## Table of Contents
 
-- <a href="#overview">Overview</a>
+1. <a href="#overview">Overview</a>
 
-- <a href="#user-stories">User Stories</a>
+2. <a href="#user-stories">User Stories</a>
 
-- <a href="#manual">Manual Testing</a>
+3. <a href="#manual">Manual Testing</a>
 
-- <a href="#auto">Automated Testing</a>
+4. <a href="#auto">Automated Testing</a>
 
-- <a href="#version-control">Version Control</a>
+5. <a href="#version-control">Version Control</a>
 
-- <a href="#responsive">Responsiveness</a>
+6. <a href="#responsive">Responsiveness</a>
 
-- <a href="#resolved-bugs">Resolved Bugs</a>
+7. <a href="#resolved-bugs">Resolved Bugs</a>
 
-- <a href="#unresolved-bugs">Unresolved Bugs</a>
+8. <a href="#unresolved-bugs">Unresolved Bugs</a>
 
 ---
 
 <span id="overview"></span>
 
-## Overview
+## 1. Overview
 
 **Consistency**
 
@@ -86,7 +88,7 @@ Designing a platform with easy navigation was front of mind during the developme
 
 <span id="user-stories"></span>
 
-## User stories
+## 2. User stories
 
 **User Story 1:** As an individual who likes to keep a healthy lifestyle, I want to find tasty food and drink recipes to try at home.
 
@@ -132,7 +134,7 @@ In order for this user to browse all recipes:
 
 <span id="manual"></span>
 
-## Manual Testing
+## 3. Manual Testing
 
 The following tests have been carried out manually without raising an issue:
 
@@ -204,7 +206,7 @@ Mobile Device:
 
 - A flash message notifies the user: 'Good to see you again, <username>!'
 
-  ![Flash Message](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/flash-message.png?raw=true)
+![Flash Message](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/flash-message.png?raw=true)
 
 - Clicking on the link below the form reading 'Not registered yet? Register now' redirects the user to the 'Register' page.
 
@@ -276,7 +278,7 @@ Recipe Cards:
 
 <span id="auto"></span>
 
-## Automated Testing
+## 4. Automated Testing
 
 ![Desktop Report]()
 
@@ -304,7 +306,7 @@ Recipe Cards:
 
 - Document does not have a meta description: Meta descriptions may be included in search results to concisely summarize page content.
 
-## Version Control
+## 5. Version Control
 
 Throughout the production of this application, I used [Gitpod](https://gitpod.io/) as a local repository and [GitHub](https://github.com/) as a remote repository.
 
@@ -330,7 +332,7 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
 <span id="deployment"></span>
 
-## Deployment
+## 6. Deployment
 
 The application was deployed using [Heroku](https://www.heroku.com/). Heroku is a cloud platform with a service supporting several programming languages including Python. GitHub can host static websites but this particular project requires back-end technology such as a server and a database. I connected the GitHub repository with Heroku.
 
@@ -366,7 +368,7 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 <span id="resolved"></span>
 
-## Resolved Bugs
+## 7. Resolved Bugs
 
 - Deletion modal not functioning, the modal used for confirming an action before deleting was not popping up and the selection was deleted without confirmation: the class `modal-trigger` was added to the modal function to trigger to pop up window before deleting.
 
@@ -376,25 +378,25 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 - Form fields not populating when editing a recipe, the existing information was not displayed in each of the fields to allow editing: tweaked input to `value="{{ recipe.recipe_name }}"`
 
-Search feature was functioning but did not display search words after submitting. The `{page_heading}` variable was added to display the missing information. e.g. `"Showing Results for 'banana'"`
+- Search feature was functioning but it did not display the search words that were inputted after submitting. The `{page_heading}` variable was added to display the missing information. e.g. `"Showing results for: banana"`
 
-The recipe images did not fit well within the card. The `-o-object-fit: contain;`styling was added so the image will keep its aspect ratio, but is resized to fit within the given dimension.
+- The recipe images did not fit well within the card. The `-o-object-fit: contain;`styling was added so the image will keep its aspect ratio, but is resized to fit within the given dimension.
 
-- Website was loading slowly due to large number of images, changed the number of recipes displayed per page from 9 to 6, pagination is used.
+- The homepage was loading slowly due to the large number of images. I changed the number of recipes displayed per page from 9 to 6 using pagination. This improved the loading speed of the site and gave more attention to the 6 recipes displayed on each tab.
+
+- Lighthouse identified buttons with an icon but no label and advised using the aria-label attribute. This attribute is used to provide the label to any assistive technologies.
 
 <span id="unresolved"></span>
 
-## Unresolved Bugs
+## 8. Unresolved Bugs
 
-- Error in console due to one or more images not displaying.
-
-- Categories page is not displaying, only accessible for admin, enable admin function for username: admin
-
-- Drop-down field in add new recipe form changes color to red after selecting next field
+- Drop-down field in add new recipe form changes colour to red after selecting next field
 
 - Materialize select dropdown does not function correctly on iOS: known bug with Materialize meaning either the dropdown does not appear or selects the wrong item when tapped/clicked.
 
-Warning reported by Chrome console, `[DOM] Input elements should have autocomplete attributes`: Resolution: added `autocomplete` to Register and Log In inputs.
+- Error in console due to one or more images not displaying.
+
+- Warning reported by Chrome console, `[DOM] Input elements should have autocomplete attributes`: Resolution: added `autocomplete` to Register and Log In inputs.
 
 **Issues reported by GitPod**
 
