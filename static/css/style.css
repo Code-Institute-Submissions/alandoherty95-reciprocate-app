@@ -137,6 +137,10 @@ nav .nav-wrapper i {
   font-size: 2rem;
 }
 
+.intro-med {
+  font-size: 1.6rem;
+}
+
 .intro-small {
   font-size: 1.2rem;
 }
@@ -253,6 +257,13 @@ h1 > span {
   margin: 0;
   padding: 2rem;
   border-bottom: 2px solid #000000;
+}
+
+.logo-image {
+  height: 30rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100% !important;
 }
 
 /* media queries */

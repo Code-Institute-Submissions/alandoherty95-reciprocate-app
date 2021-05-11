@@ -241,6 +241,12 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+# about
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     # custom 404 error handling page

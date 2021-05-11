@@ -3,6 +3,7 @@ $(document).ready(function () {
         edge: "right"
     });
     $('select').formSelect();
+    $('.collapsible').collapsible();
     $('.modal').modal();
     $('.card').hover(
         function() {
