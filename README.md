@@ -50,7 +50,7 @@ Read — A function we can call to see all of the recipes currently in our datab
 
 Update — A function we can call when information about a particular recipe must be changed. The user can edit the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. After the function is called, the corresponding entry in the `recipes` database will contain the new fields provided. This option is only available to the creator of each recipe. These steps can be followed if the website admin wishes to edit an existing category in the database.
 
-Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the `recipe` resource should contain all of the recipes it had before, except for the one recipe we just deleted. This option is only available to the creator of the recipe. A similar process can be followed if the website admin wishes to remove a category from the database.
+Delete — A function we can call to remove a particular recipe from the catalog. After this function is called, the `recipe` resource should contain all of the recipes it had before, except for the one recipe we just deleted. This option is only available to the creator of the recipe. 
 
 <span id="ux"></span>
 
