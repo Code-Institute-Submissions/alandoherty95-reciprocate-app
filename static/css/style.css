@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Orelega+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-/*-- 
-#26a69a button
-#a62632 complementary
---*/
-
 body {
   background-color: #D3D3D3;
   font-family: 'Oswald', sans-serif;
@@ -16,6 +11,7 @@ body {
   max-width: none;
 }
 
+/* headings */
 h1 {
   font-family: 'Merienda One', cursive;
   color: #a62632;
@@ -42,6 +38,10 @@ h6 {
   color: #a62632;
 }
 
+h1 > span {
+  color: #a62632;
+}
+
 p {
   padding: 0;
   font-size: 1.2rem;
@@ -57,6 +57,7 @@ p {
   background-color: #ffffff;
 }
 
+/* recipe cards */
 .card-reveal {
   -webkit-transition: all 700ms ease;
   -moz-transition: all 700ms ease;
@@ -92,6 +93,7 @@ p {
   height: 38rem;
 }
 
+/* buttons */
 .btn-green {
   background-color: #32a626;
 } 
@@ -102,6 +104,16 @@ p {
 
 .btn-red {
   background-color: #a62632;
+}
+
+.btn-small, .btn-large {
+  margin: 0.2rem;
+  border-radius: 12px;
+}
+
+/* navigation bar */
+nav .nav-wrapper i {
+  line-height: 0;
 }
 
 .extended {
@@ -115,6 +127,7 @@ p {
   font-size: 1.6rem;
 }
 
+/* side navigation bar */
 .sidenav-trigger {
   color: #a62632;
 }
@@ -123,10 +136,6 @@ p {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-}
-
-nav .nav-wrapper i {
-  line-height: 0;
 }
 
 .input-field {
@@ -150,11 +159,6 @@ nav .nav-wrapper i {
   text-align: center;
 }
 
-.btn-small, .btn-large {
-  margin: 0.2rem;
-  border-radius: 12px;
-}
-
 .form-inline {
   display: flex;
   flex-wrap: nowrap;
@@ -169,17 +173,16 @@ nav .nav-wrapper i {
   margin: 0;
 }
 
+/* faq collaspsible */
 .collapsible-header {
   margin: 6px;
   line-height: 1;
+  font-size: 1.6rem;
 }
 
 .collapsible-body {
   background-color: #ffffff;
-}
-
-h1 > span {
-  color: #a62632;
+  font-size: 1.4rem;
 }
 
 .card-recipe {
@@ -194,7 +197,6 @@ h1 > span {
 }
 
 /* pagination */
-
 .pagination {
   text-align: center;
 }
@@ -203,6 +205,7 @@ h1 > span {
   background-color: #000000;
 }
 
+/* footer */
 .base-footer {
   background-color: #ffffff;
   text-align: left;
@@ -232,6 +235,7 @@ h1 > span {
   margin-top: 1rem;
 }
 
+/* recipe card image */
 .card-image img.activator {
   height: 35rem;
   -o-object-fit: contain;
@@ -239,6 +243,7 @@ h1 > span {
   width: 100% !important;
 }
 
+/* shannon hotel supplies */
 .shs-image {
   height: 25rem;
   text-align: center;
@@ -249,6 +254,7 @@ h1 > span {
   padding: 1rem;
 }
 
+/* no search results */
 .no-result {
   line-height: 3;
   font-size: 2rem;
@@ -266,38 +272,10 @@ h1 > span {
   width: 100% !important;
 }
 
-.collapsible-header {
-  font-size: 1.6rem;
-}
-
-.collapsible-body {
-  font-size: 1.4rem;
-}
-
 .modal-info .btn-large {
   padding: 2rem;
 }
 
 .share {
   margin-bottom: 2rem;
-}
-
-/* media queries */
-
-@media only screen and (min-width: 992px) {
-  h1 {
-    padding: 0;
-  } 
-}
-
-@media only screen and (min-width: 768px) {
-  h1 {
-    padding: 0;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  h1 {
-    padding: 0;
-  }
 }

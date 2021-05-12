@@ -1,17 +1,17 @@
 $(document).ready(function () {
     $(".sidenav").sidenav({
         edge: "right"
-    });
-    $('select').formSelect();
-    $('.collapsible').collapsible();
-    $('.modal').modal();
+    }); // side naviagtion bar opens on right
+    $('select').formSelect(); // select options in form
+    $('.collapsible').collapsible(); // faq collapsible
+    $('.modal').modal(); // modal pop up
     $('.card').hover(
         function() {
             $(this).find('> .card-image > img.activator').click();
         }, function() {
             $(this).find('> .card-reveal > .card-title').click();
         }
-    );
+    ); // hover over recipe cards to reveal
 
     // validate Materialize select fields, self invoking function
     (function validateMaterializeSelect() {
