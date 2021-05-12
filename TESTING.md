@@ -4,7 +4,7 @@ Welcome to **[Reciprocate](https://reciprocate-application.herokuapp.com/)** - a
 
 ![Reciprocate Logo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/images/reciprocate-logo.png?raw=true)
 
-View [README](README.md) file.
+View [README](https://github.com/alandoherty95/reciprocate-app#readme) file.
 
 View [Reciprocate](https://reciprocate-application.herokuapp.com/) application.
 
@@ -72,9 +72,9 @@ Designing a platform with easy navigation was front of mind during the developme
 
 - Flash messages notify users on screen when they perform meaningful actions e.g. sharing a new recipe or logging in.
 
-- A modal pops up to confirm deletion of recipes or categories of recipe.
+- A modal popup to confirm deletion of recipes or categories of recipe.
 
-- A modal reveals more info about how to upload an image if the icon is clicked while filling out form.
+- A modal reveals more info about how to upload an image if the icon is clicked while filling out a form.
 
 **Responsiveness**
 
@@ -82,11 +82,12 @@ Designing a platform with easy navigation was front of mind during the developme
 
 - Different sized screens were tested extensively using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/).
 
-- I added the`loading="lazy"`attribute to recipe images to keep loading time down as the number of images on the website increases.
+- I added the`loading="lazy"attribute to recipe images to keep loading time down as the number of images on the website increases.
 
 **Security**
 
 - Passwords are hashed using Werkzeug Security to ensure they are not visible to the owner of the database or anyone else.
+
 - Users can create a secure password of between 4 and 30 characters when creating their account. Both numbers and letters can be used.
 
 <span id="user-stories"></span>
@@ -104,7 +105,8 @@ In order for this user to browse all recipes:
 - Scroll down slightly to view ‘Our Favourite Recipes'.
 
 - Click on any selection to view additional information about the recipe.
-  ![User Story 1 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/demos/user-stories-1.gif?raw=true)
+
+![User Story 1 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/demos/user-stories-1.gif?raw=true)
 
 **User Story 2:** As a food lover, I would like to share recipe ideas for snacks and smoothies with other people with similar interests.
 
@@ -123,7 +125,8 @@ In order for this user to share recipe ideas:
 - Input details such as 'Recipe Type', 'Name of Recipe', 'Ingredients' and 'Instructions'.
 
 - Click the 'Add New Recipe' button.
-  ![User Story 2 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/demos/user-stories-2.gif?raw=true)
+
+![User Story 2 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/demos/user-stories-2.gif?raw=true)
 
 **User Story 3:** As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones.
 
@@ -133,12 +136,17 @@ In order for this user to browse all recipes:
 
 - Open homepage of website.
 
-- Enter keywords into the search bar in Navigation Bar.
+- Enter keywords into the search bar in the Navigation Bar.
+
 - Submit search
+
 - View recipes relating to the keywords entered.
 
 - Click on any selection to view additional information about the recipe.
-  ![User Story 3 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/demos/user-stories-3.gif?raw=true)
+
+![User Story 3 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/demos/user-stories-3.gif?raw=true)
+
+\*Gifs used above were recorded on a Google Pixel 5. Excuse wifi lapse in second demonstration when submitting form.
 
 <span id="manual"></span>
 
@@ -174,9 +182,9 @@ Mobile Device:
 
 - Clicking on each link takes the user to the relevant page.
 
-- Clicking on the GitPod icon will open GitPod profile in new tab.
+- Clicking on the GitPod icon will open the GitPod profile in new tab.
 
-- Clicking on the LinkedIn icon will open LinkedIn profile in new tab.
+- Clicking on the LinkedIn icon will open the LinkedIn profile in new tab.
 
 - If the user is logged in, clicking 'Log Out' will remove the user from a session by logging them out.
 
@@ -194,6 +202,8 @@ Mobile Device:
 
 ![Invalid Registration Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/invalid-register-form.png?raw=true)
 
+\*Screenshot above demonstrates invalid input while entering registration form.
+
 - Entering a unique username and password creates a profile for the user.
 
 - When the 'Register' button is clicked after inputting valid details, the user is redirected to their unique 'Profile' page.
@@ -209,6 +219,8 @@ Mobile Device:
 **Log In page**
 
 ![Valid Log In Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/valid-login-form.png?raw=true)
+
+\*Screenshot above demonstrates valid user input while logging in.
 
 - When the 'Log In' button is clicked after inputting valid details, the user is redirected to their unique 'Profile' page.
 
@@ -272,13 +284,13 @@ Recipe Cards:
 
 - The 'Edit' button allows the admin to edit the name of each recipe type.
 
-- The 'Delete' button allows the admin to delete each recipe type. A modal pops up to confirm before deleting category.
+- The 'Delete' button allows the admin to delete each recipe type. A modal pops up to confirm before deleting the category.
 
 **About page**
 
 - The 'About' page provides more information about the application.
 
-- It contains a list frequently asked questions.
+- It contains a list of frequently asked questions.
 
 **404 page**
 
@@ -388,7 +400,7 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 ## 7. Resolved Bugs
 
-- Deletion modal was not functioning, the modal used for confirming an action before deleting was not popping up and the selection was deleted without confirmation: the class `modal-trigger` was added to the modal function to trigger to pop up window before deleting the record.
+- Deletion modal was not functioning, the modal used for confirming an action before deleting was not popping up and the selection was deleted without confirmation: the class `modal-trigger` was added to the modal function to trigger a pop up window before deleting the record.
 
 - Background and foreground colours do not have a sufficient contrast ratio. Low-contrast text is difficult or impossible for many users to read: Colour scheme was altered to be more visually pleasing.
 
@@ -402,21 +414,17 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 - The recipe images did not fit well within the card. The `-o-object-fit: contain;`styling was added so the image will keep its aspect ratio, but is resized to fit within the given dimension.
 
-- The homepage was loading slowly due to the large number of images. I changed the number of recipes displayed per page from 9 to 6 using pagination. This improved the loading speed of the site and gave more attention to the 6 recipes displayed on each tab.
+- The home page was loading slowly due to the large number of images. I changed the number of recipes displayed per page from 9 to 6 using pagination. This improved the loading speed of the site and gave more attention to the 6 recipes displayed on each tab.
 
 - Lighthouse identified buttons with an icon but no label and advised using the `aria-label` attribute. This attribute is used to provide the label to any assistive technologies.
 
-- The drop-down field in the add recipe form changed colour back to red after selecting next field. The colour was corrected to green in the JS code and resolved this minor issue.
+- The drop-down field in the add recipe form changed colour back to red after selecting the next field. The colour was corrected to green in the JS code and resolved this minor issue.
 
 - The attribute `input type="url"` was added to the add recipe form to allow users to input the full image url when sharing a recipe. The image will be displayed on the recipe card. By clicking on the 'Info' icon, users will see more information about how to input a valid image URL.
 
 <span id="unresolved"></span>
 
 ## 8. Unresolved Bugs
-
-- Materialize select dropdown does not function correctly on iOS: known bug with Materialize meaning either the dropdown does not appear or selects the wrong item when tapped/clicked. I read more information about this possible bug on [Stack Overflow](https://stackoverflow.com/questions/52850091/materialize-select-and-dropdown-touch-event-selecting-wrong-item)
-
-- Warning reported by Chrome console, `[DOM] Input elements should have autocomplete attributes`: Resolution: added `autocomplete` to Register and Log In inputs.
 
 **Issues reported by GitPod**
 

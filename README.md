@@ -64,7 +64,7 @@ The website was designed with a community-based approach in mind. It was created
 
 - To allow convenient access to the recipes provided by all other members
 
-- To promote a local catering supplies company
+- To promote a local catering supplies company specialising in kitchen utensils
 
 The website focuses on the following three types of recipes but it is not limited. The admin has the capability to add a new category for different categories.
 
@@ -110,7 +110,9 @@ The website focuses on the following three types of recipes but it is not limite
 
 - As the owner, I want users to browse and find recipes that suit their tastes.
 
-- As the owner, I want to allow users to create additional categories if they would like.
+- As the owner, I want to provide a search feature allowing users to find specific recipes..
+
+- As the owner, I want to create additional categories in future.
 
 - As the owner, I want to promote a local catering supplies company.
 
@@ -170,7 +172,7 @@ The minimum features to be included in this project are as follows:
 
 - **Log Out** allows users to log out of their account with one click of a button. The log out function removes the user from the session. This button is available in the navigation bar and footer of all pages when a user is logged in.
 
-- **Profile** can be accessed by users when they have successfully logged in. Users can view all recipes they have shared. Users can also edit or delete recipes they have already shared with the community. The profile page also promotes a local catering company where users can shop for any supplies needed.
+- **Profile** can be accessed by users when they have successfully logged in. Users can view all recipes they have shared. Users can also edit or delete recipes they have already shared with the community. The profile page also promotes a local catering company where users can shop for any supplies needed. Shannon Hotel Supplies is a local company specialising in kitchen supplies and utensils.
 
 - **Create Recipe** encourages users to share new recipes with the community. Users must be logged in to their account in order to share recipes. A new recipe can be submitted by filling out a simple form. The user will enter the fields for`“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The new recipe is displayed on the homepage and the user's profile page.
 
@@ -192,7 +194,7 @@ The minimum features to be included in this project are as follows:
 
 - **Home** (`recipes.html`)
 
-The welcome page clearly outlines the main purpose of the website. In the top navigation bar, there is a logo and tabs for the _Home_, _Register_ and _Login_ pages. There are two prominent call-to-action buttons encouraging users to either log in or register if they do not have an account yet. By scrolling down, users can browse all recipes in our database and search for specific recipes using keywords.
+The welcome page clearly outlines the main purpose of the website. In the top navigation bar, there is a logo and tabs for the _Home_, _Register_ and _Log In_ pages. There are two prominent call-to-action buttons encouraging users to either log in or register if they do not have an account yet. By scrolling down, users can browse all recipes in our database and search for specific recipes using keywords.
 
 - **Log In** (`login.html`)
 
@@ -204,7 +206,7 @@ The registration page allows users to create an account by entering a distinct u
 
 - **Profile** (`profile/<username>.html`)
 
-The profile page is unique to each user of the application. When users register successfully, they are redirected to their unique _Profile_ page where they can view, edit and delete their existing recipes. The profile page also promotes a local catering company where users can shop for any supplies needed.
+The profile page is unique to each user of the application. When users register successfully, they are redirected to their unique _Profile_ page where they can view, edit and delete their existing recipes. The profile page also promotes a local catering company where users can shop for any supplies needed. Shannon Hotel Supplies is a local company specialising in kitchen supplies and utensils.
 
 - **New Recipe** (`add_recipe.html`)
 
@@ -212,7 +214,7 @@ The recipe page allows users to add a new recipe by submitting a form. The user 
 
 - **Categories** (`get_categories.html`)
 
-The categories page can be accessed by the website admin to view existing types of recipe. There is also the option to edit or delete categories. The categories currently available on this website are cocktails, smoothies and snacks. New categories can also be created by the admin and will be available for selection by other users. This function allows for expansion into different types of recipes in future development.
+The categories page can be accessed by the website admin to view existing types of recipes. There is also the option to edit or delete categories. The categories currently available on this website are cocktails, smoothies and snacks. New categories can also be created by the admin and will be available for selection by other users. This function allows for expansion into different types of recipes in future development.
 
 - **Edit Recipe** (`edit_recipe.html`)
 
@@ -380,17 +382,32 @@ MongoDB was chosen as the database program for this application. It is a source-
 
 - Delete an existing category.
 
-**Materialize CSS**:
+**[Materialize CSS](https://materializecss.com/)**:
 
 - [Cards](https://materializecss.com/cards.html)
+  Cards were used to display the collection of recipes. The image, name and category are present on the card before revealing more detailed information about the recipe on hover or click.
 
 - [Forms](https://materializecss.com/text-inputs.html)
+  Forms are used to allow users to input information about recipes such as recipe name, ingredients and instructions. The details are added to the collection.
 
-- [Menu dropdown](https://materializecss.com/dropdown.html)
+- [Dropdown](https://materializecss.com/dropdown.html)
+  Dropdown is used to offer a selection of recipe types such as cocktail, smoothie and snacks.
 
 - [Modals](https://materializecss.com/modals.html)
+  Modals are used to add an extra layer of protection before permanently deleting a record from the collection. The user can confirm their action before the record is deleted.
+
+- [Collapsible](https://materializecss.com/collapsible.html)
+  Collapsible is used to display frequently asked questions on the 'About' page. This menu offers more information about the purpose of the site.
 
 - [Sidenav](https://materializecss.com/sidenav.html)
+  Sidenav is used for the navigation bar on mobile devices. The navigation bar expands from the right side of the screen.
+
+- [Buttons](https://materializecss.com/buttons.html)
+  Buttons are used to navigate around the application as well as submitting information or confirming actions. The buttons are styled depending on their actions.
+
+**[Font Awesome](https://fontawesome.com/icons?d=gallery&p=2&m=free)**
+
+- Font Awesome free icons were used throughout the application in buttons and links. This adds to the visual experience of the user.
 
 **Secure Registration**
 
@@ -423,6 +440,9 @@ The application has a search feature allowing users to search using keywords wit
 **Error handling**
 
 Additional pages were created to handle 404 and 500 errors on the website. Both pages will redirect users back to the homepage. These pages allow the website to handle errors gracefully.
+
+**About**
+The 'About' page presents more details on the purpose of the website. There is a collapsible menu displaying frequently asked questions.
 
 ### Features to Implement in the Future
 
