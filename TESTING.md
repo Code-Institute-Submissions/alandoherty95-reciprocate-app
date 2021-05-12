@@ -296,11 +296,11 @@ Recipe Cards:
 
 ## 4. Automated Testing
 
-![Desktop Report]()
+![Desktop Report](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/lighthouse-reports/desktop-home-lighthouse-report.png?raw=true)
 
-![Mobile Report]()
+![Mobile Report](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/lighthouse-reports/mobile-home-lighthouse-report.png?raw=true)
 
-<span id="version-control"></span>
+I ran Chrome Lighthouse reports on all pages on the application. See more reports saved in the [Lighthouse Reports](https://github.com/alandoherty95/reciprocate-app/tree/master/resources/lighthouse-reports) folder.
 
 ### Lighthouse Opportunities
 
@@ -321,6 +321,8 @@ Recipe Cards:
 - Displays images with incorrect aspect ratio: Image display dimensions should match natural aspect ratio.
 
 - Document does not have a meta description: Meta descriptions may be included in search results to concisely summarise page content.
+
+<span id="version-control"></span>
 
 ## 5. Version Control
 
@@ -406,7 +408,7 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 - The drop-down field in the add recipe form changed colour back to red after selecting next field. The colour was corrected to green in the JS code and resolved this minor issue.
 
-- Added `input type="url"` to the add recipe form to allow users to input the full image url when sharing a recipe. The image will be displayed on the recipe card.
+- The attribute `input type="url"` was added to the add recipe form to allow users to input the full image url when sharing a recipe. The image will be displayed on the recipe card. By clicking on the 'Info' icon, users will see more information about how to input a valid image URL.
 
 <span id="unresolved"></span>
 
