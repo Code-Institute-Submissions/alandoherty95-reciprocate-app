@@ -2,7 +2,7 @@
 
 Welcome to **[Reciprocate](https://reciprocate-application.herokuapp.com/)** - a community for sharing and discovering recipes!
 
-![Reciprocate Logo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/reciprocate-logo.png?raw=true)
+![Reciprocate Logo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/images/reciprocate-logo.png?raw=true)
 
 View [README](README.md) file.
 
@@ -104,7 +104,7 @@ In order for this user to browse all recipes:
 - Scroll down slightly to view ‘Our Favourite Recipes'.
 
 - Click on any selection to view additional information about the recipe.
-  ![User Story 1 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/user-stories-1.gif?raw=true)
+  ![User Story 1 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/demos/user-stories-1.gif?raw=true)
 
 **User Story 2:** As a food lover, I would like to share recipe ideas for snacks and smoothies with other people with similar interests.
 
@@ -123,7 +123,7 @@ In order for this user to share recipe ideas:
 - Input details such as 'Recipe Type', 'Name of Recipe', 'Ingredients' and 'Instructions'.
 
 - Click the 'Add New Recipe' button.
-  ![User Story 2 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/user-stories-2.gif?raw=true)
+  ![User Story 2 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/demos/user-stories-2.gif?raw=true)
 
 **User Story 3:** As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones.
 
@@ -138,7 +138,7 @@ In order for this user to browse all recipes:
 - View recipes relating to the keywords entered.
 
 - Click on any selection to view additional information about the recipe.
-  ![User Story 3 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/user-stories-3.gif?raw=true)
+  ![User Story 3 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/demos/user-stories-3.gif?raw=true)
 
 <span id="manual"></span>
 
@@ -192,7 +192,7 @@ Mobile Device:
 
 **Register page**
 
-![Invalid Registration Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/invalid-register-form.png?raw=true)
+![Invalid Registration Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/invalid-register-form.png?raw=true)
 
 - Entering a unique username and password creates a profile for the user.
 
@@ -208,7 +208,7 @@ Mobile Device:
 
 **Log In page**
 
-![Valid Log In Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/valid-login-form.png?raw=true)
+![Valid Log In Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/valid-login-form.png?raw=true)
 
 - When the 'Log In' button is clicked after inputting valid details, the user is redirected to their unique 'Profile' page.
 
@@ -216,7 +216,7 @@ Mobile Device:
 
 - A flash message notifies the user: 'Good to see you again, <username>!'
 
-![Flash Message](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/flash-message.png?raw=true)
+![Flash Message](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/flash-message.png?raw=true)
 
 - Clicking on the link below the form reading 'Not registered yet? Register now' redirects the user to the 'Register' page.
 
@@ -238,7 +238,7 @@ Recipe Cards:
 
 **New Recipe page**
 
-![Share New Recipe Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/share-new-recipe-form.png?raw=true)
+![Share New Recipe Form](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/share-new-recipe-form.png?raw=true)
 
 - A user who is logged in can add a new recipe by entering the required field in the form.
 

@@ -2,11 +2,11 @@
 
 Welcome to **[Reciprocate](https://reciprocate-application.herokuapp.com/)** - a community for sharing and discovering recipes!
 
-![Website Mockup](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/responsive-mockup.png?raw=true)
+![Website Mockup](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/images/responsive-mockup.png?raw=true)
 
 <span id="top"></span>
 
-![Reciprocate Logo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/reciprocate-logo.png?raw=true)
+![Reciprocate Logo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/images/reciprocate-logo.png?raw=true)
 
 **[Reciprocate](https://reciprocate-application.herokuapp.com/)** is a community-based application created for anyone who enjoys trying new recipes or sharing their favourites recipes with others. It was designed to allow users to freely share recipes with each other. Users can share their own food and drink recipes with the community and conveniently access the recipes provided by all other members. The website was designed with simplicity and ease-of-use in mind, encouraging users to recreate recipes at home with family and friends. Users will have the option of setting up an account to create, locate, display, edit and delete records from the collection of recipes.
 
@@ -126,7 +126,7 @@ The website focuses on the following three types of recipes but it is not limite
 
 #000000 - Black
 
-![enter image description here](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/my-color-scheme.png?raw=true)
+![Colour Scheme](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/my-color-scheme.png?raw=true)
 
 The colour scheme chosen for this project was inspired by bright colours to give the website an attractive, vibrant look. While Crimson and Persian Green complement each other nicely, the white background gives a sleek, neutral look to the application.
 
@@ -144,11 +144,11 @@ The colour scheme chosen for this project was inspired by bright colours to give
 
 [Merienda One](https://fonts.google.com/specimen/Merienda+One) was used for the main headings and navigation links on the website to grab the users attention. 'Merienda' is a Spanish term for "afternoon snack", which seems fitting for the purpose of this application. Merienda has soft shapes, is slightly condensed, and has a rhythm which is an invitation to read short pieces of text.
 
-![Merienda One](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/merienda-one.png?raw=true)
+![Merienda One](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/merienda-one.png?raw=true)
 
 [Oswald](https://fonts.google.com/specimen/Oswald) was used for the primary text because it is easy to read. Oswald is designed to be used freely across the internet by web browsers on desktop computers, laptops and mobile devices.
 
-![Oswald](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/oswald.png?raw=true)
+![Oswald](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/oswald.png?raw=true)
 
 - #### Imagery
 
@@ -288,9 +288,9 @@ Wireframe mockups for both desktop and mobile devices can be found in this [fold
 
 MongoDB was chosen as the database program for this application. It is a source-available cross-platform document-oriented database program. MongoDB's non-relational database structure was suitable because the number of collections is small as well as the relationships between them
 
-![Overview of MongoDB Collections](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mongodb-collections-overview.png?raw=true)
+![Overview of MongoDB Collections](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/mongodb-collections-overview.png?raw=true)
 
-![MongoDB Record](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/mongodb-collection.png?raw=true)
+![MongoDB Record](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/mongodb-collection.png?raw=true)
 
 | Categories | | |
 
@@ -434,7 +434,7 @@ Additional pages were created to handle 404 and 500 errors on the website. Both 
 
 **Site Map**
 
-![Site Map](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/site-map.png?raw=true)
+![Site Map](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/site-map.png?raw=true)
 
 - The 'About' page was created towards the end of development. This page provides more detailed information about the purpose of the application and the different components involved. It also lists frequently asked questions.
 
@@ -498,7 +498,7 @@ Once those steps have been completed, the application can be deployed. Please fo
 
 6. Navigate to the 'Settings' tab, click 'Reveal Config Vars' and enter the necessary keys and values.
 
-![Heroku Config Vars](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/heroku-config-vars.png?raw=true)
+![Heroku Config Vars](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/screenshots/heroku-config-vars.png?raw=true)
 
 7. Navigate back to the 'Deploy' tab and click 'Enable Automatic Deploys'
 
