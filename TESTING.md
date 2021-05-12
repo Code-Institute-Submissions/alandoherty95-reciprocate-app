@@ -32,17 +32,17 @@ View [Reciprocate](https://reciprocate-application.herokuapp.com/) application.
 
 ## 1. Overview
 
-**Consistency**
+**Consistent design**
 
 This website was designed to remain consistent wherever possible across the various pages:
 
 - The Navigation Bar and Footer are the same on all pages, including both error handling pages.
 
-- All headings are clear and consistent on each page.
+- All headings are clear and concise with additional info below.
 
 - Recipe cards follow a uniform size and structure.
 
-- Buttons are standardised throughout the website using either small or large buttons with varying colours.
+- Buttons are standardised throughout the website using either small or large buttons with varying colours depending on the actions.
 
 **Easy navigation**
 
@@ -52,27 +52,29 @@ Designing a platform with easy navigation was front of mind during the developme
 
 - Headings are clear and descriptive of the content displayed below.
 
-- When a search finds no results, the user is prompted to try different search words or to clear the search.
+- When a search finds no results, the user is prompted to try different search words.
 
 - Most views or actions can be reached within four clicks or taps.
 
 **Visually appealing**
 
-- Design using cards focus on the images uploaded by users.
+- Recipe cards focus on the images uploaded by users.
 
-- Striking images attract users to the recipe cards.
+- Striking images encourage users to find out more info about the recipes.
 
-- Bright colours used for headings grabs the attention of the user towards the content.
+- Bright colours used for headings grabs the attention of the user.
 
 **Intuitive design**
 
 - In the Navigation Bar, the Reciprocate logo returns users to the homepage displaying all recipes.
 
-- Familiar icons are used throughout the website for typical actions e.g. add, edit, delete, search, logout.
+- Familiar icons are used throughout the website for typical actions e.g. delete, search.
 
 - Flash messages notify users on screen when they perform meaningful actions e.g. sharing a new recipe or logging in.
 
 - A modal pops up to confirm deletion of recipes or categories of recipe.
+
+- A modal reveals more info about how to upload an image if the icon is clicked while filling out form.
 
 **Responsiveness**
 
@@ -85,6 +87,7 @@ Designing a platform with easy navigation was front of mind during the developme
 **Security**
 
 - Passwords are hashed using Werkzeug Security to ensure they are not visible to the owner of the database or anyone else.
+- Users can create a secure password of between 4 and 30 characters when creating their account. Both numbers and letters can be used.
 
 <span id="user-stories"></span>
 
@@ -101,6 +104,7 @@ In order for this user to browse all recipes:
 - Scroll down slightly to view ‘Our Favourite Recipes'.
 
 - Click on any selection to view additional information about the recipe.
+  ![User Story 1 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/user-stories-1.gif?raw=true)
 
 **User Story 2:** As a food lover, I would like to share recipe ideas for snacks and smoothies with other people with similar interests.
 
@@ -119,18 +123,22 @@ In order for this user to share recipe ideas:
 - Input details such as 'Recipe Type', 'Name of Recipe', 'Ingredients' and 'Instructions'.
 
 - Click the 'Add New Recipe' button.
+  ![User Story 2 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/user-stories-2.gif?raw=true)
 
 **User Story 3:** As an individual looking to improve their health and fitness, I want to easily browse through healthy recipes and try different ones.
 
-I can open the main homepage and scroll down to quickly view all recipes that have been shared by other members of the community.
+I can open the main homepage and search using keywords to quickly view all relevant recipes.
 
 In order for this user to browse all recipes:
 
 - Open homepage of website.
 
-- Scroll down slightly to view ‘Our Favourite Recipes'.
+- Enter keywords into the search bar in Navigation Bar.
+- Submit search
+- View recipes relating to the keywords entered.
 
 - Click on any selection to view additional information about the recipe.
+  ![User Story 3 Demo](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/user-stories-3.gif?raw=true)
 
 <span id="manual"></span>
 
@@ -171,6 +179,8 @@ Mobile Device:
 - Clicking on the LinkedIn icon will open LinkedIn profile in new tab.
 
 - If the user is logged in, clicking 'Log Out' will remove the user from a session by logging them out.
+
+- An 'About' page was added to the Footer towards the end of development. This gives users more information about the application and listing frequently asked questions.
 
 **Home page**
 
@@ -264,6 +274,12 @@ Recipe Cards:
 
 - The 'Delete' button allows the admin to delete each recipe type. A modal pops up to confirm before deleting category.
 
+**About page**
+
+- The 'About' page provides more information about the application.
+
+- It contains a list frequently asked questions.
+
 **404 page**
 
 - The '404 Page Not Found' error handling page displays if users end up on an invalid page.
@@ -304,7 +320,7 @@ Recipe Cards:
 
 - Displays images with incorrect aspect ratio: Image display dimensions should match natural aspect ratio.
 
-- Document does not have a meta description: Meta descriptions may be included in search results to concisely summarize page content.
+- Document does not have a meta description: Meta descriptions may be included in search results to concisely summarise page content.
 
 ## 5. Version Control
 
@@ -326,7 +342,7 @@ Throughout the production of this application, I used [Gitpod](https://gitpod.io
 
 - **git add - A** adds files to the staging area before committing.
 
-- **git commit -m "initial commit"** commits the work on the stage before pushing it to GitHub.
+- **git commit -m "commit description"** commits the work on the stage before pushing it to GitHub.
 
 - **git push** updates the repository in GitHub to include new or modified files and folders.
 
@@ -370,31 +386,33 @@ Once those steps are done, the website can be deployed and below are the steps o
 
 ## 7. Resolved Bugs
 
-- Deletion modal not functioning, the modal used for confirming an action before deleting was not popping up and the selection was deleted without confirmation: the class `modal-trigger` was added to the modal function to trigger to pop up window before deleting.
+- Deletion modal was not functioning, the modal used for confirming an action before deleting was not popping up and the selection was deleted without confirmation: the class `modal-trigger` was added to the modal function to trigger to pop up window before deleting the record.
 
 - Background and foreground colours do not have a sufficient contrast ratio. Low-contrast text is difficult or impossible for many users to read: Colour scheme was altered to be more visually pleasing.
 
-- Favicon not displaying: graphic image displayed correctly after changing the file path.
+- Favicon not displaying: graphic image displayed correctly after changing the file path. Favicon is visible on desktop and mobile devices.
 
-- Form fields not populating when editing a recipe, the existing information was not displayed in each of the fields to allow editing: tweaked input to `value="{{ recipe.recipe_name }}"`
+- Form fields not populating when editing a recipe, the existing information was not displayed in each of the fields to allow editing: tweaked input to `value="{{ recipe.recipe_name }}"`. The fields are populating automatically now based on the `recipe_id`.
 
 - Search feature was functioning but it did not display the search words that were inputted after submitting. The `{page_heading}` variable was added to display the missing information. e.g. `"Showing results for: banana"`
+
+- Search feature was displaying results based on the `recipe_name` and `recipe_ingredients`. The `category_name` was added to the index to ensure these results were also returned.
 
 - The recipe images did not fit well within the card. The `-o-object-fit: contain;`styling was added so the image will keep its aspect ratio, but is resized to fit within the given dimension.
 
 - The homepage was loading slowly due to the large number of images. I changed the number of recipes displayed per page from 9 to 6 using pagination. This improved the loading speed of the site and gave more attention to the 6 recipes displayed on each tab.
 
-- Lighthouse identified buttons with an icon but no label and advised using the aria-label attribute. This attribute is used to provide the label to any assistive technologies.
+- Lighthouse identified buttons with an icon but no label and advised using the `aria-label` attribute. This attribute is used to provide the label to any assistive technologies.
+
+- The drop-down field in the add recipe form changed colour back to red after selecting next field. The colour was corrected to green in the JS code and resolved this minor issue.
+
+- Added `input type="url"` to the add recipe form to allow users to input the full image url when sharing a recipe. The image will be displayed on the recipe card.
 
 <span id="unresolved"></span>
 
 ## 8. Unresolved Bugs
 
-- Drop-down field in add new recipe form changes colour to red after selecting next field
-
-- Materialize select dropdown does not function correctly on iOS: known bug with Materialize meaning either the dropdown does not appear or selects the wrong item when tapped/clicked.
-
-- Error in console due to one or more images not displaying.
+- Materialize select dropdown does not function correctly on iOS: known bug with Materialize meaning either the dropdown does not appear or selects the wrong item when tapped/clicked. I read more information about this possible bug on [Stack Overflow](https://stackoverflow.com/questions/52850091/materialize-select-and-dropdown-touch-event-selecting-wrong-item)
 
 - Warning reported by Chrome console, `[DOM] Input elements should have autocomplete attributes`: Resolution: added `autocomplete` to Register and Log In inputs.
 

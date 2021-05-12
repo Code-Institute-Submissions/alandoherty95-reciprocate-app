@@ -2,7 +2,7 @@
 
 Welcome to **[Reciprocate](https://reciprocate-application.herokuapp.com/)** - a community for sharing and discovering recipes!
 
-![Website Mockup](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/main-mockup.png?raw=true)
+![Website Mockup](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/responsive-mockup.png?raw=true)
 
 <span id="top"></span>
 
@@ -435,6 +435,8 @@ Additional pages were created to handle 404 and 500 errors on the website. Both 
 **Site Map**
 
 ![Site Map](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/site-map.png?raw=true)
+
+- The 'About' page was created towards the end of development. This page provides more detailed information about the purpose of the application and the different components involved. It also lists frequently asked questions.
 
 <span id="testing"></span>
 
