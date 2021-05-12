@@ -25,7 +25,7 @@ mongo = PyMongo(app)
 
 
 # pagination
-# https://betterprogramming.pub/simple-flask-pagination-example-4190b12c2e2e
+# inspiration from https://betterprogramming.pub/simple-flask-pagination-example-4190b12c2e2e
 def paginate(recipes):
     page, per_page, offset = get_page_args(
         page_parameter='page', per_page_parameter='per_page')
@@ -48,7 +48,7 @@ def pagination_args(recipes):
 # recipes page
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find().sort("_id", 1))
+    recipes = list(mongo.db.recipes.find().sort("_id", -1))
     paginated_recipes = paginate(recipes)
     pagination = pagination_args(recipes)
     return render_template(
@@ -174,10 +174,11 @@ def add_recipe():
             }
         mongo.db.recipes.insert_one(recipe)
         flash("Thank you for contributing!")
-        return redirect(url_for("add_recipe"))
+        return redirect(url_for("recipes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_recipe.html", categories=categories)
+    return render_template(
+        "add_recipe.html", recipe=recipe, categories=categories)
 
 
 # edit a recipe
@@ -198,7 +199,7 @@ def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "profile", username=session["user"],
+        "edit_recipe.html",
         recipe=recipe, categories=categories)
 
 

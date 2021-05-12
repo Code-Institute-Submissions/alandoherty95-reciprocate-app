@@ -266,6 +266,14 @@ h1 > span {
   width: 100% !important;
 }
 
+.collapsible-header {
+  font-size: 1.6rem;
+}
+
+.collapsible-body {
+  font-size: 1.4rem;
+}
+
 /* media queries */
 
 @media only screen and (min-width: 992px) {
