@@ -274,6 +274,10 @@ h1 > span {
   font-size: 1.4rem;
 }
 
+.modal-info .btn-large {
+  padding: 2rem;
+}
+
 /* media queries */
 
 @media only screen and (min-width: 992px) {

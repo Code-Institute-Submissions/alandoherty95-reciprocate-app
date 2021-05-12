@@ -178,7 +178,7 @@ def add_recipe():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "add_recipe.html", recipe=recipe, categories=categories)
+        "add_recipe.html", categories=categories)
 
 
 # edit a recipe

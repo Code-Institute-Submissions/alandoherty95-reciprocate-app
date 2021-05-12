@@ -116,8 +116,8 @@
                     <div class="input-field col s12">
                         <i class="far fa-image prefix"></i>
                         <input id="image_url" name="image_url" type="url" class="validate">
-                        <span class="helper-text">Full image URL must be provided for desired image to be displayed. Browse images on <a href="https://www.pexels.com/search/smoothie/?orientation=portrait" >Pexels</a>.</span>
                         <label for="image_url">Valid Image URL</label>
+                        <a href="#modal-info" class="btn-small modal-trigger center"><i class="fas fa-info-circle"></i></a>
                     </div>
                 </div>
                 <!-- submit button -->
@@ -129,6 +129,20 @@
                     </div>
                 </div>
             </form>
+            <!-- modal to display info about image URL requirements -->
+            <div id="modal-info" class="modal">
+                <div class="modal-content">
+                    <p>You can choose from a huge collection of images on Pexel. The full image URL must be provided for the desired image to be displayed. You can search for an image by entering a keyword in the search bar. By right-clicking on your favourite image, you can select ‘copy image address’ and paste it into the ‘Valid Image URL’ field in the form.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ url_for('add_recipe') }}"
+                    class="btn-small btn-green center-align modal-trigger"><i class="far fa-check-circle"></i>
+                    OK</a>
+                    <a href="https://www.pexels.com/search/smoothie/?orientation=portrait"
+                    target="_blank" class="btn-small center-align modal-trigger"><i class="far fa-image-alt"></i>
+                    Browse Pexels</a>
+                </div>
+            </div>
         </div>
     {% endif %}
 
