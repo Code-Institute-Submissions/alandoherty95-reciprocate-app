@@ -75,6 +75,20 @@
             </div>
         </div>
     </form>
+    <!-- modal to display info about image URL requirements -->
+    <div id="modal-info" class="modal">
+        <div class="modal-content">
+            <p>You can choose from a huge collection of vibrant images on Pexel. The full image URL must be provided for the desired image to be displayed. You can search for an image by entering a keyword in the search bar. Right-click on your favourite image and select ‘copy image address’. Paste into the ‘Valid Image URL’ field in the form.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="{{ url_for('add_recipe') }}"
+                class="btn-small btn-green center-align modal-trigger"><i class="far fa-check-circle"></i>
+                OK</a>
+            <a href="https://www.pexels.com/search/smoothie/?orientation=portrait"
+                target="_blank" class="btn-small center-align modal-trigger"><i class="far fa-image-alt"></i>
+                Browse Pexels</a>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

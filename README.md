@@ -419,11 +419,11 @@ The homepage displays all recipes that have been shared on the application. Each
 
 **Share your favourite recipes**
 
-The application encourages all users to share their own favourite recipes with the rest of the community. The user can input the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Users must create an account before they can share recipes.
+The application encourages all users to share their own favourite recipes with the rest of the community. The user can input the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. Users must create an account before they can share recipes. An Info icon reveals more details on how to find a great image for your recipe on Pexel.
 
 **Edit your recipes**
 
-In addition to adding new recipes, users can also edit recipes they have already shared with the community. The user can update the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The updated record will be contained within the collection.
+In addition to adding new recipes, users can also edit recipes they have already shared with the community. The user can update the values for `“category_name”`, `“recipe_name”`, `“recipe_ingredients”`, `"recipe_instructions"` and `"image_url"`. The updated record will be contained within the collection. An Info icon reveals more details on how to find a great image for your recipe on Pexel.
 
 **Delete your recipes**
 
