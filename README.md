@@ -180,6 +180,8 @@ The minimum features to be included in this project are as follows:
 
 - **Search Function** allows users to search for specific recipes using keywords. The search function targets the `“recipe_name”` and `“recipe_ingredients”` fields in each recipe. The search will return results based on the keyword inputted.
 
+- **About** (`about.html`) provides more detailed information on the purpose of the application and the different components involved. It also lists frequently asked questions in a collapsible menu.
+
 <span id="structure"></span>
 
 ## 4. Structure
@@ -223,6 +225,10 @@ The add categories page allows the website admin to add a new category. All cate
 - **Edit Categories** (`edit_category.html`)
 
 The add categories page allows the website admin to edit an existing category. All categories can be selected from the drop-down in the recipe form. The name of the category will be updated in the collection.
+
+- **About** (`about.html`)
+
+The 'About' page was created towards the end of development. This page provides more detailed information about the purpose of the application and the different components involved. It also lists frequently asked questions in a collapsible menu.
 
 <span id="wireframes"></span>
 

@@ -37,7 +37,7 @@ $(document).ready(function () {
                 if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
                     $(this).children("input").css(classValid);
                 }
-            });
+            }); // select options from dropdown
         }).on("click", function () {
             if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(0, 0, 0, 0.03)") {
                 $(this).parent(".select-wrapper").children("input").css(classValid);

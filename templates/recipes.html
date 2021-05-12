@@ -10,7 +10,7 @@
                         <li>Share your favourite recipe ideas.</li>
                     </ul>
                     <!-- add new recipe button -->
-                    <a class="waves-effect waves-light btn-large" href="{{ url_for('add_recipe') }}">Share New Recipe <i class="fas fa-plus-square right"></i></a>                   
+                    <a class="btn-large" href="{{ url_for('add_recipe') }}">Share Recipe <i class="fas fa-plus-square right"></i></a>                   
                 {% else %}
                     <p class="intro-big">Browse & share your favourite recipe ideas with other people in our community.</p>
                     <p class="intro-small">Create your own profile now to enjoy the full experience.</p>
@@ -74,10 +74,10 @@
                     <!-- cancel and delete buttons -->
                     <div class="modal-footer">
                         <a href="{{ url_for('profile', username=session['user']) }}"
-                        class="waves-effect waves-light btn-small btn-green modal-trigger"><i class="fas fa-ban"></i>
+                        class="btn-small btn-green modal-trigger"><i class="fas fa-ban"></i>
                         Cancel</a>
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                        class="waves-effect waves-light btn-small btn-red modal-trigger"><i class="far fa-trash-alt"></i>
+                        class="btn-small btn-red modal-trigger"><i class="far fa-trash-alt"></i>
                         Delete</a>
                     </div>
                 </div>
