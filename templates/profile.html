@@ -39,8 +39,8 @@
                     <p>{{ recipe.recipe_instructions }}</p>
                     <h6>Shared by:</h6>
                     <p>{{ recipe.created_by }}</p>
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large btn-blue">Edit</a>
-                    <a href="#modal-{{recipe._id}}" class="btn-large modal-trigger btn-red">Delete</a>
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large btn-blue"><i class="far fa-edit"></i> Edit</a>
+                    <a href="#modal-{{recipe._id}}" class="btn-large btn-red modal-trigger"><i class="far fa-trash-alt"></i> Delete</a>
                 </div>
             </div>
             <!-- modal to confirm action before deleting a recipe -->

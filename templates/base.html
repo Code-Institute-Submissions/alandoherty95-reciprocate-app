@@ -66,7 +66,7 @@
                 <li><a href="{{ url_for('get_recipes') }}" aria-label="Home"><i class="fas fa-home"></i></a></li>
                 <!-- only visible in user session -->
                 {% if session.user %}
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">{{ username }}'s Profile</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="{{ url_for('add_recipe') }}">Share Recipe</a></li>
                     <!-- only visible in admin session -->
                     {% if session.user|lower == "admin"|lower %}

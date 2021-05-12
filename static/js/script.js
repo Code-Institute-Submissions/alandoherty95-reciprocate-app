@@ -12,13 +12,12 @@ $(document).ready(function () {
             $(this).find('> .card-reveal > .card-title').click();
         }
     );
-    $('.fixed-action-btn').floatingActionButton();
 
     // validate Materialize select fields, self invoking function
     (function validateMaterializeSelect() {
         const classValid = {
-            "border-bottom": "1px solid #3c7c32",
-            "box-shadow": "0 1px 0 0 #3c7c32"
+            "border-bottom": "1px solid #4caf50",
+            "box-shadow": "0 1px 0 0 #4caf50"
         };
         const classInvalid = {
             "border-bottom": "1px solid #f44336",
@@ -35,7 +34,7 @@ $(document).ready(function () {
         }
         $(".select-wrapper input.select-dropdown").on("focusin", function () {
             $(this).parent(".select-wrapper").on("change", function () {
-                if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () {})) {
+                if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
                     $(this).children("input").css(classValid);
                 }
             });
