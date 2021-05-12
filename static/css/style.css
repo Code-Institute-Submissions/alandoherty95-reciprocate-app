@@ -57,6 +57,12 @@ p {
   background-color: #ffffff;
 }
 
+.share-recipe {
+  padding-bottom: 3rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
 /* recipe cards */
 .card-reveal {
   -webkit-transition: all 700ms ease;

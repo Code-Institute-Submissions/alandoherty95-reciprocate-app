@@ -312,6 +312,12 @@ Recipe Cards:
 
 ![Mobile Report](https://github.com/alandoherty95/reciprocate-app/blob/master/resources/lighthouse-reports/mobile-home-lighthouse-report.png?raw=true)
 
+HTML code passes validation on [W3 HTML Validator](https://validator.w3.org/#validate_by_input)
+
+CSS code passes validation on [W3 CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+Python code passes validation on [PEP8 Online Check](http://pep8online.com/)
+
 I ran Chrome Lighthouse reports on all pages on the application. See more reports saved in the [Lighthouse Reports](https://github.com/alandoherty95/reciprocate-app/tree/master/resources/lighthouse-reports) folder.
 
 ### Lighthouse Opportunities
