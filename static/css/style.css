@@ -52,7 +52,7 @@ p {
 }
 
 .heading-info {
-  padding: 0.5rem;
+  padding: 1rem;
   text-align: center;
   background-color: #ffffff;
 }
@@ -272,5 +272,5 @@ nav .nav-wrapper i {
 }
 
 .modal-footer .btn-small {
-  text-align: left;
+  float: left;
 }
