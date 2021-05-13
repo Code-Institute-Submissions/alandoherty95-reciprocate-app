@@ -271,6 +271,6 @@ nav .nav-wrapper i {
   width: 100% !important;
 }
 
-.modal-info .btn-large {
-  padding: 2rem;
+.modal-footer .btn-small {
+  text-align: left;
 }
