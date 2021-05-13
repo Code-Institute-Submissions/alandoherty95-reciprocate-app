@@ -403,25 +403,27 @@ Once those steps are done, the website can be deployed and below are the steps o
 10. Click 'View'.
 
 
-- Responsiveness was tested on following internet browsers:
+Responsiveness was tested on following internet browsers:
 
-Chrome (Android)
-Chrome (iOS)
-Firefox
-Safari (iOS)
+ - Chrome (Android)
+ - Chrome (iOS)
+ - Firefox
+ - Safari (iOS)
 
-- Responsiveness was tested on following screen sizes were tested with Chrome DevTools:
+Responsiveness was tested on following screen sizes were tested with Chrome DevTools:
 
-Moto G4
-Galaxy S5
-Pixel 2
-Pixel 2 XL
-iPhone 5 SE
-iPhone 6/7/8
-iPhone 6/7/8 Plus
-iPhone X
-iPad
-iPad Pro
+- Moto G4
+- Galaxy S5
+- Pixel 2
+- Pixel 2 XL
+- iPhone 5/SE
+- iPhone 6/7/8
+- iPhone 6/7/8 Plus
+- iPhone X
+- iPad
+- iPad Pro
+- Surface Duo
+- Galaxy Fold
 
 <span id="resolved"></span>
 

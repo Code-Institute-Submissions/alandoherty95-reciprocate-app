@@ -89,6 +89,10 @@ p {
   height: 38rem;
 }
 
+#shs-logo {
+  padding-top: 1rem;
+}
+
 /* buttons */
 .btn-green {
   background-color: #32a626;
