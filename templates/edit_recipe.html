@@ -53,12 +53,12 @@
         </div>
         <!-- edit recipe image url -->
         <div class="row">
+            <a href="#modal-info" class="btn-small modal-trigger" aria-label="More Info"><i class="fas fa-info-circle"></i> Choose Image</a>
             <div class="input-field col s12">
                 <i class="far fa-image prefix"></i>
                 <input id="image_url" name="image_url" type="url" value="{{ recipe.image_url }}" class="validate">
                 <span class="helper-text">Full image URL must be provided for desired image to be displayed. Browse images on <a href="https://www.pexels.com/search/smoothie/?orientation=portrait" target="_blank">Pexels</a>.</span>
                 <label for="image_url">Valid Image URL</label>
-                <a href="#modal-info" class="btn-small modal-trigger center" aria-label="More Info"><i class="fas fa-info-circle"></i></a>
             </div>
         </div>
         <!-- cancel and edit buttons -->
@@ -78,7 +78,12 @@
     <!-- modal to display info about image URL requirements -->
     <div id="modal-info" class="modal">
         <div class="modal-content">
-            <p>You can choose from a huge collection of vibrant images on Pexel. The full image URL must be provided for the desired image to be displayed. You can search for an image by entering a keyword in the search bar. Right-click on your favourite image and select ‘copy image address’. Paste into the ‘Valid Image URL’ field in the form.</p>
+            <ul>
+                <li>Browse the huge collection of vibrant images on Pexel.</li>
+                <li>Search for an image by entering a keyword in the search bar.</li>
+                <li>Right-click on your favourite image and select ‘Copy Image Address’.</li>
+                <li>Paste into the ‘Valid Image URL’ field in the form.</li>
+            </ul>
         </div>
         <div class="modal-footer">
             <a href="{{ url_for('add_recipe') }}"
